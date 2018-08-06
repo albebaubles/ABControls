@@ -20,16 +20,17 @@ import UIKit
     private var _textColor : UIColor = UIColor.black
     private var _font : UIFont = UIFont.systemFont(ofSize: 14)
     private var _label: UILabel!
+    private var _button : UIButton!
     private var _tableview: UITableView! = UITableView.init()
     private let dropdownHeight: CGFloat = 160
     private let defaultHeight: CGFloat = 30
     private let dropdownViewHeight: CGFloat = 130
-
+    
     /// Notifications
     @objc  public static var ABDropDownDidChangeIndex : String = "ABDropDownDidChangeIndex"
-
-
-/// Sets the textcolor for text and the dropdown arrow
+    
+    
+    /// Sets the textcolor for text and the dropdown arrow
     @IBInspectable public var textColor : UIColor {
         didSet{
             _textColor = textColor
@@ -46,11 +47,11 @@ import UIKit
             setNeedsDisplay()
         }
     }
-
-
-/**
+    
+    
+    /**
      The list of items to be displayed in the combobox seperated by \n (command-enter)
- */
+     */
     @IBInspectable  public var items : String = "" {
         didSet{
             _listItems = items.components(separatedBy: "\n")
@@ -58,22 +59,25 @@ import UIKit
             setNeedsDisplay()
         }
     }
-
+    
     /// The currently selected index
     @IBInspectable  public var index : Int = NSNotFound {
         didSet{
             _selected = index
+            #if !TARGET_INTERFACE_BUILDER
             _tableview.selectRow(at: IndexPath.init(row: _selected, section: 0), animated: false, scrollPosition: .middle)
+            NotificationCenter.default.post(name: NSNotification.Name(  ABDropDown.ABDropDownDidChangeIndex), object: _selected)
+            #endif
+            
             if _selected == NSNotFound {
                 _label.text = ""
             } else {
-                _label.text = " \(_listItems![_selected])"
+                _label.text = " \(items.components(separatedBy: "\n")[index])"
             }
             setNeedsDisplay()
-            NotificationCenter.default.post(name: NSNotification.Name(  ABDropDown.ABDropDownDidChangeIndex), object: _selected)
         }
     }
-
+    
     /// Sets the font, default is system font at 14pt
     @IBInspectable  public var font : UIFont = UIFont.systemFont(ofSize: 14) {
         didSet {
@@ -88,8 +92,8 @@ import UIKit
             setNeedsDisplay()
         }
     }
-
-
+    
+    
     /// the current text being displayed based on the index
     public func text() -> String {
         if _selected != NSNotFound {
@@ -97,96 +101,107 @@ import UIKit
         }
         return ""
     }
-
-
-
+    
+    
+    
     private func updateListItems(items: Array<String>) {
         if _label != nil {
             if (items.count) > 0 {
                 _label.text = items[0]
             }
         }
+        #if !TARGET_INTERFACE_BUILDER
         _tableview.reloadData()
+        #endif
     }
-
-
+    
+    
     @objc private func showList() {
         _tableview.isHidden = !_tableview.isHidden
-
+        
         /*
          if displaying the dropdown, we need to increase the
          height of the frame to accomodate.  Need to also
          check if the dropdown would fall offscreen and if so,
          popUP instead of down.
          */
-
+        
         if _tableview.isHidden {
             frame =  CGRect.init(x: _frame.origin.x,
-                    y: _frame.origin.y,
-                    width: _frame.width,
-                    height: defaultHeight)
+                                 y: _frame.origin.y,
+                                 width: _frame.width,
+                                 height: defaultHeight)
         } else if _frame.origin.y + dropdownHeight >  (window?.screen.bounds.size.height)!  {
             frame =    CGRect.init(x: _frame.origin.x,
-                    y: _frame.origin.y - dropdownViewHeight,
-                    width: _frame.width,
-                    height: dropdownHeight)
+                                   y: _frame.origin.y - dropdownViewHeight,
+                                   width: _frame.width,
+                                   height: dropdownHeight)
         } else {
             frame =  CGRect.init(x: _frame.origin.x,
-                    y: _frame.origin.y,
-                    width: _frame.width,
-                    height: dropdownHeight)
+                                 y: _frame.origin.y,
+                                 width: _frame.width,
+                                 height: dropdownHeight)
         }
         setNeedsLayout()
-
+        
     }
-
+    
     /// required for dev time
     required override public init(frame: CGRect) {
+        _frame = frame
         self.textColor = UIColor.black
         super.init(frame:   frame)
-        sharedInit()
     }
-
+    
     /// require for runtime
     required public init?(coder aDecoder: NSCoder) {
         self.textColor = UIColor.black
         super.init(coder: aDecoder)
+
+        #if !TARGET_INTERFACE_BUILDER
         sharedInit()
-
+        #endif
+        
     }
-
+    
     override public func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
         sharedInit()
     }
-
+    
     private func sharedInit() {
-        autoresizingMask = .init(rawValue: 0)
-
-        if _label == nil {
-            // setup the ui controls
-            _frame = frame
-            setupLabel()
-            setupDropdownButton()
-            setupTableviewDropdown()
-        }
+        //        autoresizingMask = .init(rawValue: 0)
+        
+        // setup the ui controls
+        _frame = frame
+        setupLabel()
+        setupDropdownButton()
+        setupTableviewDropdown()
     }
-
+    
     private func setupLabel() {
         _label = UILabel.init(frame: bounds)
         _label.layer.borderColor = _textColor.cgColor
         _label.layer.borderWidth = 0.5
+        _label.text = "ABDropDown"
         addSubview(_label)
     }
-
+    
     private func setupDropdownButton() {
-        let button = UIButton.init(type: .system)
-        button.frame = CGRect.init(x: bounds.width - 30, y: 2.5, width: 25, height: 25)
-        button.setImage(ABControlsStyleKit.imageOfDownArrow, for: .normal)
-        button.addTarget(self, action: #selector(showList), for: UIControlEvents.touchUpInside)
-        button.titleLabel?.font = _font
-        addSubview(button)
+        if _button == nil {
+            let _button = UIButton.init(type: .system)
+            _button.frame = CGRect.init(x: _frame.width - 30, y: 2.5, width: 25, height: 25)
+            _button.setImage(ABControlsStyleKit.imageOfDownArrow, for: .normal)
+            _button.titleLabel?.font = _font
+            addSubview(_button)
+            setNeedsDisplay()
+            #if !TARGET_INTERFACE_BUILDER
+            _button.addTarget(self, action: #selector(showList), for: UIControlEvents.touchUpInside)
+            #endif
+        }
+        
     }
-
+    
     private func setupTableviewDropdown() {
         _tableview.frame = CGRect.init(x: 0, y: defaultHeight, width: frame.width - 20, height: dropdownViewHeight)
         _tableview.dataSource = self
@@ -202,21 +217,21 @@ import UIKit
         _tableview.backgroundColor = self.backgroundColor
         addSubview(_tableview)
     }
-
-
+    
+    
     // MARK: - Table view data source
     //
     public func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if _listItems != nil {
             return (_listItems?.count)!
         }
         return 0
     }
-
+    
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell.init(style: .default, reuseIdentifier: "cell")
         cell.isUserInteractionEnabled = true
@@ -226,7 +241,7 @@ import UIKit
         cell.backgroundColor = self.backgroundColor
         return cell
     }
-
+    
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         index = indexPath.row
         showList()

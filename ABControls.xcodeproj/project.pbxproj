@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B459874C2117CC7E00519520 /* ABSignatureCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B459874B2117CC7E00519520 /* ABSignatureCapture.swift */; };
 		B4720EA9211776D5001DBBF2 /* ABTouchDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4720EA8211776D5001DBBF2 /* ABTouchDraw.swift */; };
 		B4720EAB211776E9001DBBF2 /* ABVoiceRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4720EAA211776E9001DBBF2 /* ABVoiceRecorder.swift */; };
 		B4720EAD21177712001DBBF2 /* ABVideoRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4720EAC21177712001DBBF2 /* ABVideoRecorder.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B459874B2117CC7E00519520 /* ABSignatureCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABSignatureCapture.swift; sourceTree = "<group>"; };
 		B46D4E542114C07600A58C71 /* ABDropDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABDropDown.swift; sourceTree = "<group>"; };
 		B4720EA8211776D5001DBBF2 /* ABTouchDraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABTouchDraw.swift; sourceTree = "<group>"; };
 		B4720EAA211776E9001DBBF2 /* ABVoiceRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABVoiceRecorder.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				B46D4E542114C07600A58C71 /* ABDropDown.swift */,
 				B4FAE1252117678C008707E7 /* ABImagePicker.swift */,
 				B4FAE12121176759008707E7 /* ABListBox.swift */,
+				B459874B2117CC7E00519520 /* ABSignatureCapture.swift */,
 				B4720EA8211776D5001DBBF2 /* ABTouchDraw.swift */,
 				B4720EAC21177712001DBBF2 /* ABVideoRecorder.swift */,
 				B4720EAA211776E9001DBBF2 /* ABVoiceRecorder.swift */,
@@ -177,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B459874C2117CC7E00519520 /* ABSignatureCapture.swift in Sources */,
 				B4FEDD20211641A100223E77 /* ABCheckBox.swift in Sources */,
 				B4FEDD23211641A900223E77 /* ABDropDown.swift in Sources */,
 				B4FAE12221176759008707E7 /* ABListBox.swift in Sources */,
