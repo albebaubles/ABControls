@@ -174,8 +174,8 @@ import UIKit
         
         // setup the ui controls
         _frame = frame
-        setupLabel()
         setupDropdownButton()
+        setupLabel()
         setupTableviewDropdown()
     }
     
