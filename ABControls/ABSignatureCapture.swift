@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ABSignatureCapture: UIView {
+@objc @IBDesignable public class  ABSignatureCapture: UIView {
 
     /*
     // Only override draw() if you perform custom drawing.

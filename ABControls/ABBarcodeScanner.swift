@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ABBarcodeScanner: UIView {
+@objc @IBDesignable public class  ABBarcodeScanner: UIView {
 
     /*
     // Only override draw() if you perform custom drawing.

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ABVideoRecorder: UIView {
+@objc @IBDesignable public class  ABVideoRecorder: UIView {
 
     /*
     // Only override draw() if you perform custom drawing.

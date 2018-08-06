@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ABTouchDraw: UIView {
+@objc @IBDesignable public class  ABTouchDraw: UIView {
 
     /*
     // Only override draw() if you perform custom drawing.

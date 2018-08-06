@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ABImagePicker: UIView {
+@objc @IBDesignable public class  ABImagePicker: UIView {
 
     /*
     // Only override draw() if you perform custom drawing.
