@@ -9,9 +9,11 @@
 import UIKit
 
 @objc @IBDesignable public class  ABSignatureCapture: ABControl {
-
-    
     var sigPaths = UIBezierPath.init()
+
+    /// Notifications
+    @objc  public static var ABSignatureCaptureDidDrawSignature : String = "ABSignatureCaptureDidDrawSignature"
+
     
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -39,7 +41,7 @@ import UIKit
     override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         setNeedsDisplay()
         let s = self.signature().base64EncodedString(options: NSData.Base64EncodingOptions.endLineWithLineFeed)
-        NotificationCenter.default.post(name: Notification.Name("ABSignatureCaptureDidDrawSignature"),
+        NotificationCenter.default.post(name: Notification.Name(ABSignatureCapture.ABSignatureCaptureDidDrawSignature),
                                         object:s)
     }
     
