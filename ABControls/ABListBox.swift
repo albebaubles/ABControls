@@ -9,22 +9,26 @@
 import UIKit
 
 @objc @IBDesignable public class ABListBox: ABControl, UITableViewDelegate, UITableViewDataSource {
-    private var _frame : CGRect = CGRect.init()
-    private var _listItems: [String]?
-    private var _selected : Int = NSNotFound
-    private var _textColor : UIColor = UIColor.black
-    private var _font : UIFont = UIFont.systemFont(ofSize: 14)
-    private var _tableview: UITableView! = UITableView.init()
+    
+    /// Cache
+    private struct Cache {
+     static   var frame : CGRect = CGRect.init()
+     static   var listItems: [String]?
+     static   var selected : Int = NSNotFound
+     static   var textColor : UIColor = UIColor.black
+     static   var font : UIFont = UIFont.systemFont(ofSize: 14)
+     static   var tableview: UITableView! = UITableView.init()
+    }
     
     
     /// Notifications
     @objc  public static var ABListBoxDidChangeIndex : String = "ABListBoxDidChangeIndex"
-
+    
     /// Sets the textcolor for text and the dropdown arrow
     @IBInspectable public override var textColor : UIColor {
         didSet{
-            _textColor = textColor
-            _tableview.reloadData()
+            Cache.textColor = textColor
+            Cache.tableview.reloadData()
             setNeedsDisplay()
         }
     }
@@ -34,8 +38,8 @@ import UIKit
      */
     @IBInspectable  public var items : String = "" {
         didSet{
-            _listItems = items.components(separatedBy: "\n")
-            updateListItems(items: _listItems!)
+            Cache.listItems = items.components(separatedBy: "\n")
+            updateListItems(items: Cache.listItems!)
             setNeedsDisplay()
         }
     }
@@ -43,10 +47,10 @@ import UIKit
     /// The currently selected index
     @IBInspectable  public var index : Int = NSNotFound {
         didSet{
-            _selected = index
+            Cache.selected = index
             #if !TARGET_INTERFACE_BUILDER
-            _tableview.selectRow(at: IndexPath.init(row: _selected, section: 0), animated: false, scrollPosition: .middle)
-            NotificationCenter.default.post(name: NSNotification.Name(  ABListBox.ABListBoxDidChangeIndex), object: _selected)
+            Cache.tableview.selectRow(at: IndexPath.init(row: Cache.selected, section: 0), animated: false, scrollPosition: .middle)
+            NotificationCenter.default.post(name: NSNotification.Name(  ABListBox.ABListBoxDidChangeIndex), object: Cache.selected)
             #endif
             setNeedsDisplay()
         }
@@ -55,12 +59,12 @@ import UIKit
     /// Sets the font, default is system font at 14pt
     @IBInspectable  public var font : UIFont = UIFont.systemFont(ofSize: 14) {
         didSet {
-            _font =  font
+            Cache.font =  font
             for view in subviews {
                 if view is UILabel {
-                    (view as! UILabel).font = _font
+                    (view as! UILabel).font = Cache.font
                 } else if view is UIButton {
-                    (view as! UIButton).titleLabel?.font = _font
+                    (view as! UIButton).titleLabel?.font = Cache.font
                 }
             }
             setNeedsDisplay()
@@ -70,8 +74,8 @@ import UIKit
     
     /// the current text being displayed based on the index
     public func text() -> String {
-        if _selected != NSNotFound {
-            return _listItems![_selected]
+        if Cache.selected != NSNotFound {
+            return Cache.listItems![Cache.selected]
         }
         return ""
     }
@@ -80,7 +84,7 @@ import UIKit
     
     private func updateListItems(items: Array<String>) {
         #if !TARGET_INTERFACE_BUILDER
-        _tableview.reloadData()
+        Cache.tableview.reloadData()
         #endif
     }
     
@@ -88,7 +92,7 @@ import UIKit
     
     /// required for dev time
     required  public init(frame: CGRect) {
-        _frame = frame
+        Cache.frame = frame
         super.init(frame:   frame)
     }
     
@@ -111,28 +115,28 @@ import UIKit
         //        autoresizingMask = .init(rawValue: 0)
         
         // setup the ui controls
-        _frame = frame
+        Cache.frame = frame
         setupTableview()
     }
     
-
+    
     
     
     private func setupTableview() {
-        _tableview.dataSource = self
-        _tableview.delegate = self
-        _tableview.isHidden = false
-        _tableview.indicatorStyle = .default
-        _tableview.isUserInteractionEnabled = true
-        _tableview.flashScrollIndicators()
-        _tableview.rowHeight = 25
-        _tableview.bounces = false
-        _tableview.alwaysBounceVertical = false
-        _tableview.alwaysBounceHorizontal = false
-        _tableview.backgroundColor = self.backgroundColor
-        _tableview.frame = bounds
-        addSubview(_tableview)
-        _tableview.reloadData()
+        Cache.tableview.dataSource = self
+        Cache.tableview.delegate = self
+        Cache.tableview.isHidden = false
+        Cache.tableview.indicatorStyle = .default
+        Cache.tableview.isUserInteractionEnabled = true
+        Cache.tableview.flashScrollIndicators()
+        Cache.tableview.rowHeight = 25
+        Cache.tableview.bounces = false
+        Cache.tableview.alwaysBounceVertical = false
+        Cache.tableview.alwaysBounceHorizontal = false
+        Cache.tableview.backgroundColor = backgroundColor
+        Cache.tableview.frame = bounds
+        addSubview(Cache.tableview)
+        Cache.tableview.reloadData()
     }
     
     
@@ -143,8 +147,8 @@ import UIKit
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if _listItems != nil {
-            return (_listItems?.count)!
+        if Cache.listItems != nil {
+            return (Cache.listItems?.count)!
         }
         return 0
     }
@@ -152,10 +156,10 @@ import UIKit
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell.init(style: .default, reuseIdentifier: "cell")
         cell.isUserInteractionEnabled = true
-        cell.textLabel?.text = _listItems?[indexPath.row]
-        cell.textLabel?.textColor = _textColor
-        cell.textLabel?.font = _font
-        cell.backgroundColor = self.backgroundColor
+        cell.textLabel?.text = Cache.listItems?[indexPath.row]
+        cell.textLabel?.textColor = Cache.textColor
+        cell.textLabel?.font = Cache.font
+        cell.backgroundColor = backgroundColor
         return cell
     }
     

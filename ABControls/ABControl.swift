@@ -9,13 +9,16 @@
 import UIKit
 
 @IBDesignable public class ABControl: UIView {
-    private var _textColor : UIColor = UIColor.black
+    
+    private struct Cache {
+        static var textColor : UIColor = UIColor.black
+    }
 
     
     /// Sets the textcolor for text and the dropdown arrow
     @IBInspectable public var textColor : UIColor {
         didSet{
-            _textColor = textColor
+            Cache.textColor = textColor
             for view in subviews {
                 if view is UILabel {
                     (view as! UILabel).textColor = textColor
@@ -30,14 +33,14 @@ import UIKit
     
     /// required for dev time
     required override public init(frame: CGRect) {
-        textColor = _textColor
+        textColor = Cache.textColor
         super.init(frame:  frame)
     }
     
     
     /// require for runtime
     required public init?(coder aDecoder: NSCoder) {
-        textColor = _textColor
+        textColor = Cache.textColor
         super.init(coder: aDecoder)
         #if !TARGET_INTERFACE_BUILDER
         sharedInit()
@@ -50,7 +53,7 @@ import UIKit
     
     private func sharedInit() {
         backgroundColor = super.backgroundColor
-        textColor = _textColor
+        textColor = Cache.textColor
     }
     
 }
