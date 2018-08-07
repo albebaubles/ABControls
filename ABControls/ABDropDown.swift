@@ -142,6 +142,8 @@ import UIKit
                                  width: _frame.width,
                                  height: dropdownHeight)
         }
+        self.layer.borderColor = UIColor.black.cgColor
+        self.layer.borderWidth = 0.5
         setNeedsLayout()
         
     }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-@objc @IBDesignable public class ABListBox: UIView, UITableViewDelegate, UITableViewDataSource {
+@objc @IBDesignable public class ABListBox: ABControl, UITableViewDelegate, UITableViewDataSource {
     private var _frame : CGRect = CGRect.init()
     private var _listItems: [String]?
     private var _selected : Int = NSNotFound
@@ -21,17 +21,9 @@ import UIKit
     @objc  public static var ABListBoxDidChangeIndex : String = "ABListBoxDidChangeIndex"
 
     /// Sets the textcolor for text and the dropdown arrow
-    @IBInspectable public var textColor : UIColor {
+    @IBInspectable public override var textColor : UIColor {
         didSet{
             _textColor = textColor
-            for view in subviews {
-                if view is UILabel {
-                    (view as! UILabel).textColor = textColor
-                } else if view is UIButton {
-                    (view as! UIButton).tintColor = textColor
-                    (view as! UIButton).titleLabel?.textColor = textColor
-                }
-            }
             _tableview.reloadData()
             setNeedsDisplay()
         }
@@ -95,15 +87,13 @@ import UIKit
     
     
     /// required for dev time
-    required override public init(frame: CGRect) {
+    required  public init(frame: CGRect) {
         _frame = frame
-        self.textColor = UIColor.black
         super.init(frame:   frame)
     }
     
     /// require for runtime
     required public init?(coder aDecoder: NSCoder) {
-        self.textColor = UIColor.black
         super.init(coder: aDecoder)
         
         #if !TARGET_INTERFACE_BUILDER
