@@ -9,58 +9,38 @@
 import UIKit
 
 @objc @IBDesignable public class ABCheckBox: UIView {
-    
-    /// Cache
-    private struct Cache {
-        static var isChecked : Bool = false
-        static var button : UIButton = UIButton.init(type: .system)
-    }
+    private var _isChecked : Bool = false
+    private var _button : UIButton = UIButton.init(type: .system)
     
     /// Notifications
     //[Name of associated class] + [Did | Will] + [UniquePartOfName] + Notification
     // ABCheckBoxDidChange
-    @objc  public static var ABCheckBoxDidChange : String = "ABCheckBoxDidChange"
+    @objc  public static let ABCheckBoxDidChange : String = "ABCheckBoxDidChange"
     
 
-    @IBInspectable  public var isChecked : Bool = false {
+    @IBInspectable public var isChecked : Bool = false {
         didSet {
-            Cache.isChecked = isChecked
-            Cache.button.setImage(Cache.isChecked ?  ABControlsStyleKit.imageOfCheckedBox :  ABControlsStyleKit.imageOfUncheckedBox , for: .normal)
+            _isChecked = isChecked
+                _button.setImage( _isChecked ? ABControlsStyleKit.imageOfCheckedBox :
+                    ABControlsStyleKit.imageOfUncheckedBox, for: .normal)
             setNeedsDisplay()
-            NotificationCenter.default.post(name: NSNotification.Name(  ABCheckBox.ABCheckBoxDidChange), object: Cache.isChecked)
+            NotificationCenter.default.post(name: NSNotification.Name(  ABCheckBox.ABCheckBoxDidChange), object: _isChecked)
         }
     }
     
+
     
-    /// Sets the textcolor for text and the dropdown arrow
-    @IBInspectable public var color : UIColor {
-        didSet{
-            for view in subviews {
-                if view is UILabel {
-                    (view as! UILabel).textColor = color
-                } else if view is UIButton {
-                    (view as! UIButton).tintColor = color
-                    (view as! UIButton).titleLabel?.textColor = color
-                }
-            }
-            setNeedsDisplay()
-        }
-    }
-    
-    
+    /// Fires when the on/off value ofthe checkbox changes
     @objc private func checkboxChanged() {
-        Cache.isChecked = !Cache.isChecked
-        isChecked = Cache.isChecked
-        Cache.button.setImage(Cache.isChecked ?  ABControlsStyleKit.imageOfCheckedBox :  ABControlsStyleKit.imageOfUncheckedBox , for: .normal)
+        self.isChecked = !self.isChecked
         setNeedsDisplay()
         
-        NotificationCenter.default.post(name: NSNotification.Name(  ABCheckBox.ABCheckBoxDidChange), object: Cache.isChecked)
+        NotificationCenter.default.post(name: NSNotification.Name(  ABCheckBox.ABCheckBoxDidChange), object: _isChecked)
     }
     
     
     /// required for dev time
     required override public init(frame: CGRect) {
-        self.color = UIColor.black
         super.init(frame:  frame)
         invalidateIntrinsicContentSize()
     }
@@ -68,28 +48,32 @@ import UIKit
     
     /// require for runtime
     required public init?(coder aDecoder: NSCoder) {
-        self.color = UIColor.black
         super.init(coder: aDecoder)
+
+        #if !TARGET_INTERFACE_BUILDER
         sharedInit()
+        #endif
     }
     
     override public func prepareForInterfaceBuilder() {
-        super.prepareForInterfaceBuilder()
         sharedInit()
+        _button.layer.borderColor = UIColor.black.cgColor
+        _button.layer.borderWidth = 0.5
+        self.isChecked = _isChecked
     }
     
     private func sharedInit() {
         autoresizingMask = .init(rawValue: 0)
-        if Cache.button.image(for: .normal) == nil {
+//        if _button.image(for: .normal) == nil {
             setupCheckbox()
-        }
+//        }
     }
     
     private func setupCheckbox() {
-        Cache.button.frame = bounds
-        Cache.button.setImage(ABControlsStyleKit.imageOfUncheckedBox , for: .normal)
-        Cache.button.addTarget(self, action: #selector(checkboxChanged), for: .touchUpInside)
-        Cache.button.backgroundColor = backgroundColor
-        addSubview(Cache.button)
+        _button.frame = bounds
+        _button.setImage(ABControlsStyleKit.imageOfUncheckedBox , for: .normal)
+        _button.addTarget(self, action: #selector(checkboxChanged), for: .touchUpInside)
+        _button.backgroundColor = backgroundColor
+        addSubview(_button)
     }
 }

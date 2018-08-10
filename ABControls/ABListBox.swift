@@ -8,93 +8,85 @@
 
 import UIKit
 
-@objc @IBDesignable public class ABListBox: ABControl, UITableViewDelegate, UITableViewDataSource {
-    
-    /// Cache
-    private struct Cache {
-     static   var frame : CGRect = CGRect.init()
-     static   var listItems: [String]?
-     static   var selected : Int = NSNotFound
-     static   var textColor : UIColor = UIColor.black
-     static   var font : UIFont = UIFont.systemFont(ofSize: 14)
-     static   var tableview: UITableView! = UITableView.init()
-    }
+@objc @IBDesignable public class ABListBox: ABTextualControl, UITableViewDelegate, UITableViewDataSource {
+    private var _frame : CGRect = CGRect.init()
+    private var _listItems: [String]?
+    private var _selected : Int = NSNotFound
+    private var _font : UIFont = UIFont.systemFont(ofSize: 14)
+    private var _tableview: UITableView! = UITableView.init()
     
     
     /// Notifications
-    @objc  public static var ABListBoxDidChangeIndex : String = "ABListBoxDidChangeIndex"
+    @objc  public static let ABListBoxDidChangeIndex : String = "ABListBoxDidChangeIndex"
     
     /// Sets the textcolor for text and the dropdown arrow
-    @IBInspectable public override var textColor : UIColor {
+    override public var textColor : UIColor {
         didSet{
-            Cache.textColor = textColor
-            Cache.tableview.reloadData()
-            setNeedsDisplay()
+            super.textColor = textColor
+            _tableview.reloadData()
         }
     }
+    
+    override var cornerRadius : CGFloat{
+        didSet {
+            super.cornerRadius = cornerRadius
+            _tableview.layer.cornerRadius = cornerRadius
+        }
+    }
+    
     
     /**
      The list of items to be displayed in the combobox seperated by \n (command-enter)
      */
     @IBInspectable  public var items : String = "" {
         didSet{
-            Cache.listItems = items.components(separatedBy: "\n")
-            updateListItems(items: Cache.listItems!)
-            setNeedsDisplay()
+            _listItems = items.components(separatedBy: "\n")
+            _tableview.reloadData()
         }
     }
     
     /// The currently selected index
     @IBInspectable  public var index : Int = NSNotFound {
         didSet{
-            Cache.selected = index
+            _selected = index
             #if !TARGET_INTERFACE_BUILDER
-            Cache.tableview.selectRow(at: IndexPath.init(row: Cache.selected, section: 0), animated: false, scrollPosition: .middle)
-            NotificationCenter.default.post(name: NSNotification.Name(  ABListBox.ABListBoxDidChangeIndex), object: Cache.selected)
+            _tableview.selectRow(at: IndexPath.init(row: _selected, section: 0), animated: false, scrollPosition: .middle)
+            NotificationCenter.default.post(name: NSNotification.Name(  ABListBox.ABListBoxDidChangeIndex), object: _selected)
             #endif
-            setNeedsDisplay()
         }
     }
     
     /// Sets the font, default is system font at 14pt
     @IBInspectable  public var font : UIFont = UIFont.systemFont(ofSize: 14) {
         didSet {
-            Cache.font =  font
+            _font =  font
             for view in subviews {
                 if view is UILabel {
-                    (view as! UILabel).font = Cache.font
+                    (view as! UILabel).font = _font
                 } else if view is UIButton {
-                    (view as! UIButton).titleLabel?.font = Cache.font
+                    (view as! UIButton).titleLabel?.font = _font
                 }
             }
-            setNeedsDisplay()
         }
     }
     
     
     /// the current text being displayed based on the index
     public func text() -> String {
-        if Cache.selected != NSNotFound {
-            return Cache.listItems![Cache.selected]
+        if _selected != NSNotFound {
+            return _listItems![_selected]
         }
         return ""
     }
     
     
     
-    private func updateListItems(items: Array<String>) {
-        #if !TARGET_INTERFACE_BUILDER
-        Cache.tableview.reloadData()
-        #endif
-    }
-    
-    
-    
     /// required for dev time
     required  public init(frame: CGRect) {
-        Cache.frame = frame
+        _frame = frame
         super.init(frame:   frame)
     }
+    
     
     /// require for runtime
     required public init?(coder aDecoder: NSCoder) {
@@ -106,37 +98,52 @@ import UIKit
         
     }
     
+    
     override public func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         sharedInit()
+        _tableview.selectRow(at: IndexPath.init(row: self.index, section: 0), animated: false, scrollPosition: .top)
+        if items.count == 0 {
+        let label = UILabel.init(frame: bounds.insetBy(dx: 20, dy: 20))
+        label.textAlignment = .center
+        label.textColor = UIColor.lightGray
+        label.text = "ABListBox"
+        addSubview(label)
+        }
     }
     
+    
     private func sharedInit() {
-        //        autoresizingMask = .init(rawValue: 0)
+        autoresizingMask = .init(rawValue: 0)
         
         // setup the ui controls
-        Cache.frame = frame
+        _frame = frame
+        layer.masksToBounds = true
+        layer.borderWidth = 0.5
+        layer.borderColor = UIColor.black.cgColor
         setupTableview()
+        _tableview.reloadData()
+
     }
     
     
     
     
     private func setupTableview() {
-        Cache.tableview.dataSource = self
-        Cache.tableview.delegate = self
-        Cache.tableview.isHidden = false
-        Cache.tableview.indicatorStyle = .default
-        Cache.tableview.isUserInteractionEnabled = true
-        Cache.tableview.flashScrollIndicators()
-        Cache.tableview.rowHeight = 25
-        Cache.tableview.bounces = false
-        Cache.tableview.alwaysBounceVertical = false
-        Cache.tableview.alwaysBounceHorizontal = false
-        Cache.tableview.backgroundColor = backgroundColor
-        Cache.tableview.frame = bounds
-        addSubview(Cache.tableview)
-        Cache.tableview.reloadData()
+        _tableview.autoresizingMask = .init(rawValue: 0)
+        _tableview.dataSource = self
+        _tableview.delegate = self
+        _tableview.isHidden = false
+        _tableview.indicatorStyle = .default
+        _tableview.isUserInteractionEnabled = true
+        _tableview.flashScrollIndicators()
+        _tableview.rowHeight = 25
+        _tableview.bounces = false
+        _tableview.alwaysBounceVertical = false
+        _tableview.alwaysBounceHorizontal = false
+        _tableview.backgroundColor = self.backgroundColor
+        _tableview.frame = bounds
+        addSubview(_tableview)
     }
     
     
@@ -147,8 +154,8 @@ import UIKit
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if Cache.listItems != nil {
-            return (Cache.listItems?.count)!
+        if _listItems != nil {
+            return (_listItems?.count)!
         }
         return 0
     }
@@ -156,12 +163,13 @@ import UIKit
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell.init(style: .default, reuseIdentifier: "cell")
         cell.isUserInteractionEnabled = true
-        cell.textLabel?.text = Cache.listItems?[indexPath.row]
-        cell.textLabel?.textColor = Cache.textColor
-        cell.textLabel?.font = Cache.font
-        cell.backgroundColor = backgroundColor
+        cell.textLabel?.text = _listItems?[indexPath.row]
+        cell.textLabel?.textColor = textColor
+        cell.textLabel?.font = _font
+        cell.backgroundColor = self.backgroundColor
         return cell
     }
+    
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         index = indexPath.row

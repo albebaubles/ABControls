@@ -1,3 +1,4 @@
+
 //
 //  ABTouchDraw.swift
 //  ABControls
@@ -5,7 +6,6 @@
 //  Created by Alan Corbett on 8/5/18.
 //  Copyright © 2018 AlbeBaubles LLC. All rights reserved.
 //
-
 import UIKit
 
 @objc @IBDesignable public class  ABTouchDraw : ABControl {
@@ -15,7 +15,7 @@ import UIKit
     }
     
     /// Notifications
-    @objc  public static var ABSignatureCaptureDidDrawSignature : String = "ABSignatureCaptureDidDrawSignature"
+    @objc  public static let ABSignatureCaptureDidDrawSignature : String = "ABSignatureCaptureDidDrawSignature"
     
     
     // Only override draw() if you perform custom drawing.
@@ -24,9 +24,9 @@ import UIKit
         super.draw(rect)
         UIColor.blue.setStroke()
         Cache.drawingPaths.stroke()
-        layer.cornerRadius = 5
         layer.borderWidth = 1
         layer.borderColor = UIColor.black.cgColor
+        layer.cornerRadius = super.cornerRadius
     }
     
     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -39,7 +39,6 @@ import UIKit
         Cache.drawingPaths.addLine(to: (touches.first?.location(in: self))!)
         setNeedsDisplay()
     }
-    
     
     override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         setNeedsDisplay()
@@ -69,5 +68,14 @@ import UIKit
         setNeedsDisplay()
     }
     
+    override public func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        layer.cornerRadius = super.cornerRadius
+        
+        let label = UILabel.init(frame: bounds.insetBy(dx: 20, dy: 20))
+        label.textAlignment = .center
+        label.textColor = UIColor.lightGray
+        label.text = "ABTouchDraw"
+        addSubview(label)
+    }
 }
-
