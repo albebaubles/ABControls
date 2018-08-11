@@ -20,6 +20,7 @@
 		B4720EA9211776D5001DBBF2 /* ABTouchDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4720EA8211776D5001DBBF2 /* ABTouchDraw.swift */; };
 		B4720EAB211776E9001DBBF2 /* ABVoiceRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4720EAA211776E9001DBBF2 /* ABVoiceRecorder.swift */; };
 		B4720EAD21177712001DBBF2 /* ABVideoRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4720EAC21177712001DBBF2 /* ABVideoRecorder.swift */; };
+		B48AFCF7211F6F680067BA86 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = B48AFCF6211F6F680067BA86 /* LICENSE.md */; };
 		B4ACB3FB211B697900140837 /* ABTextualControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ACB3FA211B697900140837 /* ABTextualControl.swift */; };
 		B4DA3C9121164A39006B1AB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DA3C9021164A39006B1AB2 /* UIKit.framework */; };
 		B4DA3C9A21164CB9006B1AB2 /* ABControls.h in Headers */ = {isa = PBXBuildFile; fileRef = B4DA3C9921164CB9006B1AB2 /* ABControls.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -41,6 +42,7 @@
 		B4720EA8211776D5001DBBF2 /* ABTouchDraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABTouchDraw.swift; sourceTree = "<group>"; };
 		B4720EAA211776E9001DBBF2 /* ABVoiceRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABVoiceRecorder.swift; sourceTree = "<group>"; };
 		B4720EAC21177712001DBBF2 /* ABVideoRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABVideoRecorder.swift; sourceTree = "<group>"; };
+		B48AFCF6211F6F680067BA86 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		B4ACB3FA211B697900140837 /* ABTextualControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABTextualControl.swift; sourceTree = "<group>"; };
 		B4DA3C9021164A39006B1AB2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B4DA3C9921164CB9006B1AB2 /* ABControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABControls.h; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				B4720EAC21177712001DBBF2 /* ABVideoRecorder.swift */,
 				B4720EAA211776E9001DBBF2 /* ABVoiceRecorder.swift */,
 				B4FEDD052116419200223E77 /* Info.plist */,
+				B48AFCF6211F6F680067BA86 /* LICENSE.md */,
 			);
 			path = ABControls;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B48AFCF7211F6F680067BA86 /* LICENSE.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

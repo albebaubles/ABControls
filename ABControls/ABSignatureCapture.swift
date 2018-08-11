@@ -8,6 +8,10 @@
 
 import UIKit
 
+@objc protocol ABSignatureCaptureDelegate : class {
+    @objc optional func didAcceptSignature()
+}
+
 
 /// Control for capturing a signature
 @objc @IBDesignable public class  ABSignatureCapture: ABControl {
