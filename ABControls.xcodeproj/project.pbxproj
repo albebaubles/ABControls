@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B44974072119016900F3553F /* ABBarcodeScanner.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4FAE12321176773008707E7 /* ABBarcodeScanner.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		B44974082119016900F3553F /* ABImagePicker.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4FAE1252117678C008707E7 /* ABImagePicker.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		B44974082119016900F3553F /* ABImageViewer.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4FAE1252117678C008707E7 /* ABImageViewer.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		B44974092119016900F3553F /* ABListBox.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4FAE12121176759008707E7 /* ABListBox.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		B449740A2119016900F3553F /* ABSignatureCapture.swift in Headers */ = {isa = PBXBuildFile; fileRef = B459874B2117CC7E00519520 /* ABSignatureCapture.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		B449740B2119016900F3553F /* ABTouchDraw.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4720EA8211776D5001DBBF2 /* ABTouchDraw.swift */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -25,7 +25,7 @@
 		B4DA3C9A21164CB9006B1AB2 /* ABControls.h in Headers */ = {isa = PBXBuildFile; fileRef = B4DA3C9921164CB9006B1AB2 /* ABControls.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B4FAE12221176759008707E7 /* ABListBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FAE12121176759008707E7 /* ABListBox.swift */; };
 		B4FAE12421176773008707E7 /* ABBarcodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FAE12321176773008707E7 /* ABBarcodeScanner.swift */; };
-		B4FAE1262117678C008707E7 /* ABImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FAE1252117678C008707E7 /* ABImagePicker.swift */; };
+		B4FAE1262117678C008707E7 /* ABImageViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FAE1252117678C008707E7 /* ABImageViewer.swift */; };
 		B4FEDD20211641A100223E77 /* ABCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FEDCE8211620DD00223E77 /* ABCheckBox.swift */; };
 		B4FEDD22211641A500223E77 /* ABControlsStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FC45602114EBC8006B8A15 /* ABControlsStyleKit.swift */; };
 		B4FEDD23211641A900223E77 /* ABDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46D4E542114C07600A58C71 /* ABDropDown.swift */; };
@@ -46,7 +46,7 @@
 		B4DA3C9921164CB9006B1AB2 /* ABControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABControls.h; sourceTree = "<group>"; };
 		B4FAE12121176759008707E7 /* ABListBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListBox.swift; sourceTree = "<group>"; };
 		B4FAE12321176773008707E7 /* ABBarcodeScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABBarcodeScanner.swift; sourceTree = "<group>"; };
-		B4FAE1252117678C008707E7 /* ABImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABImagePicker.swift; sourceTree = "<group>"; };
+		B4FAE1252117678C008707E7 /* ABImageViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABImageViewer.swift; sourceTree = "<group>"; };
 		B4FC45602114EBC8006B8A15 /* ABControlsStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABControlsStyleKit.swift; sourceTree = "<group>"; };
 		B4FEDCE8211620DD00223E77 /* ABCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABCheckBox.swift; sourceTree = "<group>"; };
 		B4FEDD022116419200223E77 /* ABControls.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ABControls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,7 +91,7 @@
 				B4DA3C9921164CB9006B1AB2 /* ABControls.h */,
 				B4FC45602114EBC8006B8A15 /* ABControlsStyleKit.swift */,
 				B46D4E542114C07600A58C71 /* ABDropDown.swift */,
-				B4FAE1252117678C008707E7 /* ABImagePicker.swift */,
+				B4FAE1252117678C008707E7 /* ABImageViewer.swift */,
 				B4FAE12121176759008707E7 /* ABListBox.swift */,
 				B459874B2117CC7E00519520 /* ABSignatureCapture.swift */,
 				B4ACB3FA211B697900140837 /* ABTextualControl.swift */,
@@ -123,7 +123,7 @@
 				B4FEDD6A2116487C00223E77 /* ABCheckBox.swift in Headers */,
 				B4FEDD6C2116487C00223E77 /* ABControlsStyleKit.swift in Headers */,
 				B4FEDD6D2116487C00223E77 /* ABDropDown.swift in Headers */,
-				B44974082119016900F3553F /* ABImagePicker.swift in Headers */,
+				B44974082119016900F3553F /* ABImageViewer.swift in Headers */,
 				B44974092119016900F3553F /* ABListBox.swift in Headers */,
 				B449740A2119016900F3553F /* ABSignatureCapture.swift in Headers */,
 				B449740B2119016900F3553F /* ABTouchDraw.swift in Headers */,
@@ -209,7 +209,7 @@
 				B4FEDD23211641A900223E77 /* ABDropDown.swift in Sources */,
 				B4FEDD22211641A500223E77 /* ABControlsStyleKit.swift in Sources */,
 				B4720EAD21177712001DBBF2 /* ABVideoRecorder.swift in Sources */,
-				B4FAE1262117678C008707E7 /* ABImagePicker.swift in Sources */,
+				B4FAE1262117678C008707E7 /* ABImageViewer.swift in Sources */,
 				B4ACB3FB211B697900140837 /* ABTextualControl.swift in Sources */,
 				B4FAE12421176773008707E7 /* ABBarcodeScanner.swift in Sources */,
 				B4720EA9211776D5001DBBF2 /* ABTouchDraw.swift in Sources */,
@@ -337,7 +337,7 @@
 		B4FEDD1A2116419300223E77 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;

@@ -8,8 +8,16 @@
 
 import UIKit
 
-@objc @IBDesignable public class ABCheckBox: UIView {
-    private var _isChecked : Bool = false
+@objc protocol ABCheckBoxDelegate : class {
+    
+    /// Fires anytime the checkbox is checked or unchecked
+    ///
+    /// - Parameter checked: true if checked
+    @objc optional func didChangeCheckboxSelection(_ checked : Bool)
+}
+
+@objc @IBDesignable public class ABCheckBox: ABControl {
+    private weak var _delegate : ABCheckBoxDelegate?
     private var _button : UIButton = UIButton.init(type: .system)
     
     /// Notifications
@@ -20,11 +28,14 @@ import UIKit
 
     @IBInspectable public var isChecked : Bool = false {
         didSet {
-            _isChecked = isChecked
-                _button.setImage( _isChecked ? ABControlsStyleKit.imageOfCheckedBox :
+                _button.setImage( isChecked ? ABControlsStyleKit.imageOfCheckedBox :
                     ABControlsStyleKit.imageOfUncheckedBox, for: .normal)
             setNeedsDisplay()
-            NotificationCenter.default.post(name: NSNotification.Name(  ABCheckBox.ABCheckBoxDidChange), object: _isChecked)
+            #if !TARGET_INTERFACE_BUILDER
+
+            NotificationCenter.default.post(name: NSNotification.Name(  ABCheckBox.ABCheckBoxDidChange), object: isChecked)
+            _delegate?.didChangeCheckboxSelection!(isChecked)
+            #endif
         }
     }
     
@@ -35,12 +46,11 @@ import UIKit
         self.isChecked = !self.isChecked
         setNeedsDisplay()
         
-        NotificationCenter.default.post(name: NSNotification.Name(  ABCheckBox.ABCheckBoxDidChange), object: _isChecked)
     }
     
     
     /// required for dev time
-    required override public init(frame: CGRect) {
+    required  public init(frame: CGRect) {
         super.init(frame:  frame)
         invalidateIntrinsicContentSize()
     }
@@ -56,17 +66,15 @@ import UIKit
     }
     
     override public func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
         sharedInit()
         _button.layer.borderColor = UIColor.black.cgColor
         _button.layer.borderWidth = 0.5
-        self.isChecked = _isChecked
     }
     
     private func sharedInit() {
         autoresizingMask = .init(rawValue: 0)
-//        if _button.image(for: .normal) == nil {
             setupCheckbox()
-//        }
     }
     
     private func setupCheckbox() {

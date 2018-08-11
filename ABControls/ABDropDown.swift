@@ -25,8 +25,6 @@ import UIKit
 
 /// Provides a dropdown list as a replacement for a UIPickerView.  If the dropdown cannot display without falling off the window, it will popUP
 /// - Attention: fires notification 'ABDropDownDidChangeIndex' which returns the selected index
-
-
 @objc @IBDesignable public class ABDropDown: ABTextualControl, UITableViewDelegate, UITableViewDataSource {
     private weak var _delegate : ABDropDownDelegate?
     private var _frame : CGRect = CGRect.init()
@@ -68,6 +66,11 @@ import UIKit
     
     /// The currently selected index
     @IBInspectable  public var index : Int = 0 {
+        willSet (newIndex) {
+            if newIndex < 0 || newIndex > (ABDropDown._listItems?.count)! || newIndex == NSNotFound {
+                return
+            }
+        }
         didSet{
             if index < (ABDropDown._listItems?.count)! && index >= 0 {
                 _selected = index
@@ -194,14 +197,6 @@ import UIKit
         if ABDropDown._listItems != nil && ABDropDown._listItems!.count > 0 && self.index != NSNotFound {
             _label.text = ABDropDown._listItems![self.index]
         }
-        
-        if items.count == 0 {
-            let label = UILabel.init(frame: bounds.insetBy(dx: 20, dy: 20))
-            label.textAlignment = .center
-            label.textColor = UIColor.lightGray
-            label.text = "ABDropDown"
-            addSubview(label)
-        }
     }
     
     private func sharedInit() {
@@ -283,8 +278,3 @@ import UIKit
     }
 }
 
-
-/*
- 
- 
- */

@@ -8,7 +8,16 @@
 
 import UIKit
 
+@objc protocol ABListBoxDelegate : class {
+    
+    /// Fires when the listbox selection has changed
+    ///
+    /// - Parameter index: index of the selected item
+    @objc optional func didChangeListBoxIndex(_ index : Int)
+}
+
 @objc @IBDesignable public class ABListBox: ABTextualControl, UITableViewDelegate, UITableViewDataSource {
+    private weak var _delegate : ABListBoxDelegate?
     private var _frame : CGRect = CGRect.init()
     private var _listItems: [String]?
     private var _selected : Int = NSNotFound
@@ -47,11 +56,17 @@ import UIKit
     
     /// The currently selected index
     @IBInspectable  public var index : Int = NSNotFound {
+        willSet {
+            if index < 0 || index > (_listItems?.count)! {
+                return
+            }
+        }
         didSet{
             _selected = index
             #if !TARGET_INTERFACE_BUILDER
             _tableview.selectRow(at: IndexPath.init(row: _selected, section: 0), animated: false, scrollPosition: .middle)
             NotificationCenter.default.post(name: NSNotification.Name(  ABListBox.ABListBoxDidChangeIndex), object: _selected)
+            _delegate?.didChangeListBoxIndex!(index)
             #endif
         }
     }

@@ -66,8 +66,11 @@ import UIKit
     
     override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         let s = self.signature().base64EncodedString(options: NSData.Base64EncodingOptions.endLineWithLineFeed)
+        #if !TARGET_INTERFACE_BUILDER
+
         NotificationCenter.default.post(name: Notification.Name(ABSignatureCapture.ABSignatureCaptureDidDrawSignature),
                                         object:s)
+        #endif
     }
     
     
