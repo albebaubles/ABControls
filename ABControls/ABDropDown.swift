@@ -64,13 +64,9 @@ import UIKit
         }
     }
     
+    
     /// The currently selected index
     @IBInspectable  public var index : Int = 0 {
-        willSet (newIndex) {
-            if newIndex < 0 || newIndex > (ABDropDown._listItems?.count)! || newIndex == NSNotFound {
-                return
-            }
-        }
         didSet{
             if index < (ABDropDown._listItems?.count)! && index >= 0 {
                 _selected = index
@@ -88,10 +84,11 @@ import UIKit
                 }
                 setNeedsDisplay()
             } else {
-                self.index = 0
+                self.index = oldValue
             }
         }
     }
+    
     
     /// Sets the font, default is system font at 14pt
     @IBInspectable  public var font : UIFont = UIFont.systemFont(ofSize: 14) {

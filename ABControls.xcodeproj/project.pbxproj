@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B43C887B211FAA9900A079F0 /* ABPotentiometerRadial.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43C887A211FAA9900A079F0 /* ABPotentiometerRadial.swift */; };
+		B43C887D211FAAAF00A079F0 /* ABPotentiometerLinear.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43C887C211FAAAF00A079F0 /* ABPotentiometerLinear.swift */; };
 		B44974072119016900F3553F /* ABBarcodeScanner.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4FAE12321176773008707E7 /* ABBarcodeScanner.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		B44974082119016900F3553F /* ABImageViewer.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4FAE1252117678C008707E7 /* ABImageViewer.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		B44974092119016900F3553F /* ABListBox.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4FAE12121176759008707E7 /* ABListBox.swift */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -36,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B43C887A211FAA9900A079F0 /* ABPotentiometerRadial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABPotentiometerRadial.swift; sourceTree = "<group>"; };
+		B43C887C211FAAAF00A079F0 /* ABPotentiometerLinear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABPotentiometerLinear.swift; sourceTree = "<group>"; };
 		B459874B2117CC7E00519520 /* ABSignatureCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABSignatureCapture.swift; sourceTree = "<group>"; };
 		B459874D2117D19400519520 /* ABControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABControl.swift; sourceTree = "<group>"; };
 		B46D4E542114C07600A58C71 /* ABDropDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABDropDown.swift; sourceTree = "<group>"; };
@@ -94,7 +98,9 @@
 				B4FC45602114EBC8006B8A15 /* ABControlsStyleKit.swift */,
 				B46D4E542114C07600A58C71 /* ABDropDown.swift */,
 				B4FAE1252117678C008707E7 /* ABImageViewer.swift */,
+				B43C887C211FAAAF00A079F0 /* ABPotentiometerLinear.swift */,
 				B4FAE12121176759008707E7 /* ABListBox.swift */,
+				B43C887A211FAA9900A079F0 /* ABPotentiometerRadial.swift */,
 				B459874B2117CC7E00519520 /* ABSignatureCapture.swift */,
 				B4ACB3FA211B697900140837 /* ABTextualControl.swift */,
 				B4720EA8211776D5001DBBF2 /* ABTouchDraw.swift */,
@@ -211,6 +217,7 @@
 				B459874E2117D19400519520 /* ABControl.swift in Sources */,
 				B4FAE12221176759008707E7 /* ABListBox.swift in Sources */,
 				B4FEDD23211641A900223E77 /* ABDropDown.swift in Sources */,
+				B43C887D211FAAAF00A079F0 /* ABPotentiometerLinear.swift in Sources */,
 				B4FEDD22211641A500223E77 /* ABControlsStyleKit.swift in Sources */,
 				B4720EAD21177712001DBBF2 /* ABVideoRecorder.swift in Sources */,
 				B4FAE1262117678C008707E7 /* ABImageViewer.swift in Sources */,
@@ -218,6 +225,7 @@
 				B4FAE12421176773008707E7 /* ABBarcodeScanner.swift in Sources */,
 				B4720EA9211776D5001DBBF2 /* ABTouchDraw.swift in Sources */,
 				B4720EAB211776E9001DBBF2 /* ABVoiceRecorder.swift in Sources */,
+				B43C887B211FAA9900A079F0 /* ABPotentiometerRadial.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
