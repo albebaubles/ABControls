@@ -88,7 +88,7 @@ barcodeScanner.delegate = self
     NSLog("code value \(code.data)")<br />
     NSLog("code type \(code.type)")<br />
     let barcodeImage = code.image()<br />
-}
+}<br />
 
 
 </code>

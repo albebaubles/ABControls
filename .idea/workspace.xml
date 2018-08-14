@@ -23,47 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="897abc6c-0fc4-43b9-a3cc-6d3e62b40fe6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ABControls.xcodeproj/xcuserdata/acorbett.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ABControls.xcodeproj/xcuserdata/acorbett.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ABControls/ABBarcodeScanner.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ABControls/ABBarcodeScanner.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ABControls/ABImageViewer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ABControls/ABImageViewer.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Classes.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Classes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Classes/ABBarCode.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Classes/ABBarCode.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Classes/ABBarcodeScanner.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Classes/ABBarcodeScanner.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Classes/ABCheckBox.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Classes/ABCheckBox.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Classes/ABControl.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Classes/ABControl.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Classes/ABControlsStyleKit.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Classes/ABControlsStyleKit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Classes/ABControlsStyleKit/ResizingBehavior.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Classes/ABControlsStyleKit/ResizingBehavior.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Classes/ABDropDown.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Classes/ABDropDown.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Classes/ABImageViewer.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Classes/ABImageViewer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Classes/ABImageViewer/LightMode.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Classes/ABImageViewer/LightMode.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Classes/ABListBox.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Classes/ABListBox.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Classes/ABSignatureCapture.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Classes/ABSignatureCapture.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Classes/ABTextualControl.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Classes/ABTextualControl.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Classes/ABTouchDraw.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Classes/ABTouchDraw.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/badge.svg" beforeDir="false" afterPath="$PROJECT_DIR$/docs/badge.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/ABBarCode.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/ABBarCode.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/ABBarcodeScanner.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/ABBarcodeScanner.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/ABCheckBox.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/ABCheckBox.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/ABControl.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/ABControl.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/ABControlsStyleKit.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/ABControlsStyleKit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/ABControlsStyleKit/ResizingBehavior.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/ABControlsStyleKit/ResizingBehavior.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/ABDropDown.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/ABDropDown.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/ABImageViewer.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/ABImageViewer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/ABImageViewer/LightMode.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/ABImageViewer/LightMode.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/ABListBox.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/ABListBox.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/ABSignatureCapture.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/ABSignatureCapture.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/ABTextualControl.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/ABTextualControl.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/ABTouchDraw.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/ABTouchDraw.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/search.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/search.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/docSet.dsidx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/docSet.dsidx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.tgz" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.tgz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/search.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/search.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/undocumented.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/undocumented.json" afterDir="false" />
     </list>
     <ignored path="$USER_HOME$/Library/Developer/Xcode/DerivedData/ABControls-hjirvxksxkqyscbmvpxkodwhhlif/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -87,14 +47,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="md" value="1071" />
+          <entry key="md" value="1080" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open" />
       <usages-collector id="statistics.file.types.open" />
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="1071" />
+          <entry key="Markdown" value="1080" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.cidr.testingFrameworks.usages" />
@@ -122,8 +82,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="542">
-                <caret line="54" column="49" lean-forward="true" selection-start-line="54" selection-start-column="49" selection-end-line="54" selection-end-column="49" />
+              <first_editor relative-caret-position="1122">
+                <caret line="90" column="7" selection-start-line="90" selection-start-column="7" selection-end-line="90" selection-end-column="7" />
               </first_editor>
               <second_editor />
             </state>
@@ -222,12 +182,12 @@
       <workItem from="1533931229759" duration="200000" />
       <workItem from="1534262468579" duration="319000" />
       <workItem from="1534276723244" duration="67000" />
-      <workItem from="1534276834759" duration="1940000" />
+      <workItem from="1534276834759" duration="2122000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2526000" />
+    <option name="totallyTimeSpent" value="2708000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="909" y="442" width="2230" height="1501" extended-state="0" />
@@ -279,8 +239,8 @@
       <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="542">
-            <caret line="54" column="49" lean-forward="true" selection-start-line="54" selection-start-column="49" selection-end-line="54" selection-end-column="49" />
+          <first_editor relative-caret-position="1122">
+            <caret line="90" column="7" selection-start-line="90" selection-start-column="7" selection-end-line="90" selection-end-column="7" />
           </first_editor>
           <second_editor />
         </state>
