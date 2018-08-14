@@ -1,4 +1,7 @@
 # ABControls
+
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
 The ABControls project's purpose is to provide various iOS controls within a reusable framework.
 
 In the decade I've been writing iOS apps for clients I've written dozens of custom UI elements - from special labels to
@@ -8,8 +11,6 @@ to learn how to create their own controls.
 
 ----------
 All of the controls support @IBDesignable and @IBInspectable - so they will render within InterfaceBuilder.  All objects inherit from UIView.    To use, simply drop a UIView on your viewcontroller.view in IB, change the  owner to ABControls and the class to the type of ABControl you'd like to use
-
-
 
 Current List of Implemented Controls:
 
@@ -28,5 +29,28 @@ Current List of Implemented Controls:
 • ABTouchDraw -- Similar to ABSignatureCapture -- allows for simple drawing with return data as an image.  Very nasic, plenty of room for enhancement
 
 Additionally, I have created some placeholder classes for controls I plan to implement in the near future.
+
+## Installation
+
+ABControls are compatible with [Carthage](https://github.com/Carthage/Carthage)
+and can be easily added to your application. ABControls supports generation
+of static frameworks using Carthage 0.30.0 or newer, or ABControls can be
+used as a dynamic framework. To install ABControls into your project using
+Carthage, add the following line to your `Cartfile`:
+
+    github "albebaubles/ABControls"
+
+Next, run the following command from your terminal:
+
+    carthage update
+
+This command will build the `ABControls` and `ABControls-Static` schemes.
+After being built, you can find the dynamic framework at
+`Carthage/Build/iOS/ABControls.framework` and the static framework at
+`Carthage/Build/iOS/Static/ABControls.framework`.
+
+Please note when using the static framework that you do not need to copy
+the static framework into the application bundle like you do with dynamic
+frameworks.
 
 Thank you!  All feedback welcome.
