@@ -68,15 +68,16 @@ be able to scan a barcode.
 
 ![camera access setting](docs/img/cameraAccess.png "plist camera usage statement")
 
- <br />
+
 Next step is to drop a UIView object onto your view, and change the class type to ABBarcodeScanner
 
 ![set class](docs/img/abbarcodeSetClass.png )
-<br /><br />
+
+
 Now your view should indicate it's a barcode scanner<br />
 
 ![set class](docs/img/ABBarcodeScanner.png )
-<br />
+
 Now all that is left to do is wire the delegate, set the allowed barcode types 
 (default is all == nil) and you are off and running.  Note the camera turns on
 immediately for this control.  No implementation for turning it off/on exists at this time.
