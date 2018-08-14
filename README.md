@@ -68,7 +68,7 @@ be able to scan a barcode.
 
 ![camera access setting](docs/img/cameraAccess.png "plist camera usage statement")
 
- <br /><br />
+ <br />
 Next step is to drop a UIView object onto your view, and change the class type to ABBarcodeScanner
 ![set class](docs/img/abbarcodeSetClass.png )
 <br /><br />
@@ -91,5 +91,3 @@ immediately for this control.  No implementation for turning it off/on exists at
         let barcode = ABBarCode.init("CICode128BarcodeGenerator", "0100859619004301171811182118061-05")
     }
 
-
-#### ABCheckBox
