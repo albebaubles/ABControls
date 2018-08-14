@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html"> Docs</a> (45% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html"> Reference</a>
+        <img id="carat" src="img/carat.png" />
+          Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/ABBarCode.html">ABBarCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ABBarcodeScanner.html">ABBarcodeScanner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ABCheckBox.html">ABCheckBox</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ABControl.html">ABControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ABControlsStyleKit.html">ABControlsStyleKit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ABControlsStyleKit/ResizingBehavior.html">– ResizingBehavior</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ABDropDown.html">ABDropDown</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ABImageViewer.html">ABImageViewer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ABImageViewer/LightMode.html">– LightMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ABListBox.html">ABListBox</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ABSignatureCapture.html">ABSignatureCapture</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ABTextualControl.html">ABTextualControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ABTouchDraw.html">ABTouchDraw</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes.html#/c:@M@ABControls@objc(cs)ABVideoRecorder">ABVideoRecorder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes.html#/c:@M@ABControls@objc(cs)ABVoiceRecorder">ABVoiceRecorder</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='abcontrols' class='heading'>ABControls</h1>
+
+<p>The ABControls project&rsquo;s purpose is to provide various iOS controls within a reusable framework.</p>
+
+<p>In the decade I&rsquo;ve been writing iOS apps for clients I&rsquo;ve written dozens of custom UI elements - from special labels to
+barcode readers, to signature capture elements.  I thought, why not take some of the things I&rsquo;ve learned in this 
+time and put together some UI controls that would both speed my development and more importantly hopefully help others 
+to learn how to create their own controls.</p>
+
+<hr>
+
+<p>All of the controls support @IBDesignable and @IBInspectable - so they will render within InterfaceBuilder.  All objects inherit from UIView.    To use, simply drop a UIView on your viewcontroller.view in IB, change the  owner to ABControls and the class to the type of ABControl you&rsquo;d like to use</p>
+
+<p>Current List of Implemented Controls:</p>
+
+<p>• ABBarcodeScanner - Allows for scanning barcodes of various types.  Inner class ABBarCode allows for creating a barcode image</p>
+
+<p>• ABCheckBox - A simple checkbox control</p>
+
+<p>• ABDropDown - A dropdown control.  </p>
+
+<p>• ABImageViewer - Allows for specifying an array of UIImage objects, displays them in a scrollable image list and allows for selecting on to Be diaplayed/selected</p>
+
+<p>• ABListBox &ndash; exactly what you expect it to be</p>
+
+<p>• ABSignatureCapture - Allows for capture a touch drawn signature - returns as data, an image or a bezierpath</p>
+
+<p>• ABTouchDraw &ndash; Similar to ABSignatureCapture &ndash; allows for simple drawing with return data as an image.  Very nasic, plenty of room for enhancement</p>
+
+<p>Additionally, I have created some placeholder classes for controls I plan to implement in the near future.</p>
+
+<p>Thank you!  All feedback welcome.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-08-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

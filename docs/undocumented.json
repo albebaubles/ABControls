@@ -1,0 +1,411 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABBarcodeScanner.swift",
+      "line": 12,
+      "symbol": "ABBarCode",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABBarcodeScanner.swift",
+      "line": 13,
+      "symbol": "ABBarCode.type",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABBarcodeScanner.swift",
+      "line": 14,
+      "symbol": "ABBarCode.stringData",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABBarcodeScanner.swift",
+      "line": 68,
+      "symbol": "ABBarcodeScanner",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABBarcodeScanner.swift",
+      "line": 101,
+      "symbol": "ABBarcodeScanner.prepareForInterfaceBuilder()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABBarcodeScanner.swift",
+      "line": 174,
+      "symbol": "ABBarcodeScanner.metadataOutput(_:didOutput:from:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABCheckBox.swift",
+      "line": 19,
+      "symbol": "ABCheckBox",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABCheckBox.swift",
+      "line": 26,
+      "symbol": "ABCheckBox.ABCheckBoxDidChange",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABCheckBox.swift",
+      "line": 29,
+      "symbol": "ABCheckBox.isChecked",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABCheckBox.swift",
+      "line": 68,
+      "symbol": "ABCheckBox.prepareForInterfaceBuilder()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABControl.swift",
+      "line": 11,
+      "symbol": "ABControl",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABControl.swift",
+      "line": 40,
+      "symbol": "ABControl.prepareForInterfaceBuilder()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABControlsStyleKit.swift",
+      "line": 16,
+      "symbol": "ABControlsStyleKit",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABControlsStyleKit.swift",
+      "line": 64,
+      "symbol": "ABControlsStyleKit.drawCheckedBox(frame:resizing:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABControlsStyleKit.swift",
+      "line": 90,
+      "symbol": "ABControlsStyleKit.drawUncheckedBox(frame:resizing:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABControlsStyleKit.swift",
+      "line": 130,
+      "symbol": "ABControlsStyleKit.imageOfCheckedBox",
+      "symbol_kind": "source.lang.swift.decl.var.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABControlsStyleKit.swift",
+      "line": 144,
+      "symbol": "ABControlsStyleKit.imageOfUncheckedBox",
+      "symbol_kind": "source.lang.swift.decl.var.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABControlsStyleKit.swift",
+      "line": 194,
+      "symbol": "ABControlsStyleKit.ResizingBehavior",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABControlsStyleKit.swift",
+      "line": 195,
+      "symbol": "ABControlsStyleKit.ResizingBehavior.aspectFit",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABDropDown.swift",
+      "line": 189,
+      "symbol": "ABDropDown.prepareForInterfaceBuilder()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABDropDown.swift",
+      "line": 251,
+      "symbol": "ABDropDown.numberOfSections(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABDropDown.swift",
+      "line": 255,
+      "symbol": "ABDropDown.tableView(_:numberOfRowsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABDropDown.swift",
+      "line": 262,
+      "symbol": "ABDropDown.tableView(_:cellForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABDropDown.swift",
+      "line": 272,
+      "symbol": "ABDropDown.tableView(_:didSelectRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABImageViewer.swift",
+      "line": 11,
+      "symbol": "ABImageViewer",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABImageViewer.swift",
+      "line": 16,
+      "symbol": "ABImageViewer.LightMode",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABImageViewer.swift",
+      "line": 17,
+      "symbol": "ABImageViewer.LightMode.clear",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABImageViewer.swift",
+      "line": 18,
+      "symbol": "ABImageViewer.LightMode.light",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABImageViewer.swift",
+      "line": 19,
+      "symbol": "ABImageViewer.LightMode.dark",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABImageViewer.swift",
+      "line": 23,
+      "symbol": "ABImageViewer.lightMode",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABImageViewer.swift",
+      "line": 120,
+      "symbol": "ABImageViewer.prepareForInterfaceBuilder()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABListBox.swift",
+      "line": 19,
+      "symbol": "ABListBox",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABListBox.swift",
+      "line": 117,
+      "symbol": "ABListBox.prepareForInterfaceBuilder()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABListBox.swift",
+      "line": 167,
+      "symbol": "ABListBox.numberOfSections(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABListBox.swift",
+      "line": 171,
+      "symbol": "ABListBox.tableView(_:numberOfRowsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABListBox.swift",
+      "line": 178,
+      "symbol": "ABListBox.tableView(_:cellForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABListBox.swift",
+      "line": 189,
+      "symbol": "ABListBox.tableView(_:didSelectRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABSignatureCapture.swift",
+      "line": 50,
+      "symbol": "ABSignatureCapture.draw(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABSignatureCapture.swift",
+      "line": 60,
+      "symbol": "ABSignatureCapture.touchesBegan(_:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABSignatureCapture.swift",
+      "line": 65,
+      "symbol": "ABSignatureCapture.touchesMoved(_:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABSignatureCapture.swift",
+      "line": 71,
+      "symbol": "ABSignatureCapture.touchesEnded(_:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABSignatureCapture.swift",
+      "line": 105,
+      "symbol": "ABSignatureCapture.signatureImage()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABSignatureCapture.swift",
+      "line": 115,
+      "symbol": "ABSignatureCapture.signature(path:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABSignatureCapture.swift",
+      "line": 132,
+      "symbol": "ABSignatureCapture.prepareForInterfaceBuilder()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABTextualControl.swift",
+      "line": 11,
+      "symbol": "ABTextualControl",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABTextualControl.swift",
+      "line": 50,
+      "symbol": "ABTextualControl.prepareForInterfaceBuilder()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABTouchDraw.swift",
+      "line": 12,
+      "symbol": "ABTouchDraw",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABTouchDraw.swift",
+      "line": 24,
+      "symbol": "ABTouchDraw.draw(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABTouchDraw.swift",
+      "line": 33,
+      "symbol": "ABTouchDraw.touchesBegan(_:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABTouchDraw.swift",
+      "line": 39,
+      "symbol": "ABTouchDraw.touchesMoved(_:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABTouchDraw.swift",
+      "line": 44,
+      "symbol": "ABTouchDraw.touchesEnded(_:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABTouchDraw.swift",
+      "line": 51,
+      "symbol": "ABTouchDraw.clear()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABTouchDraw.swift",
+      "line": 58,
+      "symbol": "ABTouchDraw.drawing()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABTouchDraw.swift",
+      "line": 62,
+      "symbol": "ABTouchDraw.drawingPath()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABTouchDraw.swift",
+      "line": 67,
+      "symbol": "ABTouchDraw.drawing(path:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABTouchDraw.swift",
+      "line": 72,
+      "symbol": "ABTouchDraw.prepareForInterfaceBuilder()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABVideoRecorder.swift",
+      "line": 11,
+      "symbol": "ABVideoRecorder",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/acorbett/dev/ABControls/ABControls/ABVoiceRecorder.swift",
+      "line": 11,
+      "symbol": "ABVoiceRecorder",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/acorbett/dev/ABControls"
+}
