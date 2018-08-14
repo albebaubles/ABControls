@@ -2,33 +2,38 @@
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-The ABControls project's purpose is to provide various iOS controls within a reusable framework.
+The ABControls project's purpose is to provide various iOS controls within
+ a reusable framework.
 
-In the decade I've been writing iOS apps for clients I've written dozens of custom UI elements - from special labels to
-barcode readers, to signature capture elements.  I thought, why not take some of the things I've learned in this 
-time and put together some UI controls that would both speed my development and more importantly hopefully help others 
-to learn how to create their own controls.
+In the decade I've been writing iOS apps for clients I've written dozens of
+ custom UI elements - from special labels to barcode readers, to signature 
+ capture elements.  I thought, why not take some of the things I've learned
+ in this time and put together some UI controls that would both speed my 
+ development and more importantly hopefully help others to learn how to create
+  their own controls.
 
-----------
-All of the controls support @IBDesignable and @IBInspectable - so they will render within InterfaceBuilder.  All objects inherit from UIView.    To use, simply drop a UIView on your viewcontroller.view in IB, change the  owner to ABControls and the class to the type of ABControl you'd like to use
+---
+All of the controls support **@IBDesignable** and **@IBInspectable** - so they will render within InterfaceBuilder.  All objects inherit from UIView.    To use, simply drop a UIView on your viewcontroller.view in IB, change the  owner to ABControls and the class to the type of ABControl you'd like to use
 
-Current List of Implemented Controls:
+#### Current List of Implemented Controls:
 
-• ABBarcodeScanner - Allows for scanning barcodes of various types.  Inner class ABBarCode allows for creating a barcode image
+**ABBarcodeScanner** - Allows for scanning barcodes of various types.  Inner class ABBarCode allows for creating a barcode image
 
-• ABCheckBox - A simple checkbox control
+**ABCheckBox** - A simple checkbox control
 
-• ABDropDown - A dropdown control.  
+**ABDropDown** - A dropdown control.  
 
-• ABImageViewer - Allows for specifying an array of UIImage objects, displays them in a scrollable image list and allows for selecting on to Be diaplayed/selected
+**ABImageViewer** - Allows for specifying an array of UIImage objects, displays them in a scrollable image list and allows for selecting on to Be diaplayed/selected
 
-• ABListBox -- exactly what you expect it to be
+**ABListBox** - exactly what you expect it to be
 
-• ABSignatureCapture - Allows for capture a touch drawn signature - returns as data, an image or a bezierpath
+**ABSignatureCapture** - Allows for capture a touch drawn signature - returns as data, an image or a bezierpath
 
-• ABTouchDraw -- Similar to ABSignatureCapture -- allows for simple drawing with return data as an image.  Very nasic, plenty of room for enhancement
+**ABTouchDraw** - Similar to ABSignatureCapture -- allows for simple drawing with return data as an image.  Very nasic, plenty of room for enhancement
 
 Additionally, I have created some placeholder classes for controls I plan to implement in the near future.
+
+
 
 ## Installation
 
@@ -54,3 +59,36 @@ the static framework into the application bundle like you do with dynamic
 frameworks.
 
 Thank you!  All feedback welcome.
+
+## Usage
+
+**ABBarcodeScanner**<br />
+You must be sure to add a camera usage description to your project's plist, otherwise you will not
+be able to scan a barcode. 
+
+![camera access setting](docs/img/cameraAccess.png "plist camera usage statement")
+
+ <br /><br />
+Next step is to drop a UIView object onto your view, and change the class type to ABBarcodeScanner
+![set class](docs/img/abbarcodeSetClass.png )
+<br /><br />
+Now your view should indicate it's a barcode scanner<br />
+![set class](docs/img/ABBarcodeScanner.png )
+<br />
+Now all that is left to do is wire the delegate, set the allowed barcode types 
+(default is all == nil) and you are off and running.  Note the camera turns on
+immediately for this control.  No implementation for turning it off/on exists at this time.
+
+<code>
+@IBOutlet weak var barcodeScanner : ABBarcodeScanner!
+
+barcodeScanner.delegate = self
+
+@objc func didReceiveBarcode(_ code : ABBarCode) {<br/>
+    NSLog("code value \(code.data)")<br />
+    NSLog("code type \(code.type)")<br />
+    let barcodeImage = code.image()<br />
+}
+
+
+</code>

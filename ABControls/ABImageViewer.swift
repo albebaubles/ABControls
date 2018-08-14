@@ -32,6 +32,7 @@ import UIKit
     @IBInspectable public var thumbnailSize : CGFloat = 0 {
         didSet {
             setupImageScrollview()
+            setupPreview()
             setNeedsDisplay()
         }
     }
@@ -64,22 +65,22 @@ import UIKit
     }
     
     private func previewSize() -> CGSize {
-        return CGSize.init(width: frame.width, height: frame.height - thumbnailSize)
+        return CGSize.init(width: bounds.width, height: bounds.height - thumbnailSize)
     }
     
     private func contentSize() -> CGSize {
-        return CGSize.init(width: images.count * 30, height: 30)
+        return CGSize.init(width: images.count * Int(thumbnailSize), height: Int(thumbnailSize))
     }
     
     
     private func setupImageScrollview() {
         _imageScrollview.removeFromSuperview()
         _imageScrollview.subviews.forEach({ $0.removeFromSuperview() })
-        _imageScrollview.frame = CGRect.init(x: 0, y: frame.height - thumbnailSize - 2, width: bounds.width, height: thumbnailSize + 1)
+        _imageScrollview.frame = CGRect.init(x: 0, y: bounds.height - thumbnailSize, width: bounds.width, height: thumbnailSize)
         _imageScrollview.contentSize = contentSize()
         for case let image  in images {
             let imageButton = UIButton.init(type: .custom)
-            imageButton.frame = CGRect.init(x: CGFloat(_imageScrollview.subviews.count * 30), y: 1, width: thumbnailSize, height: thumbnailSize)
+            imageButton.frame = CGRect.init(x: CGFloat(_imageScrollview.subviews.count * Int(thumbnailSize)), y: 0, width: thumbnailSize, height: thumbnailSize)
             imageButton.setImage(image as? UIImage, for: .normal)
             imageButton.backgroundColor = .clear
             imageButton.layer.borderColor = foreground().cgColor
@@ -97,6 +98,7 @@ import UIKit
     }
     
     private func setupPreview() {
+        _preview.removeFromSuperview()
         _preview.frame = CGRect.init(origin: CGPoint.init(x: 0, y: 0), size: previewSize())
         _preview.backgroundColor = background()
         _preview.contentMode = .scaleAspectFit

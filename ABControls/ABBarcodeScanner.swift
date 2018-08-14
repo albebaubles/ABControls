@@ -15,7 +15,7 @@ import AVFoundation
     @objc public var  type : String?
     @objc public var  stringData : String?
     
-
+    
     /// Converts the AVMetadata to barcode data
     ///
     /// - Parameter meta: the AVMetadata to convert ot barcode data
@@ -32,6 +32,14 @@ import AVFoundation
     /// returns an image object based on it's barcode data and type
     ///
     /// - Returns: returns an UIImage of the barcodes data in the object
+    ///
+    /**
+     ABBarCode.init("CIQRCodeGenerator", "0122333223484984").image()
+     ABBarCode.init("CIAztecCodeGenerator", "43543323535433").image()
+     
+     let barcode = ABBarCode.init("CIQRCodeGenerator", "24342344")
+     let myImage = barcode.image()
+ */
     @objc public func image() -> UIImage {
         guard let data = stringData!.data(using: .ascii),
             let filter = CIFilter(name: type!) else {
@@ -54,7 +62,6 @@ import AVFoundation
     ///
     /**
      let barcode = ABBarCode.init("CICode128BarcodeGenerator", "0100859619004301171811182118061-05")
-     myImageView.image = barcode.image()
      */
     @objc public static func `init`(_ type : String, _ stringData : String) -> ABBarCode {
         let bc = ABBarCode.init()
@@ -91,9 +98,16 @@ import AVFoundation
     private var _previewLayer =  AVCaptureVideoPreviewLayer.init()
     private var _meta = AVCaptureMetadataOutput.init()
     
+    /// Notifications
+    @objc  public static let ABBarcodeScannerDidReceiveBarcode : String = "ABBarcodeScannerDidReceiveBarcode"
+    @objc  public static let ABBarcodeScannerDidFail : String = "ABBarcodeScannerDidFail"
+
     
     /// A string array of acceptable barcode types. A nil value will scan for all barcodetype
-    /// ex. CICode128BarcodeGenerator
+    /// ex.
+    ///     CICode128BarcodeGenerator,
+    ///     CIAztecCodeGenerator,
+    ///     CICode128BarcodeGenerator
     @objc @IBInspectable var barcodeTypes : [String] = [] {
         didSet {
         }
@@ -147,14 +161,19 @@ import AVFoundation
                 self.setupBarcodeCapture()
             } else {
                 self._delegate?.didFail("ABBarcodeScanner does not have access to the camera")
+                NotificationCenter.default.post(name: NSNotification.Name(  ABBarcodeScanner.ABBarcodeScannerDidFail), object: nil)
+
             }
         }
     }
     
     
+    /// 
     private func setupBarcodeCapture() {
         if _camera == nil {
             _delegate?.didFail("ABBarcodeScanner : device does not have a camera")
+            NotificationCenter.default.post(name: NSNotification.Name(  ABBarcodeScanner.ABBarcodeScannerDidFail), object: nil)
+
             return
         }
         
@@ -185,17 +204,27 @@ import AVFoundation
             }
         } else {
             _delegate?.didFail("ABBarcodeScanner did not receive access to the camera")
+            NotificationCenter.default.post(name: NSNotification.Name(  ABBarcodeScanner.ABBarcodeScannerDidFail), object: nil)
+
         }
     }
     
     
-    public func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+
+    /// Fires when the camera has detected a barcode
+    ///
+    /// - Parameters:
+    ///   - output: the metadata associated with the barcode
+    ///   - metadataObjects: The metadat oobjects
+    ///   - connection: the capture connection this applies to
+    private func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         for  metaData in metadataObjects {
             if metaData is AVMetadataMachineReadableCodeObject {
                 let code = _previewLayer.transformedMetadataObject(for: metaData)
                 let barcode = ABBarCode.processBarcode(meta: code as! AVMetadataMachineReadableCodeObject)
                 if barcodeTypes.contains(code!.type.rawValue) {
                     _delegate?.didReceiveBarcode(barcode)
+                    NotificationCenter.default.post(name: NSNotification.Name(  ABBarcodeScanner.ABBarcodeScannerDidReceiveBarcode), object: barcode)
                     _session.stopRunning()
                 }
             }

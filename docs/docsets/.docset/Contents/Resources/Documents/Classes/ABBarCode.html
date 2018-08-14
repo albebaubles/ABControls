@@ -14,7 +14,7 @@
     <a title="ABBarCode Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (47% documented)</p>
+        <p><a href="../index.html"> Docs</a> (48% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -165,7 +165,11 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>returns an image object based on it&rsquo;s barcode data and type</p>
+                        <p>ABBarCode.init(<q>CIQRCodeGenerator</q>, <q>0122333223484984</q>).image()
+ABBarCode.init(<q>CIAztecCodeGenerator</q>, <q>43543323535433</q>).image()</p>
+
+<p>let barcode = ABBarCode.init(<q>CIQRCodeGenerator</q>, <q>24342344</q>)
+let myImage = barcode.image()</p>
 
                       </div>
                       <div class="declaration">
@@ -176,10 +180,6 @@
 <span class="kd">public</span> <span class="kd">func</span> <span class="nf">image</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">UIImage</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>returns an UIImage of the barcodes data in the object</p>
                       </div>
                     </section>
                   </div>
@@ -197,8 +197,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>let barcode = ABBarCode.init(<q>CICode128BarcodeGenerator</q>, <q>0100859619004301171811182118061-05</q>)
-myImageView.image = barcode.image()</p>
+                        <p>let barcode = ABBarCode.init(<q>CICode128BarcodeGenerator</q>, <q>0100859619004301171811182118061-05</q>)</p>
 
                       </div>
                       <div class="declaration">

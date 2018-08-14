@@ -16,15 +16,15 @@
     },
     {
       "file": "/Users/acorbett/dev/ABControls/ABControls/ABBarcodeScanner.swift",
-      "line": 103,
-      "symbol": "ABBarcodeScanner.ABBarcodeScannerDidFail",
-      "symbol_kind": "source.lang.swift.decl.var.static",
+      "line": 119,
+      "symbol": "ABBarcodeScanner.prepareForInterfaceBuilder()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/acorbett/dev/ABControls/ABControls/ABBarcodeScanner.swift",
-      "line": 133,
-      "symbol": "ABBarcodeScanner.prepareForInterfaceBuilder()",
+      "line": 192,
+      "symbol": "ABBarcodeScanner.metadataOutput(_:didOutput:from:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -198,7 +198,7 @@
     },
     {
       "file": "/Users/acorbett/dev/ABControls/ABControls/ABImageViewer.swift",
-      "line": 123,
+      "line": 121,
       "symbol": "ABImageViewer.prepareForInterfaceBuilder()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
