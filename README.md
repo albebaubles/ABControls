@@ -87,9 +87,9 @@ immediately for this control.  No implementation for turning it off/on exists at
     barcodeScanner.delegate = self
 
     @objc func didReceiveBarcode(_ code : ABBarCode) {
-        NSLog("code value \(code.data)")<br />
-        NSLog("code type \(code.type)")<br />
-        let barcodeImage = code.image()<br />
+        NSLog("code value \(code.data)")
+        NSLog("code type \(code.type)")
+        let barcodeImage = code.image()
     
         let barcode = ABBarCode.init("CICode128BarcodeGenerator", "0100859619004301171811182118061-05")
     }
