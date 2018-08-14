@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B4248EB1212265250026D3BF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B4248EB0212265250026D3BF /* README.md */; };
 		B43C887B211FAA9900A079F0 /* ABPotentiometerRadial.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43C887A211FAA9900A079F0 /* ABPotentiometerRadial.swift */; };
 		B43C887D211FAAAF00A079F0 /* ABPotentiometerLinear.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43C887C211FAAAF00A079F0 /* ABPotentiometerLinear.swift */; };
 		B44974072119016900F3553F /* ABBarcodeScanner.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4FAE12321176773008707E7 /* ABBarcodeScanner.swift */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B4248EB0212265250026D3BF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		B43C887A211FAA9900A079F0 /* ABPotentiometerRadial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABPotentiometerRadial.swift; sourceTree = "<group>"; };
 		B43C887C211FAAAF00A079F0 /* ABPotentiometerLinear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABPotentiometerLinear.swift; sourceTree = "<group>"; };
 		B459874B2117CC7E00519520 /* ABSignatureCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABSignatureCapture.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				B4720EAA211776E9001DBBF2 /* ABVoiceRecorder.swift */,
 				B4FEDD052116419200223E77 /* Info.plist */,
 				B48AFCF6211F6F680067BA86 /* LICENSE.md */,
+				B4248EB0212265250026D3BF /* README.md */,
 			);
 			path = ABControls;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4248EB1212265250026D3BF /* README.md in Resources */,
 				B48AFCF7211F6F680067BA86 /* LICENSE.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

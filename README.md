@@ -12,3 +12,19 @@ All of the controls support @IBDesignable and @IBInspectable - so they will rend
 
 Current List of Implemented Controls:
 
+• ABBarcodeScanner - Allows for scanning barcodes of various types.  Inner class ABBarCode allows for creating a barcode image
+
+• ABCheckBox - A simple checkbox control
+
+• ABDropDown - A dropdown control.  
+
+• ABImageViewer - Allows for specifying an array of UIImage objects, displays them in a scrollable image list and allows for selecting on to Be diaplayed/selected
+
+• ABListBox -- exactly what you expect it to be
+
+• ABSignatureCapture - Allows for capture a touch drawn signature - returns as data, an image or a bezierpath
+
+• ABTouchDraw -- Similar to ABSignatureCapture -- allows for simple drawing with return data as an image.  Very nasic, plenty of room for enhancement
+
+I have created some placeholder classes for controls I plan to implement in the near future.
+
