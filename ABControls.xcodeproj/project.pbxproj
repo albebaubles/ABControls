@@ -89,7 +89,6 @@
 		B4FEDD022116419200223E77 /* ABControls.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ABControls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4FEDD052116419200223E77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF73BD29212324EF001BEBE1 /* ABControls.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ABControls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF73BD2A212324EF001BEBE1 /* ABControls copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ABControls copy-Info.plist"; path = "/Users/michaelcollins/Projects/mfcollins3/ABControls/ABControls copy-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +117,6 @@
 				B46D4E252114C05F00A58C71 /* ABControls */,
 				B46D4E242114C05F00A58C71 /* Products */,
 				B4FEDCFB2116411700223E77 /* Frameworks */,
-				EF73BD2A212324EF001BEBE1 /* ABControls copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
