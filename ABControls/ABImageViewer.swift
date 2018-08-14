@@ -54,6 +54,7 @@ import UIKit
         return _selected!
     }
     
+    
     private func background() -> UIColor {
         return  lightMode == LightMode.clear ? .clear : lightMode == LightMode.light ? .white : .black
         

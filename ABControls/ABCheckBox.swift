@@ -32,7 +32,6 @@ import UIKit
                     ABControlsStyleKit.imageOfUncheckedBox, for: .normal)
             setNeedsDisplay()
             #if !TARGET_INTERFACE_BUILDER
-
             NotificationCenter.default.post(name: NSNotification.Name(  ABCheckBox.ABCheckBoxDidChange), object: isChecked)
             _delegate?.didChangeCheckboxSelection!(isChecked)
             #endif

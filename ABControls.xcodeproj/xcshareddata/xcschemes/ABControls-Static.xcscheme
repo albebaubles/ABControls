@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EF73BD04212324EF001BEBE1"
-               BuildableName = "ABControls-Static.framework"
+               BuildableName = "ABControls.framework"
                BlueprintName = "ABControls-Static"
                ReferencedContainer = "container:ABControls.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EF73BD04212324EF001BEBE1"
-            BuildableName = "ABControls-Static.framework"
+            BuildableName = "ABControls.framework"
             BlueprintName = "ABControls-Static"
             ReferencedContainer = "container:ABControls.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EF73BD04212324EF001BEBE1"
-            BuildableName = "ABControls-Static.framework"
+            BuildableName = "ABControls.framework"
             BlueprintName = "ABControls-Static"
             ReferencedContainer = "container:ABControls.xcodeproj">
          </BuildableReference>

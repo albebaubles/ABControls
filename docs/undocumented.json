@@ -2,42 +2,28 @@
   "warnings": [
     {
       "file": "/Users/acorbett/dev/ABControls/ABControls/ABBarcodeScanner.swift",
-      "line": 12,
-      "symbol": "ABBarCode",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/acorbett/dev/ABControls/ABControls/ABBarcodeScanner.swift",
-      "line": 13,
+      "line": 15,
       "symbol": "ABBarCode.type",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/acorbett/dev/ABControls/ABControls/ABBarcodeScanner.swift",
-      "line": 14,
+      "line": 16,
       "symbol": "ABBarCode.stringData",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/acorbett/dev/ABControls/ABControls/ABBarcodeScanner.swift",
-      "line": 68,
-      "symbol": "ABBarcodeScanner",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/acorbett/dev/ABControls/ABControls/ABBarcodeScanner.swift",
-      "line": 101,
+      "line": 119,
       "symbol": "ABBarcodeScanner.prepareForInterfaceBuilder()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/acorbett/dev/ABControls/ABControls/ABBarcodeScanner.swift",
-      "line": 174,
+      "line": 192,
       "symbol": "ABBarcodeScanner.metadataOutput(_:didOutput:from:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -65,7 +51,7 @@
     },
     {
       "file": "/Users/acorbett/dev/ABControls/ABControls/ABCheckBox.swift",
-      "line": 68,
+      "line": 67,
       "symbol": "ABCheckBox.prepareForInterfaceBuilder()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -212,7 +198,7 @@
     },
     {
       "file": "/Users/acorbett/dev/ABControls/ABControls/ABImageViewer.swift",
-      "line": 120,
+      "line": 121,
       "symbol": "ABImageViewer.prepareForInterfaceBuilder()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

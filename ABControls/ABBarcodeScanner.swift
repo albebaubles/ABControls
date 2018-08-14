@@ -9,10 +9,17 @@
 import UIKit
 import AVFoundation
 
+
+/// ABBarcode contains the data and type of barcode
 @objc public class ABBarCode : NSObject {
     @objc public var  type : String?
     @objc public var  stringData : String?
     
+
+    /// Converts the AVMetadata to barcode data
+    ///
+    /// - Parameter meta: the AVMetadata to convert ot barcode data
+    /// - Returns: an ABBarcode
     @objc internal static func processBarcode(meta : AVMetadataMachineReadableCodeObject) -> ABBarCode {
         let code = ABBarCode.init()
         code.type = meta.type.rawValue
@@ -30,9 +37,7 @@ import AVFoundation
             let filter = CIFilter(name: type!) else {
                 return UIImage.init()
         }
-        
         filter.setValue(data, forKey: "inputMessage")
-        
         guard let image = filter.outputImage else {
             return UIImage.init()
         }
@@ -59,12 +64,25 @@ import AVFoundation
     }
 }
 
+
+/// In this iteration the scanner object is always on and active
 @objc protocol ABBarcodeScannerDelegate : class {
+    
+    /// Fires when the control has found and proceessed a barcode
+    ///
+    /// - Parameter code: reutns an ABBarcode object
     @objc func didReceiveBarcode(_ code : ABBarCode)
+    
+    
+    /// Fires anytime a problem occurs while attempting to scan a barcode
+    ///
+    /// - Parameter message: string indicating the problem/issue
     @objc func didFail(_ message : String)
 }
 
 
+
+/// Uses the camera to scan a barcode
 @objc @IBDesignable public class  ABBarcodeScanner : ABControl, AVCaptureMetadataOutputObjectsDelegate {
     private weak var _delegate : ABBarcodeScannerDelegate?
     private let _camera =  AVCaptureDevice.default(for: .video)
@@ -128,7 +146,7 @@ import AVFoundation
                 //access granted
                 self.setupBarcodeCapture()
             } else {
-                self._delegate?.didFail("device does not have access to the camera")
+                self._delegate?.didFail("ABBarcodeScanner does not have access to the camera")
             }
         }
     }
@@ -136,7 +154,7 @@ import AVFoundation
     
     private func setupBarcodeCapture() {
         if _camera == nil {
-            _delegate?.didFail("device does not have a camera")
+            _delegate?.didFail("ABBarcodeScanner : device does not have a camera")
             return
         }
         
@@ -166,7 +184,7 @@ import AVFoundation
                 /// TODO : fire a delegate message, somethign went wrong
             }
         } else {
-            _delegate?.didFail("Did not receive access to the camera")
+            _delegate?.didFail("ABBarcodeScanner did not receive access to the camera")
         }
     }
     
