@@ -7,7 +7,7 @@ time and put together some UI controls that would both speed my development and 
 to learn how to create their own controls.
 
 ----------
-All of the controls support @IBDesignable and @IBInspectable - so they will render within InterfaceBuilder.  All objects inherit from UIView.    To use, simply draw a UIView to your viewcontroll and change the  owner to ABControls and the class to the type of ABcontrol you'd like to use
+All of the controls support @IBDesignable and @IBInspectable - so they will render within InterfaceBuilder.  All objects inherit from UIView.    To use, simply drop a UIView on your viewcontroller.view in IB, change the  owner to ABControls and the class to the type of ABControl you'd like to use
 
 
 
