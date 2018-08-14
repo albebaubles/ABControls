@@ -70,9 +70,11 @@ be able to scan a barcode.
 
  <br />
 Next step is to drop a UIView object onto your view, and change the class type to ABBarcodeScanner
+
 ![set class](docs/img/abbarcodeSetClass.png )
 <br /><br />
 Now your view should indicate it's a barcode scanner<br />
+
 ![set class](docs/img/ABBarcodeScanner.png )
 <br />
 Now all that is left to do is wire the delegate, set the allowed barcode types 
