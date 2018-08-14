@@ -62,7 +62,7 @@ Thank you!  All feedback welcome.
 
 ## Usage
 
-**ABBarcodeScanner**<br />
+#### ABBarcodeScanner<br />
 You must be sure to add a camera usage description to your project's plist, otherwise you will not
 be able to scan a barcode. 
 
@@ -79,16 +79,17 @@ Now all that is left to do is wire the delegate, set the allowed barcode types
 (default is all == nil) and you are off and running.  Note the camera turns on
 immediately for this control.  No implementation for turning it off/on exists at this time.
 
-<code>
-@IBOutlet weak var barcodeScanner : ABBarcodeScanner!
+    @IBOutlet weak var barcodeScanner : ABBarcodeScanner!
 
-barcodeScanner.delegate = self
+    barcodeScanner.delegate = self
 
-@objc func didReceiveBarcode(_ code : ABBarCode) {<br/>
-    NSLog("code value \(code.data)")<br />
-    NSLog("code type \(code.type)")<br />
-    let barcodeImage = code.image()<br />
-}<br />
+    @objc func didReceiveBarcode(_ code : ABBarCode) {
+        NSLog("code value \(code.data)")<br />
+        NSLog("code type \(code.type)")<br />
+        let barcodeImage = code.image()<br />
+    
+        let barcode = ABBarCode.init("CICode128BarcodeGenerator", "0100859619004301171811182118061-05")
+    }
 
 
-</code>
+#### ABCheckBox
