@@ -72,7 +72,7 @@ import UIKit
     }
     
     /// Sets the font, default is system font at 14pt
-    @IBInspectable  public var font : UIFont = UIFont.systemFont(ofSize: 14) {
+    @objc @IBInspectable  public var font : UIFont = UIFont.systemFont(ofSize: 14) {
         didSet {
             _font =  font
             for view in subviews {

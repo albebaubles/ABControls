@@ -21,6 +21,10 @@ import AVFoundation
         return code
     }
     
+    
+    /// returns an image object based on it's barcode data and type
+    ///
+    /// - Returns: returns an UIImage of the barcodes data in the object
     @objc public func image() -> UIImage {
         guard let data = stringData!.data(using: .ascii),
             let filter = CIFilter(name: type!) else {
@@ -32,7 +36,26 @@ import AVFoundation
         guard let image = filter.outputImage else {
             return UIImage.init()
         }
-          return UIImage(ciImage: image)
+        return UIImage(ciImage: image)
+    }
+    
+    
+    /// Creates a UIImage object from barcode data
+    ///
+    /// - Parameters:
+    ///   - type: barcode type, eg. - CICode128BarcodeGenerator...
+    ///   - stringData: the data that comprisies the barcode info
+    /// - Returns: UIImage
+    ///
+    /**
+     let barcode = ABBarCode.init("CICode128BarcodeGenerator", "0100859619004301171811182118061-05")
+     myImageView.image = barcode.image()
+     */
+    @objc public static func `init`(_ type : String, _ stringData : String) -> ABBarCode {
+        let bc = ABBarCode.init()
+        bc.type = type
+        bc.stringData = stringData
+        return bc
     }
 }
 
@@ -94,7 +117,7 @@ import AVFoundation
         label.textAlignment = .center
         label.textColor = UIColor.lightGray
         // \n so the label won't render on top of line
-        label.text = "\nABBarcodeScanner"
+        label.text = "ABBarcodeScanner\n"
         label.numberOfLines = 2
         label.layer.zPosition = 1
         addSubview(label)
@@ -106,7 +129,6 @@ import AVFoundation
                 self.setupBarcodeCapture()
             } else {
                 self._delegate?.didFail("device does not have access to the camera")
-                
             }
         }
     }
