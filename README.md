@@ -62,7 +62,7 @@ Thank you!  All feedback welcome.
 
 ## Usage
 
-#### ABBarcodeScanner<br />
+### ABBarcodeScanner
 You must be sure to add a camera usage description to your project's plist, otherwise you will not
 be able to scan a barcode. 
 
@@ -89,8 +89,14 @@ immediately for this control.  No implementation for turning it off/on exists at
     @objc func didReceiveBarcode(_ code : ABBarCode) {
         NSLog("code value \(code.data)")
         NSLog("code type \(code.type)")
-        let barcodeImage = code.image()
-    
-        let barcode = ABBarCode.init("CICode128BarcodeGenerator", "0100859619004301171811182118061-05")
     }
+
+To create a barcode image its as simple as
+
+    let barcodeImage = ABBarCode.init("CICode128BarcodeGenerator", "01171811182118061-05").image()
+
+
+
+
+### ABCheckBox
 

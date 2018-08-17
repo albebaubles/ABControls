@@ -217,7 +217,7 @@ import AVFoundation
     ///   - output: the metadata associated with the barcode
     ///   - metadataObjects: The metadat oobjects
     ///   - connection: the capture connection this applies to
-    private func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+    public func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         for  metaData in metadataObjects {
             if metaData is AVMetadataMachineReadableCodeObject {
                 let code = _previewLayer.transformedMetadataObject(for: metaData)

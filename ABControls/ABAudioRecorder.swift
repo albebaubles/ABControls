@@ -8,7 +8,7 @@
 
 import UIKit
 
-@objc @IBDesignable public class  ABVoiceRecorder: UIView {
+@objc @IBDesignable public class  ABAudioRecorder: UIView {
 
     /*
     // Only override draw() if you perform custom drawing.

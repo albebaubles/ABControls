@@ -23,6 +23,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="897abc6c-0fc4-43b9-a3cc-6d3e62b40fe6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ABControls/ABControlsPlayground.playground/Contents.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ABControls/ABControlsPlayground.playground/contents.xcplayground" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ABControls/ABGradientView.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABControls.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ABControls.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABControls/ABBarcodeScanner.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ABControls/ABBarcodeScanner.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABControls/ABControlsStyle.pcvd" beforeDir="false" afterPath="$PROJECT_DIR$/ABControls/ABControlsStyle.pcvd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABControls/ABControlsStyleKit.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ABControls/ABControlsStyleKit.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABControls/ABPotentiometerRadial.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ABControls/ABPotentiometerRadial.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$USER_HOME$/Library/Developer/Xcode/DerivedData/ABControls-hjirvxksxkqyscbmvpxkodwhhlif/" />
@@ -32,29 +41,30 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_88658042fa2b6f264a9004becc9b5d9750ab8272" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_476A4715-B173-465A-A188-A5A58D5F617A" />
   <component name="FUSProjectUsageTrigger">
     <session id="-1354863498">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="md" value="1160" />
+          <entry key="md" value="1286" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open" />
       <usages-collector id="statistics.file.types.open" />
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="1160" />
+          <entry key="Markdown" value="1286" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.cidr.testingFrameworks.usages" />
@@ -82,8 +92,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="1142">
-                <caret line="91" column="39" selection-start-line="91" selection-start-column="39" selection-end-line="91" selection-end-column="39" />
+              <first_editor relative-caret-position="452">
+                <caret line="62" selection-start-line="62" selection-end-line="98" />
               </first_editor>
               <second_editor />
             </state>
@@ -182,12 +192,13 @@
       <workItem from="1533931229759" duration="200000" />
       <workItem from="1534262468579" duration="319000" />
       <workItem from="1534276723244" duration="67000" />
-      <workItem from="1534276834759" duration="3107000" />
+      <workItem from="1534276834759" duration="5483000" />
+      <workItem from="1534456153426" duration="1106000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3693000" />
+    <option name="totallyTimeSpent" value="7175000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="909" y="442" width="2230" height="1501" extended-state="0" />
@@ -239,8 +250,8 @@
       <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1142">
-            <caret line="91" column="39" selection-start-line="91" selection-start-column="39" selection-end-line="91" selection-end-column="39" />
+          <first_editor relative-caret-position="452">
+            <caret line="62" selection-start-line="62" selection-end-line="98" />
           </first_editor>
           <second_editor />
         </state>

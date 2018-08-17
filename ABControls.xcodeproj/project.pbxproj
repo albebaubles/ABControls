@@ -25,6 +25,8 @@
 		B4720EAD21177712001DBBF2 /* ABVideoRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4720EAC21177712001DBBF2 /* ABVideoRecorder.swift */; };
 		B48AFCF7211F6F680067BA86 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = B48AFCF6211F6F680067BA86 /* LICENSE.md */; };
 		B4ACB3FB211B697900140837 /* ABTextualControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ACB3FA211B697900140837 /* ABTextualControl.swift */; };
+		B4BF62E6212389EB003CD938 /* ABGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BF62E5212389EB003CD938 /* ABGradientView.swift */; };
+		B4BF62E721238BCA003CD938 /* ABGradientView.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4BF62E5212389EB003CD938 /* ABGradientView.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		B4DA3C9121164A39006B1AB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DA3C9021164A39006B1AB2 /* UIKit.framework */; };
 		B4DA3C9A21164CB9006B1AB2 /* ABControls.h in Headers */ = {isa = PBXBuildFile; fileRef = B4DA3C9921164CB9006B1AB2 /* ABControls.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B4FAE12221176759008707E7 /* ABListBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FAE12121176759008707E7 /* ABListBox.swift */; };
@@ -79,6 +81,7 @@
 		B4720EAC21177712001DBBF2 /* ABVideoRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABVideoRecorder.swift; sourceTree = "<group>"; };
 		B48AFCF6211F6F680067BA86 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		B4ACB3FA211B697900140837 /* ABTextualControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABTextualControl.swift; sourceTree = "<group>"; };
+		B4BF62E5212389EB003CD938 /* ABGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABGradientView.swift; sourceTree = "<group>"; };
 		B4DA3C9021164A39006B1AB2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B4DA3C9921164CB9006B1AB2 /* ABControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABControls.h; sourceTree = "<group>"; };
 		B4FAE12121176759008707E7 /* ABListBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListBox.swift; sourceTree = "<group>"; };
@@ -138,6 +141,7 @@
 				B4DA3C9921164CB9006B1AB2 /* ABControls.h */,
 				B4FC45602114EBC8006B8A15 /* ABControlsStyleKit.swift */,
 				B46D4E542114C07600A58C71 /* ABDropDown.swift */,
+				B4BF62E5212389EB003CD938 /* ABGradientView.swift */,
 				B4FAE1252117678C008707E7 /* ABImageViewer.swift */,
 				B4FAE12121176759008707E7 /* ABListBox.swift */,
 				B43C887C211FAAAF00A079F0 /* ABPotentiometerLinear.swift */,
@@ -176,6 +180,7 @@
 				B4FEDD6D2116487C00223E77 /* ABDropDown.swift in Headers */,
 				B44974082119016900F3553F /* ABImageViewer.swift in Headers */,
 				B44974092119016900F3553F /* ABListBox.swift in Headers */,
+				B4BF62E721238BCA003CD938 /* ABGradientView.swift in Headers */,
 				B449740A2119016900F3553F /* ABSignatureCapture.swift in Headers */,
 				B449740B2119016900F3553F /* ABTouchDraw.swift in Headers */,
 				B449740C2119016900F3553F /* ABVideoRecorder.swift in Headers */,
@@ -308,6 +313,7 @@
 				B4FAE12221176759008707E7 /* ABListBox.swift in Sources */,
 				B4FEDD23211641A900223E77 /* ABDropDown.swift in Sources */,
 				B43C887D211FAAAF00A079F0 /* ABPotentiometerLinear.swift in Sources */,
+				B4BF62E6212389EB003CD938 /* ABGradientView.swift in Sources */,
 				B4FEDD22211641A500223E77 /* ABControlsStyleKit.swift in Sources */,
 				B4720EAD21177712001DBBF2 /* ABVideoRecorder.swift in Sources */,
 				B4FAE1262117678C008707E7 /* ABImageViewer.swift in Sources */,
