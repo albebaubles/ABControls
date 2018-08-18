@@ -16,19 +16,20 @@
 		B449740A2119016900F3553F /* ABSignatureCapture.swift in Headers */ = {isa = PBXBuildFile; fileRef = B459874B2117CC7E00519520 /* ABSignatureCapture.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		B449740B2119016900F3553F /* ABTouchDraw.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4720EA8211776D5001DBBF2 /* ABTouchDraw.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		B449740C2119016900F3553F /* ABVideoRecorder.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4720EAC21177712001DBBF2 /* ABVideoRecorder.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		B449740D2119016900F3553F /* ABVoiceRecorder.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4720EAA211776E9001DBBF2 /* ABVoiceRecorder.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		B449740D2119016900F3553F /* ABAudioRecorder.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4720EAA211776E9001DBBF2 /* ABAudioRecorder.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		B449740E2119016900F3553F /* ABControl.swift in Headers */ = {isa = PBXBuildFile; fileRef = B459874D2117D19400519520 /* ABControl.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		B459874C2117CC7E00519520 /* ABSignatureCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B459874B2117CC7E00519520 /* ABSignatureCapture.swift */; };
 		B459874E2117D19400519520 /* ABControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B459874D2117D19400519520 /* ABControl.swift */; };
 		B4720EA9211776D5001DBBF2 /* ABTouchDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4720EA8211776D5001DBBF2 /* ABTouchDraw.swift */; };
-		B4720EAB211776E9001DBBF2 /* ABVoiceRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4720EAA211776E9001DBBF2 /* ABVoiceRecorder.swift */; };
+		B4720EAB211776E9001DBBF2 /* ABAudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4720EAA211776E9001DBBF2 /* ABAudioRecorder.swift */; };
 		B4720EAD21177712001DBBF2 /* ABVideoRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4720EAC21177712001DBBF2 /* ABVideoRecorder.swift */; };
 		B48AFCF7211F6F680067BA86 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = B48AFCF6211F6F680067BA86 /* LICENSE.md */; };
 		B4ACB3FB211B697900140837 /* ABTextualControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ACB3FA211B697900140837 /* ABTextualControl.swift */; };
-		B4BF62E6212389EB003CD938 /* ABGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BF62E5212389EB003CD938 /* ABGradientView.swift */; };
-		B4BF62E721238BCA003CD938 /* ABGradientView.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4BF62E5212389EB003CD938 /* ABGradientView.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4BF62E6212389EB003CD938 /* ABGradientLinear.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BF62E5212389EB003CD938 /* ABGradientLinear.swift */; };
+		B4BF62E721238BCA003CD938 /* ABGradientLinear.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4BF62E5212389EB003CD938 /* ABGradientLinear.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		B4DA3C9121164A39006B1AB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DA3C9021164A39006B1AB2 /* UIKit.framework */; };
 		B4DA3C9A21164CB9006B1AB2 /* ABControls.h in Headers */ = {isa = PBXBuildFile; fileRef = B4DA3C9921164CB9006B1AB2 /* ABControls.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4E66DCD2127764D005932EC /* ABGradientRadial.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E66DCC2127764D005932EC /* ABGradientRadial.swift */; };
 		B4FAE12221176759008707E7 /* ABListBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FAE12121176759008707E7 /* ABListBox.swift */; };
 		B4FAE12421176773008707E7 /* ABBarcodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FAE12321176773008707E7 /* ABBarcodeScanner.swift */; };
 		B4FAE1262117678C008707E7 /* ABImageViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FAE1252117678C008707E7 /* ABImageViewer.swift */; };
@@ -48,7 +49,7 @@
 		EF73BD0D212324EF001BEBE1 /* ABSignatureCapture.swift in Headers */ = {isa = PBXBuildFile; fileRef = B459874B2117CC7E00519520 /* ABSignatureCapture.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF73BD0E212324EF001BEBE1 /* ABTouchDraw.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4720EA8211776D5001DBBF2 /* ABTouchDraw.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF73BD0F212324EF001BEBE1 /* ABVideoRecorder.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4720EAC21177712001DBBF2 /* ABVideoRecorder.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF73BD10212324EF001BEBE1 /* ABVoiceRecorder.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4720EAA211776E9001DBBF2 /* ABVoiceRecorder.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF73BD10212324EF001BEBE1 /* ABAudioRecorder.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4720EAA211776E9001DBBF2 /* ABAudioRecorder.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF73BD11212324EF001BEBE1 /* ABControl.swift in Headers */ = {isa = PBXBuildFile; fileRef = B459874D2117D19400519520 /* ABControl.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF73BD13212324EF001BEBE1 /* ABSignatureCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B459874B2117CC7E00519520 /* ABSignatureCapture.swift */; };
 		EF73BD14212324EF001BEBE1 /* ABCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FEDCE8211620DD00223E77 /* ABCheckBox.swift */; };
@@ -62,7 +63,7 @@
 		EF73BD1C212324EF001BEBE1 /* ABTextualControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ACB3FA211B697900140837 /* ABTextualControl.swift */; };
 		EF73BD1D212324EF001BEBE1 /* ABBarcodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FAE12321176773008707E7 /* ABBarcodeScanner.swift */; };
 		EF73BD1E212324EF001BEBE1 /* ABTouchDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4720EA8211776D5001DBBF2 /* ABTouchDraw.swift */; };
-		EF73BD1F212324EF001BEBE1 /* ABVoiceRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4720EAA211776E9001DBBF2 /* ABVoiceRecorder.swift */; };
+		EF73BD1F212324EF001BEBE1 /* ABAudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4720EAA211776E9001DBBF2 /* ABAudioRecorder.swift */; };
 		EF73BD20212324EF001BEBE1 /* ABPotentiometerRadial.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43C887A211FAA9900A079F0 /* ABPotentiometerRadial.swift */; };
 		EF73BD22212324EF001BEBE1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DA3C9021164A39006B1AB2 /* UIKit.framework */; };
 		EF73BD24212324EF001BEBE1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B4248EB0212265250026D3BF /* README.md */; };
@@ -77,13 +78,14 @@
 		B459874D2117D19400519520 /* ABControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABControl.swift; sourceTree = "<group>"; };
 		B46D4E542114C07600A58C71 /* ABDropDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABDropDown.swift; sourceTree = "<group>"; };
 		B4720EA8211776D5001DBBF2 /* ABTouchDraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABTouchDraw.swift; sourceTree = "<group>"; };
-		B4720EAA211776E9001DBBF2 /* ABVoiceRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABVoiceRecorder.swift; sourceTree = "<group>"; };
+		B4720EAA211776E9001DBBF2 /* ABAudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABAudioRecorder.swift; sourceTree = "<group>"; };
 		B4720EAC21177712001DBBF2 /* ABVideoRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABVideoRecorder.swift; sourceTree = "<group>"; };
 		B48AFCF6211F6F680067BA86 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		B4ACB3FA211B697900140837 /* ABTextualControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABTextualControl.swift; sourceTree = "<group>"; };
-		B4BF62E5212389EB003CD938 /* ABGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABGradientView.swift; sourceTree = "<group>"; };
+		B4BF62E5212389EB003CD938 /* ABGradientLinear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABGradientLinear.swift; sourceTree = "<group>"; };
 		B4DA3C9021164A39006B1AB2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B4DA3C9921164CB9006B1AB2 /* ABControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABControls.h; sourceTree = "<group>"; };
+		B4E66DCC2127764D005932EC /* ABGradientRadial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABGradientRadial.swift; sourceTree = "<group>"; };
 		B4FAE12121176759008707E7 /* ABListBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListBox.swift; sourceTree = "<group>"; };
 		B4FAE12321176773008707E7 /* ABBarcodeScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABBarcodeScanner.swift; sourceTree = "<group>"; };
 		B4FAE1252117678C008707E7 /* ABImageViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABImageViewer.swift; sourceTree = "<group>"; };
@@ -135,13 +137,15 @@
 		B46D4E252114C05F00A58C71 /* ABControls */ = {
 			isa = PBXGroup;
 			children = (
+				B4720EAA211776E9001DBBF2 /* ABAudioRecorder.swift */,
 				B4FAE12321176773008707E7 /* ABBarcodeScanner.swift */,
 				B4FEDCE8211620DD00223E77 /* ABCheckBox.swift */,
 				B459874D2117D19400519520 /* ABControl.swift */,
 				B4DA3C9921164CB9006B1AB2 /* ABControls.h */,
 				B4FC45602114EBC8006B8A15 /* ABControlsStyleKit.swift */,
 				B46D4E542114C07600A58C71 /* ABDropDown.swift */,
-				B4BF62E5212389EB003CD938 /* ABGradientView.swift */,
+				B4BF62E5212389EB003CD938 /* ABGradientLinear.swift */,
+				B4E66DCC2127764D005932EC /* ABGradientRadial.swift */,
 				B4FAE1252117678C008707E7 /* ABImageViewer.swift */,
 				B4FAE12121176759008707E7 /* ABListBox.swift */,
 				B43C887C211FAAAF00A079F0 /* ABPotentiometerLinear.swift */,
@@ -150,7 +154,6 @@
 				B4ACB3FA211B697900140837 /* ABTextualControl.swift */,
 				B4720EA8211776D5001DBBF2 /* ABTouchDraw.swift */,
 				B4720EAC21177712001DBBF2 /* ABVideoRecorder.swift */,
-				B4720EAA211776E9001DBBF2 /* ABVoiceRecorder.swift */,
 				B4FEDD052116419200223E77 /* Info.plist */,
 				B48AFCF6211F6F680067BA86 /* LICENSE.md */,
 				B4248EB0212265250026D3BF /* README.md */,
@@ -180,11 +183,11 @@
 				B4FEDD6D2116487C00223E77 /* ABDropDown.swift in Headers */,
 				B44974082119016900F3553F /* ABImageViewer.swift in Headers */,
 				B44974092119016900F3553F /* ABListBox.swift in Headers */,
-				B4BF62E721238BCA003CD938 /* ABGradientView.swift in Headers */,
+				B4BF62E721238BCA003CD938 /* ABGradientLinear.swift in Headers */,
 				B449740A2119016900F3553F /* ABSignatureCapture.swift in Headers */,
 				B449740B2119016900F3553F /* ABTouchDraw.swift in Headers */,
 				B449740C2119016900F3553F /* ABVideoRecorder.swift in Headers */,
-				B449740D2119016900F3553F /* ABVoiceRecorder.swift in Headers */,
+				B449740D2119016900F3553F /* ABAudioRecorder.swift in Headers */,
 				B449740E2119016900F3553F /* ABControl.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,7 +206,7 @@
 				EF73BD0D212324EF001BEBE1 /* ABSignatureCapture.swift in Headers */,
 				EF73BD0E212324EF001BEBE1 /* ABTouchDraw.swift in Headers */,
 				EF73BD0F212324EF001BEBE1 /* ABVideoRecorder.swift in Headers */,
-				EF73BD10212324EF001BEBE1 /* ABVoiceRecorder.swift in Headers */,
+				EF73BD10212324EF001BEBE1 /* ABAudioRecorder.swift in Headers */,
 				EF73BD11212324EF001BEBE1 /* ABControl.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,15 +316,16 @@
 				B4FAE12221176759008707E7 /* ABListBox.swift in Sources */,
 				B4FEDD23211641A900223E77 /* ABDropDown.swift in Sources */,
 				B43C887D211FAAAF00A079F0 /* ABPotentiometerLinear.swift in Sources */,
-				B4BF62E6212389EB003CD938 /* ABGradientView.swift in Sources */,
+				B4BF62E6212389EB003CD938 /* ABGradientLinear.swift in Sources */,
 				B4FEDD22211641A500223E77 /* ABControlsStyleKit.swift in Sources */,
 				B4720EAD21177712001DBBF2 /* ABVideoRecorder.swift in Sources */,
 				B4FAE1262117678C008707E7 /* ABImageViewer.swift in Sources */,
 				B4ACB3FB211B697900140837 /* ABTextualControl.swift in Sources */,
 				B4FAE12421176773008707E7 /* ABBarcodeScanner.swift in Sources */,
 				B4720EA9211776D5001DBBF2 /* ABTouchDraw.swift in Sources */,
-				B4720EAB211776E9001DBBF2 /* ABVoiceRecorder.swift in Sources */,
+				B4720EAB211776E9001DBBF2 /* ABAudioRecorder.swift in Sources */,
 				B43C887B211FAA9900A079F0 /* ABPotentiometerRadial.swift in Sources */,
+				B4E66DCD2127764D005932EC /* ABGradientRadial.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,7 +345,7 @@
 				EF73BD1C212324EF001BEBE1 /* ABTextualControl.swift in Sources */,
 				EF73BD1D212324EF001BEBE1 /* ABBarcodeScanner.swift in Sources */,
 				EF73BD1E212324EF001BEBE1 /* ABTouchDraw.swift in Sources */,
-				EF73BD1F212324EF001BEBE1 /* ABVoiceRecorder.swift in Sources */,
+				EF73BD1F212324EF001BEBE1 /* ABAudioRecorder.swift in Sources */,
 				EF73BD20212324EF001BEBE1 /* ABPotentiometerRadial.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

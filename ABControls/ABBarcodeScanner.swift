@@ -39,10 +39,12 @@ import AVFoundation
      
      let barcode = ABBarCode.init("CIQRCodeGenerator", "24342344")
      let myImage = barcode.image()
+     CIQRCodeGenerator
  */
     @objc public func image() -> UIImage {
         guard let data = stringData!.data(using: .ascii),
             let filter = CIFilter(name: type!) else {
+                NSLog("did fail to create image")
                 return UIImage.init()
         }
         filter.setValue(data, forKey: "inputMessage")
@@ -73,7 +75,7 @@ import AVFoundation
 
 
 /// In this iteration the scanner object is always on and active
-@objc protocol ABBarcodeScannerDelegate : class {
+@objc public protocol ABBarcodeScannerDelegate : class {
     
     /// Fires when the control has found and proceessed a barcode
     ///
@@ -91,7 +93,7 @@ import AVFoundation
 
 /// Uses the camera to scan a barcode
 @objc @IBDesignable public class  ABBarcodeScanner : ABControl, AVCaptureMetadataOutputObjectsDelegate {
-    private weak var _delegate : ABBarcodeScannerDelegate?
+    public weak var delegate : ABBarcodeScannerDelegate?
     private let _camera =  AVCaptureDevice.default(for: .video)
     private let _session = AVCaptureSession.init()
     private var _video : AVCaptureDeviceInput?
@@ -160,7 +162,7 @@ import AVFoundation
                 //access granted
                 self.setupBarcodeCapture()
             } else {
-                self._delegate?.didFail("ABBarcodeScanner does not have access to the camera")
+                self.delegate?.didFail("ABBarcodeScanner does not have access to the camera")
                 NotificationCenter.default.post(name: NSNotification.Name(  ABBarcodeScanner.ABBarcodeScannerDidFail), object: nil)
 
             }
@@ -171,7 +173,7 @@ import AVFoundation
     /// 
     private func setupBarcodeCapture() {
         if _camera == nil {
-            _delegate?.didFail("ABBarcodeScanner : device does not have a camera")
+            delegate?.didFail("ABBarcodeScanner : device does not have a camera")
             NotificationCenter.default.post(name: NSNotification.Name(  ABBarcodeScanner.ABBarcodeScannerDidFail), object: nil)
 
             return
@@ -203,7 +205,7 @@ import AVFoundation
                 /// TODO : fire a delegate message, somethign went wrong
             }
         } else {
-            _delegate?.didFail("ABBarcodeScanner did not receive access to the camera")
+            delegate?.didFail("ABBarcodeScanner did not receive access to the camera")
             NotificationCenter.default.post(name: NSNotification.Name(  ABBarcodeScanner.ABBarcodeScannerDidFail), object: nil)
 
         }
@@ -222,8 +224,8 @@ import AVFoundation
             if metaData is AVMetadataMachineReadableCodeObject {
                 let code = _previewLayer.transformedMetadataObject(for: metaData)
                 let barcode = ABBarCode.processBarcode(meta: code as! AVMetadataMachineReadableCodeObject)
-                if barcodeTypes.contains(code!.type.rawValue) {
-                    _delegate?.didReceiveBarcode(barcode)
+                if barcodeTypes.contains(code!.type.rawValue) || barcodeTypes.count == 0 {
+                    delegate?.didReceiveBarcode(barcode)
                     NotificationCenter.default.post(name: NSNotification.Name(  ABBarcodeScanner.ABBarcodeScannerDidReceiveBarcode), object: barcode)
                     _session.stopRunning()
                 }

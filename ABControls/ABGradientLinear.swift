@@ -1,5 +1,5 @@
 //
-//  ABGradientLinearView.swift
+//  ABGradientLinear.swift
 //  ABControls
 //
 //  Created by Alan Corbett on 8/14/18.

@@ -9,7 +9,7 @@
 import UIKit
 
 
-@objc protocol ABDropDownDelegate : class {
+@objc public protocol ABDropDownDelegate : class {
     
     /// Fires when the selected has changed
     ///
@@ -26,7 +26,7 @@ import UIKit
 /// Provides a dropdown list as a replacement for a UIPickerView.  If the dropdown cannot display without falling off the window, it will popUP
 /// - Attention: fires notification 'ABDropDownDidChangeIndex' which returns the selected index
 @objc @IBDesignable public class ABDropDown: ABTextualControl, UITableViewDelegate, UITableViewDataSource {
-    private weak var _delegate : ABDropDownDelegate?
+    public weak var delegate : ABDropDownDelegate?
     private var _frame : CGRect = CGRect.init()
     private static var _listItems: [String]?
     private var _selected : Int = NSNotFound
@@ -74,7 +74,7 @@ import UIKit
                 
                 #if !TARGET_INTERFACE_BUILDER
                     NotificationCenter.default.post(name: NSNotification.Name(  ABDropDown.ABDropDownDidChangeIndex), object: _selected)
-                    _delegate?.didChangeIndex!(index)
+                    delegate?.didChangeIndex!(index)
                 #endif
                 
                 if _selected == NSNotFound {
@@ -144,19 +144,19 @@ import UIKit
                                  y: _frame.origin.y,
                                  width: _frame.width,
                                  height: _defaultHeight)
-            _delegate?.didHideDropdown!()
+            delegate?.didHideDropdown?()
         } else if _frame.origin.y + _dropdownHeight >  (window?.screen.bounds.size.height)!  {
             frame =    CGRect.init(x: _frame.origin.x,
                                    y: _frame.origin.y - _dropdownViewHeight,
                                    width: _frame.width,
                                    height: _dropdownHeight)
-            _delegate?.didShowDropdown!()
+            delegate?.didShowDropdown?()
         } else {
             frame =  CGRect.init(x: _frame.origin.x,
                                  y: _frame.origin.y,
                                  width: _frame.width,
                                  height: _dropdownHeight)
-            _delegate?.didShowDropdown!()
+            delegate?.didShowDropdown?()
         }
         
         layer.borderColor = UIColor.black.cgColor

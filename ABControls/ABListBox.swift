@@ -8,7 +8,7 @@
 
 import UIKit
 
-@objc protocol ABListBoxDelegate : class {
+@objc public protocol ABListBoxDelegate : class {
     
     /// Fires when the listbox selection has changed
     ///
@@ -17,7 +17,7 @@ import UIKit
 }
 
 @objc @IBDesignable public class ABListBox: ABTextualControl, UITableViewDelegate, UITableViewDataSource {
-    private weak var _delegate : ABListBoxDelegate?
+    @objc public weak var delegate : ABListBoxDelegate?
     private var _frame : CGRect = CGRect.init()
     private var _listItems: [String]?
     private var _selected : Int = NSNotFound
@@ -44,6 +44,14 @@ import UIKit
     }
     
     
+    @IBInspectable  public var rowHeight : Float = 40 {
+        didSet{
+            _tableview.rowHeight = CGFloat(rowHeight)
+            _tableview.reloadData()
+        }
+    }
+
+
     /**
      The list of items to be displayed in the combobox seperated by \n (command-enter)
      */
@@ -66,7 +74,7 @@ import UIKit
             #if !TARGET_INTERFACE_BUILDER
             _tableview.selectRow(at: IndexPath.init(row: _selected, section: 0), animated: false, scrollPosition: .middle)
             NotificationCenter.default.post(name: NSNotification.Name(  ABListBox.ABListBoxDidChangeIndex), object: _selected)
-            _delegate?.didChangeListBoxIndex!(index)
+            delegate?.didChangeListBoxIndex!(index)
             #endif
         }
     }
@@ -152,7 +160,7 @@ import UIKit
         _tableview.indicatorStyle = .default
         _tableview.isUserInteractionEnabled = true
         _tableview.flashScrollIndicators()
-        _tableview.rowHeight = 25
+        _tableview.rowHeight = CGFloat(rowHeight)
         _tableview.bounces = false
         _tableview.alwaysBounceVertical = false
         _tableview.alwaysBounceHorizontal = false

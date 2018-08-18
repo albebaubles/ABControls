@@ -8,7 +8,7 @@
 
 import UIKit
 
-@objc protocol ABCheckBoxDelegate : class {
+@objc public protocol ABCheckBoxDelegate : class {
     
     /// Fires anytime the checkbox is checked or unchecked
     ///
@@ -17,7 +17,7 @@ import UIKit
 }
 
 @objc @IBDesignable public class ABCheckBox: ABControl {
-    private weak var _delegate : ABCheckBoxDelegate?
+    public weak var delegate : ABCheckBoxDelegate?
     private var _button : UIButton = UIButton.init(type: .system)
     
     /// Notifications
@@ -30,10 +30,11 @@ import UIKit
         didSet {
                 _button.setImage( isChecked ? ABControlsStyleKit.imageOfCheckedBox :
                     ABControlsStyleKit.imageOfUncheckedBox, for: .normal)
+            _button.frame = bounds
             setNeedsDisplay()
             #if !TARGET_INTERFACE_BUILDER
             NotificationCenter.default.post(name: NSNotification.Name(  ABCheckBox.ABCheckBoxDidChange), object: isChecked)
-            _delegate?.didChangeCheckboxSelection!(isChecked)
+            delegate?.didChangeCheckboxSelection!(isChecked)
             #endif
         }
     }
@@ -51,6 +52,7 @@ import UIKit
     /// required for dev time
     required  public init(frame: CGRect) {
         super.init(frame:  frame)
+        _button.bounds = frame
         invalidateIntrinsicContentSize()
     }
     
@@ -69,6 +71,7 @@ import UIKit
         sharedInit()
         _button.layer.borderColor = UIColor.black.cgColor
         _button.layer.borderWidth = 0.5
+        _button.frame = bounds
     }
     
     private func sharedInit() {
@@ -78,6 +81,7 @@ import UIKit
     
     private func setupCheckbox() {
         _button.frame = bounds
+        _button.imageView?.frame = bounds
         _button.setImage(ABControlsStyleKit.imageOfUncheckedBox , for: .normal)
         _button.addTarget(self, action: #selector(checkboxChanged), for: .touchUpInside)
         _button.backgroundColor = backgroundColor
