@@ -7,12 +7,32 @@
 //
 
 import UIKit
+import ABControls
 
-class ABScannerViewController: UIViewController {
-
+class ABScannerViewController: UIViewController, ABBarcodeScannerDelegate {
+    @IBOutlet weak var scanner: ABBarcodeScanner!
+    @IBOutlet weak var scanned: UIImageView!
+    @IBOutlet weak var created: UIImageView!
+    @IBOutlet weak var barcodeValue: UILabel!
+    
+    func didReceiveBarcode(_ code: ABBarCode) {
+        DispatchQueue.main.async {
+            code.type = "CIQRCodeGenerator"
+            self.scanned.image = code.image()
+            self.barcodeValue.text = code.stringData
+        }
+    }
+    
+    func didFail(_ message: String) {
+        //
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        scanner.delegate = self
+        created.image = ABBarCode.init("CIQRCodeGenerator", "ABControls Rock!").image()
         // Do any additional setup after loading the view.
     }
     

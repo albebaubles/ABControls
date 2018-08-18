@@ -7,11 +7,25 @@
 //
 
 import UIKit
+import ABControls
 
-class ABCheckBoxViewController: UIViewController {
-
+class ABCheckBoxViewController: UIViewController, ABCheckBoxDelegate {
+    @IBOutlet weak var checkbox1: ABCheckBox!
+    @IBOutlet weak var checkbox2: ABCheckBox!
+    @IBOutlet weak var button: UIButton!
+    
+    func didChangeCheckboxSelection(_ checked: Bool) {
+        if checkbox1.isChecked && checkbox2.isChecked {
+            button.isEnabled = true
+        } else {
+            button.isEnabled = false
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkbox1.delegate = self
+        checkbox2.delegate = self
 
         // Do any additional setup after loading the view.
     }

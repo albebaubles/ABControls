@@ -7,11 +7,37 @@
 //
 
 import UIKit
+import ABControls
 
-class ABDropDownViewController: UIViewController {
+class ABDropDownViewController: UIViewController, ABDropDownDelegate {
+
+    @IBOutlet weak var textview: UITextView!
+    @IBOutlet weak var dropdown: ABDropDown!
+
+    func didChangeIndex(_ index: Int) {
+        switch index {
+        case 0:
+            textview.textColor = .red
+        case 1:
+            textview.textColor = .green
+        case 2:
+            textview.textColor = .blue
+        case 3:
+            textview.textColor = .black
+        case 4:
+            textview.textColor = .gray
+
+        default:
+            textview.textColor = .brown
+
+        }
+    }
+
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        dropdown.delegate = self
 
         // Do any additional setup after loading the view.
     }

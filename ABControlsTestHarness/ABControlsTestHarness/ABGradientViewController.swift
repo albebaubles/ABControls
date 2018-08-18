@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import ABControls
 
 class ABGradientViewController: UIViewController {
-
+    @IBOutlet weak var gradient: ABGradientLinearView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        gradient.colors = [UIColor.red, UIColor.blue, UIColor.green]
         // Do any additional setup after loading the view.
     }
     
