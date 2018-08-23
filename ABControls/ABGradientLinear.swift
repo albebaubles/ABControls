@@ -53,21 +53,14 @@ import UIKit
     }
     
     private func sharedInit() {
-//        gradient = CAGradientLayer.init()
-//        gradient.frame = frame
-//        gradient.startPoint = CGPoint.init(x: 0, y: 0);
-//        gradient.endPoint = CGPoint.init(x: 1, y: 1);
-//        self.layer.addSublayer(gradient)
-//        setNeedsDisplay()
     }
     
     override public func draw(_ rect: CGRect) {
+        super.draw(rect)
+        layer.cornerRadius = super.cornerRadius
 
         // Setup view
- //       let colors =  [UIColor.red.cgColor, UIColor.blue.cgColor]  as CFArray
         let locations = [ 0.0, 1.0 ] as [CGFloat]
-        let radius = min((self.bounds.size.height / 2), (self.bounds.size.width / 2))
-        let center = CGPoint.init(x: self.bounds.size.width / 2, y: self.bounds.size.height / 2)
         
         // Prepare a context and create a color space
         let context = UIGraphicsGetCurrentContext()
@@ -76,9 +69,6 @@ import UIKit
         
         // Create gradient object from our color space, color components and locations
         let gradient = CGGradient.init(colorsSpace: colorSpace, colors: colors, locations: locations)
-        
-        // Draw a gradient
-//        context!.drawRadialGradient(gradient!, startCenter: center, startRadius: 0.0, endCenter: center, endRadius: radius, options: CGGradientDrawingOptions(rawValue: 0))
         
         context!.drawLinearGradient(gradient!, start: startPoint, end: endPoint, options: .drawsBeforeStartLocation)
         context?.restoreGState()

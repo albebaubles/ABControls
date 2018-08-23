@@ -23,10 +23,13 @@
 		B4720EA9211776D5001DBBF2 /* ABTouchDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4720EA8211776D5001DBBF2 /* ABTouchDraw.swift */; };
 		B4720EAB211776E9001DBBF2 /* ABAudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4720EAA211776E9001DBBF2 /* ABAudioRecorder.swift */; };
 		B4720EAD21177712001DBBF2 /* ABVideoRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4720EAC21177712001DBBF2 /* ABVideoRecorder.swift */; };
+		B47CBFE7212B299500629096 /* ABGradientRadial.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4E66DCC2127764D005932EC /* ABGradientRadial.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		B48AFCF7211F6F680067BA86 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = B48AFCF6211F6F680067BA86 /* LICENSE.md */; };
 		B4ACB3FB211B697900140837 /* ABTextualControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ACB3FA211B697900140837 /* ABTextualControl.swift */; };
 		B4BF62E6212389EB003CD938 /* ABGradientLinear.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BF62E5212389EB003CD938 /* ABGradientLinear.swift */; };
 		B4BF62E721238BCA003CD938 /* ABGradientLinear.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4BF62E5212389EB003CD938 /* ABGradientLinear.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4CC1AF921288D8C00FF1A75 /* ABPotentiometerLinear.swift in Headers */ = {isa = PBXBuildFile; fileRef = B43C887C211FAAAF00A079F0 /* ABPotentiometerLinear.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4CC1AFA21288D8E00FF1A75 /* ABPotentiometerRadial.swift in Headers */ = {isa = PBXBuildFile; fileRef = B43C887A211FAA9900A079F0 /* ABPotentiometerRadial.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		B4DA3C9121164A39006B1AB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DA3C9021164A39006B1AB2 /* UIKit.framework */; };
 		B4DA3C9A21164CB9006B1AB2 /* ABControls.h in Headers */ = {isa = PBXBuildFile; fileRef = B4DA3C9921164CB9006B1AB2 /* ABControls.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B4E66DCD2127764D005932EC /* ABGradientRadial.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E66DCC2127764D005932EC /* ABGradientRadial.swift */; };
@@ -184,9 +187,12 @@
 				B44974082119016900F3553F /* ABImageViewer.swift in Headers */,
 				B44974092119016900F3553F /* ABListBox.swift in Headers */,
 				B4BF62E721238BCA003CD938 /* ABGradientLinear.swift in Headers */,
+				B47CBFE7212B299500629096 /* ABGradientRadial.swift in Headers */,
 				B449740A2119016900F3553F /* ABSignatureCapture.swift in Headers */,
 				B449740B2119016900F3553F /* ABTouchDraw.swift in Headers */,
 				B449740C2119016900F3553F /* ABVideoRecorder.swift in Headers */,
+				B4CC1AFA21288D8E00FF1A75 /* ABPotentiometerRadial.swift in Headers */,
+				B4CC1AF921288D8C00FF1A75 /* ABPotentiometerLinear.swift in Headers */,
 				B449740D2119016900F3553F /* ABAudioRecorder.swift in Headers */,
 				B449740E2119016900F3553F /* ABControl.swift in Headers */,
 			);
@@ -316,16 +322,16 @@
 				B4FAE12221176759008707E7 /* ABListBox.swift in Sources */,
 				B4FEDD23211641A900223E77 /* ABDropDown.swift in Sources */,
 				B43C887D211FAAAF00A079F0 /* ABPotentiometerLinear.swift in Sources */,
-				B4BF62E6212389EB003CD938 /* ABGradientLinear.swift in Sources */,
 				B4FEDD22211641A500223E77 /* ABControlsStyleKit.swift in Sources */,
 				B4720EAD21177712001DBBF2 /* ABVideoRecorder.swift in Sources */,
+				B4BF62E6212389EB003CD938 /* ABGradientLinear.swift in Sources */,
+				B4E66DCD2127764D005932EC /* ABGradientRadial.swift in Sources */,
 				B4FAE1262117678C008707E7 /* ABImageViewer.swift in Sources */,
 				B4ACB3FB211B697900140837 /* ABTextualControl.swift in Sources */,
 				B4FAE12421176773008707E7 /* ABBarcodeScanner.swift in Sources */,
 				B4720EA9211776D5001DBBF2 /* ABTouchDraw.swift in Sources */,
 				B4720EAB211776E9001DBBF2 /* ABAudioRecorder.swift in Sources */,
 				B43C887B211FAA9900A079F0 /* ABPotentiometerRadial.swift in Sources */,
-				B4E66DCD2127764D005932EC /* ABGradientRadial.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

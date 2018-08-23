@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B4CC1AF721288C6400FF1A75 /* ABControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CC1AF621288C6400FF1A75 /* ABControls.framework */; };
+		B4CC1AF821288C6400FF1A75 /* ABControls.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B4CC1AF621288C6400FF1A75 /* ABControls.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B4FA156C2127409B000A9C53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA156B2127409B000A9C53 /* AppDelegate.swift */; };
 		B4FA156E2127409B000A9C53 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA156D2127409B000A9C53 /* MasterViewController.swift */; };
 		B4FA15702127409B000A9C53 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA156F2127409B000A9C53 /* DetailViewController.swift */; };
@@ -15,8 +17,6 @@
 		B4FA15782127409D000A9C53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4FA15762127409D000A9C53 /* LaunchScreen.storyboard */; };
 		B4FA15832127409D000A9C53 /* ABControlsTestHarnessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA15822127409D000A9C53 /* ABControlsTestHarnessTests.swift */; };
 		B4FA158E2127409D000A9C53 /* ABControlsTestHarnessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA158D2127409D000A9C53 /* ABControlsTestHarnessUITests.swift */; };
-		B4FA159C21274241000A9C53 /* ABControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4FA159B21274241000A9C53 /* ABControls.framework */; };
-		B4FA159D21274241000A9C53 /* ABControls.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B4FA159B21274241000A9C53 /* ABControls.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B4FA15A021274E53000A9C53 /* ABScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA159F21274E53000A9C53 /* ABScannerViewController.swift */; };
 		B4FA15A2212760DC000A9C53 /* ABCheckBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA15A1212760DC000A9C53 /* ABCheckBoxViewController.swift */; };
 		B4FA15A4212764D5000A9C53 /* ABDropDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA15A3212764D5000A9C53 /* ABDropDownViewController.swift */; };
@@ -47,7 +47,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B4FA159D21274241000A9C53 /* ABControls.framework in Embed Frameworks */,
+				B4CC1AF821288C6400FF1A75 /* ABControls.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,6 +55,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B4CC1AF621288C6400FF1A75 /* ABControls.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ABControls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4FA15682127409B000A9C53 /* ABControlsTestHarness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ABControlsTestHarness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4FA156B2127409B000A9C53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4FA156D2127409B000A9C53 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -69,7 +70,6 @@
 		B4FA15892127409D000A9C53 /* ABControlsTestHarnessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ABControlsTestHarnessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4FA158D2127409D000A9C53 /* ABControlsTestHarnessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABControlsTestHarnessUITests.swift; sourceTree = "<group>"; };
 		B4FA158F2127409D000A9C53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B4FA159B21274241000A9C53 /* ABControls.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ABControls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4FA159F21274E53000A9C53 /* ABScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABScannerViewController.swift; sourceTree = "<group>"; };
 		B4FA15A1212760DC000A9C53 /* ABCheckBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABCheckBoxViewController.swift; sourceTree = "<group>"; };
 		B4FA15A3212764D5000A9C53 /* ABDropDownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABDropDownViewController.swift; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4FA159C21274241000A9C53 /* ABControls.framework in Frameworks */,
+				B4CC1AF721288C6400FF1A75 /* ABControls.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +105,7 @@
 		B4FA155F2127409B000A9C53 = {
 			isa = PBXGroup;
 			children = (
-				B4FA159B21274241000A9C53 /* ABControls.framework */,
+				B4CC1AF621288C6400FF1A75 /* ABControls.framework */,
 				B4FA156A2127409B000A9C53 /* ABControlsTestHarness */,
 				B4FA15812127409D000A9C53 /* ABControlsTestHarnessTests */,
 				B4FA158C2127409D000A9C53 /* ABControlsTestHarnessUITests */,

@@ -10,17 +10,18 @@ import UIKit
 import ABControls
 
 class ABGradientViewController: UIViewController {
-    @IBOutlet weak var gradient: ABGradientLinearView!
+    @IBOutlet weak var gradientLinear: ABGradientLinear!
     
+    @IBOutlet weak var gradientRadial: ABGradientRadial!
     override func viewDidLoad() {
         super.viewDidLoad()
-        gradient.colors = [UIColor.red, UIColor.blue, UIColor.green]
+        gradientLinear.colors = [UIColor.red.cgColor, UIColor.blue.cgColor, UIColor.green.cgColor, UIColor.orange.cgColor] as CFArray
         // Do any additional setup after loading the view.
     }
     
 
     /*
-    // MARK: - Navigation
+    // MARK: - Navigation,
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

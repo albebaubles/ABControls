@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H1p-Uh-vWS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H1p-Uh-vWS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,7 +40,7 @@
                                 <string key="value">ABBarcodeScanner
 ABCheckBox
 ABDropDown
-ABGradientView
+ABGradientLinear / ABGradientRadial
 ABImageViewer
 ABListBox
 ABPotentiometerLinear
@@ -148,10 +148,10 @@ ABAudioRecorder</string>
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="point" keyPath="startPoint">
-                                        <point key="value" x="150" y="0.0"/>
+                                        <point key="value" x="0.0" y="100"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="point" keyPath="endPoint">
-                                        <point key="value" x="0.0" y="300"/>
+                                        <point key="value" x="222" y="193"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -170,7 +170,8 @@ ABAudioRecorder</string>
                         <viewLayoutGuide key="safeArea" id="EMc-aN-yIq"/>
                     </view>
                     <connections>
-                        <outlet property="gradient" destination="lOk-cJ-nnX" id="2Mz-gP-0IM"/>
+                        <outlet property="gradientLinear" destination="lOk-cJ-nnX" id="bgR-jX-bUi"/>
+                        <outlet property="gradientRadial" destination="LWH-D1-lax" id="y9Q-IX-GTB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6hy-k7-gJS" userLabel="First Responder" sceneMemberID="firstResponder"/>
