@@ -166,11 +166,12 @@ import UIKit
         _tableview.alwaysBounceHorizontal = false
         _tableview.backgroundColor = UIColor.clear
         _tableview.frame = bounds
+            _tableview.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(_tableview)
         _tableview.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor).isActive = true
         _tableview.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor).isActive = true
         _tableview.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor).isActive = true
         _tableview.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor).isActive = true
-        addSubview(_tableview)
     }
     
     
