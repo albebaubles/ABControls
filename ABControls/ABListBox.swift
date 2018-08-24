@@ -164,8 +164,9 @@ import UIKit
         _tableview.bounces = false
         _tableview.alwaysBounceVertical = false
         _tableview.alwaysBounceHorizontal = false
-        _tableview.backgroundColor = self.backgroundColor
+        _tableview.backgroundColor = UIColor.clear
         _tableview.frame = bounds
+        self.backgroundColor = UIColor.clear
         addSubview(_tableview)
     }
     
@@ -201,7 +202,7 @@ import UIKit
     
     public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.backgroundColor = self.backgroundColor
-        cell.contentView.backgroundColor = self.backgroundColor
+        _tableview.backgroundColor = UIColor.clear
         cell.textLabel?.textColor = self.textColor
     }
 

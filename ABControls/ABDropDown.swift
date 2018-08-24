@@ -239,8 +239,8 @@ import UIKit
         _tableview.bounces = false
         _tableview.alwaysBounceVertical = false
         _tableview.alwaysBounceHorizontal = false
-        _tableview.backgroundColor = self.backgroundColor
-        
+        _tableview.backgroundColor = UIColor.clear
+        self.backgroundColor = UIColor.clear
         addSubview(_tableview)
     }
     
