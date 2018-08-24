@@ -164,7 +164,7 @@ import UIKit
         _tableview.bounces = false
         _tableview.alwaysBounceVertical = false
         _tableview.alwaysBounceHorizontal = false
-        _tableview.backgroundColor = UIColor.clear
+        _tableview.backgroundColor = self.backgroundColor
         _tableview.frame = bounds
             _tableview.translatesAutoresizingMaskIntoConstraints = false
         addSubview(_tableview)
@@ -193,9 +193,9 @@ import UIKit
         cell.isUserInteractionEnabled = true
         cell.textLabel?.text = _listItems?[indexPath.row]
         cell.textLabel?.font = _font
-        cell.textLabel?.backgroundColor = UIColor.clear
-        cell.backgroundView?.backgroundColor = UIColor.clear
-        cell.contentView.backgroundColor = UIColor.clear
+//        cell.textLabel?.backgroundColor = UIColor.clear
+//        cell.backgroundView?.backgroundColor = UIColor.clear
+//        cell.contentView.backgroundColor = UIColor.clear
         cell.textLabel?.textColor = self.textColor
         cell.layer.backgroundColor = self.backgroundColor?.cgColor
         return cell
@@ -207,9 +207,9 @@ import UIKit
     }
     
     public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.backgroundView?.backgroundColor = UIColor.clear
-        cell.contentView.backgroundColor = UIColor.clear
-        cell.textLabel?.textColor = self.textColor
+//        cell.backgroundView?.backgroundColor = UIColor.clear
+//        cell.contentView.backgroundColor = UIColor.clear
+//        cell.textLabel?.textColor = self.textColor
         cell.layer.backgroundColor = self.backgroundColor?.cgColor
         NSLog("cell setup")
     }
