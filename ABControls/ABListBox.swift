@@ -175,7 +175,7 @@ import UIKit
         _tableview.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor).isActive = true
         layer.backgroundColor = self.backgroundColor?.cgColor
         layer.borderColor = self.textColor.cgColor
-        layer.borderWidth = 1
+        layer.borderWidth = 0.5
     }
     
     

@@ -249,6 +249,8 @@ import UIKit
         _tableview.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor).isActive = true
         _tableview.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor).isActive = true
         layer.backgroundColor = self.backgroundColor?.cgColor
+        layer.borderColor = self.textColor.cgColor
+        layer.borderWidth = 0.5
     }
     
     
