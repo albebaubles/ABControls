@@ -22,7 +22,7 @@ import UIKit
     private var _listItems: [String]?
     private var _selected : Int = NSNotFound
     private var _font : UIFont = UIFont.systemFont(ofSize: 14)
-    private var _tableview: UITableView! = UITableView.init(frame: CGRect.init(), style: UITableViewStyle.grouped)
+    private var _tableview: UITableView! = UITableView.init()
     
     
     /// Notifications
