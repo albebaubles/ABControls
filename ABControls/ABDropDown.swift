@@ -241,7 +241,6 @@ import UIKit
         _tableview.alwaysBounceHorizontal = false
         _tableview.backgroundColor = self.backgroundColor
         
-        
         addSubview(_tableview)
     }
     
@@ -266,6 +265,7 @@ import UIKit
         cell.textLabel?.textColor = textColor
         cell.textLabel?.font = _font
         cell.backgroundColor = self.backgroundColor
+        cell.contentView.backgroundColor = self.backgroundColor
         return cell
     }
     
