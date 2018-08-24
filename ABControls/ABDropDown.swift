@@ -276,8 +276,10 @@ import UIKit
     
     public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.backgroundColor = self.backgroundColor
-        cell.contentView.backgroundColor = self.backgroundColor
-        cell.textLabel?.textColor = self.textColor
+        cell.backgroundColor = UIColor.clear
+        cell.backgroundView?.backgroundColor = UIColor.clear
+        cell.contentView.backgroundColor = UIColor.clear
+        NSLog("ABDropDown")
     }
 }
 
