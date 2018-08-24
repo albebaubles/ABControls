@@ -131,6 +131,9 @@ import UIKit
         label.textAlignment = .center
         label.textColor = UIColor.lightGray
         label.text = "ABListBox"
+            layer.masksToBounds = true
+            layer.borderWidth = 0.5
+            layer.borderColor = UIColor.black.cgColor
         addSubview(label)
         }
     }
@@ -141,9 +144,6 @@ import UIKit
         
         // setup the ui controls
         _frame = frame
-        layer.masksToBounds = true
-        layer.borderWidth = 0.5
-        layer.borderColor = UIColor.black.cgColor
         setupTableview()
         _tableview.reloadData()
 
@@ -190,7 +190,7 @@ import UIKit
         cell.textLabel?.text = _listItems?[indexPath.row]
         cell.textLabel?.textColor = textColor
         cell.textLabel?.font = _font
-        cell.backgroundColor = self.backgroundColor
+        cell.backgroundColor = UIColor.clear
         cell.contentView.backgroundColor = self.backgroundColor
         return cell
     }
@@ -201,8 +201,8 @@ import UIKit
     }
     
     public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.backgroundColor = self.backgroundColor
-        _tableview.backgroundColor = UIColor.clear
+        cell.backgroundColor = UIColor.clear
+        cell.contentView.backgroundColor = self.backgroundColor
         cell.textLabel?.textColor = self.textColor
     }
 
