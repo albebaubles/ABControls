@@ -205,7 +205,7 @@ import UIKit
         cell.backgroundView?.backgroundColor = UIColor.clear
         cell.contentView.backgroundColor = UIColor.clear
         cell.textLabel?.textColor = self.textColor
-        cell.layer.backgroundColor = self.backgroundColor
+        cell.layer.backgroundColor = self.backgroundColor?.cgColor
         NSLog("cell setup")
     }
 
