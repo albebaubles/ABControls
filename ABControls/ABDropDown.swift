@@ -243,11 +243,12 @@ import UIKit
         _tableview.bounces = false
         _tableview.alwaysBounceVertical = false
         _tableview.alwaysBounceHorizontal = false
-        _tableview.backgroundColor = UIColor.clear
+        _tableview.backgroundColor = self.backgroundColor
         self.backgroundColor = UIColor.clear
         addSubview(_tableview)
         _tableview.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor).isActive = true
         _tableview.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor).isActive = true
+        layer.backgroundColor = self.backgroundColor?.cgColor
     }
     
     
@@ -280,10 +281,7 @@ import UIKit
     }
     
     public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.backgroundColor = UIColor.clear
-        cell.backgroundView?.backgroundColor = UIColor.clear
-        cell.contentView.backgroundColor = UIColor.clear
-        cell.layer.backgroundColor = UIColor.clear.cgColor
+        cell.layer.backgroundColor = self.backgroundColor?.cgColor
     }
 }
 

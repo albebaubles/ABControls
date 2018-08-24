@@ -22,7 +22,7 @@ import UIKit
     private var _listItems: [String]?
     private var _selected : Int = NSNotFound
     private var _font : UIFont = UIFont.systemFont(ofSize: 14)
-    private var _tableview: UITableView! = UITableView.init()
+    private var _tableview: UITableView! = UITableView.init(frame: CGRect.init(), style: UITableViewStyle.grouped)
     
     
     /// Notifications
@@ -167,7 +167,6 @@ import UIKit
         _tableview.alwaysBounceHorizontal = false
         _tableview.backgroundColor = self.backgroundColor
         _tableview.layer.backgroundColor = self.backgroundColor?.cgColor
-//        _tableview.frame = bounds
             _tableview.translatesAutoresizingMaskIntoConstraints = false
         addSubview(_tableview)
         _tableview.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor).isActive = true
@@ -207,11 +206,7 @@ import UIKit
     }
     
     public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//        cell.backgroundView?.backgroundColor = UIColor.clear
-//        cell.contentView.backgroundColor = UIColor.clear
-//        cell.textLabel?.textColor = self.textColor
         cell.layer.backgroundColor = self.backgroundColor?.cgColor
-        NSLog("cell setup")
     }
 
 }
