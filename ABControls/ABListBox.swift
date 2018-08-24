@@ -190,6 +190,7 @@ import UIKit
         cell.textLabel?.textColor = textColor
         cell.textLabel?.font = _font
         cell.backgroundColor = self.backgroundColor
+        cell.contentView.backgroundColor = self.backgroundColor
         return cell
     }
     
