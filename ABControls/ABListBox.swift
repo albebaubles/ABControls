@@ -166,7 +166,8 @@ import UIKit
         _tableview.alwaysBounceVertical = false
         _tableview.alwaysBounceHorizontal = false
         _tableview.backgroundColor = self.backgroundColor
-        _tableview.frame = bounds
+        _tableview.layer.backgroundColor = self.backgroundColor?.cgColor
+//        _tableview.frame = bounds
             _tableview.translatesAutoresizingMaskIntoConstraints = false
         addSubview(_tableview)
         _tableview.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor).isActive = true
