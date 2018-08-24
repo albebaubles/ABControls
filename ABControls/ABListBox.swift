@@ -118,7 +118,8 @@ import UIKit
         #if !TARGET_INTERFACE_BUILDER
         sharedInit()
         #endif
-        
+        layer.backgroundColor = self.backgroundColor?.cgColor
+
     }
     
     
@@ -194,9 +195,6 @@ import UIKit
         cell.isUserInteractionEnabled = true
         cell.textLabel?.text = _listItems?[indexPath.row]
         cell.textLabel?.font = _font
-//        cell.textLabel?.backgroundColor = UIColor.clear
-//        cell.backgroundView?.backgroundColor = UIColor.clear
-//        cell.contentView.backgroundColor = UIColor.clear
         cell.textLabel?.textColor = self.textColor
         cell.layer.backgroundColor = self.backgroundColor?.cgColor
         return cell
