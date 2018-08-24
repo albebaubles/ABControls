@@ -209,6 +209,10 @@ import UIKit
     private func setupLabel() {
         _label = UILabel.init(frame: bounds.insetBy(dx: 5, dy: 0))
         addSubview(_label)
+        _label.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor).isActive = true
+        _label.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor).isActive = true
+        _label.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor).isActive = true
+        _label.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor).isActive = true
     }
     
     
@@ -279,7 +283,6 @@ import UIKit
         cell.backgroundColor = UIColor.clear
         cell.backgroundView?.backgroundColor = UIColor.clear
         cell.contentView.backgroundColor = UIColor.clear
-        NSLog("ABDropDown")
     }
 }
 
