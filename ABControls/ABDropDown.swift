@@ -229,9 +229,6 @@ import UIKit
     
     private func setupTableviewDropdown() {
         _tableview.frame = CGRect.init(x: 0, y: _defaultHeight, width: frame.width - 20, height: _dropdownViewHeight)
-        _tableview.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor).isActive = true
-        _tableview.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor).isActive = true
-        _tableview.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor).isActive = true
         _tableview.dataSource = self
         _tableview.delegate = self
         _tableview.isHidden = true
@@ -245,6 +242,9 @@ import UIKit
         _tableview.backgroundColor = UIColor.clear
         self.backgroundColor = UIColor.clear
         addSubview(_tableview)
+        _tableview.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor).isActive = true
+        _tableview.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor).isActive = true
+        _tableview.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor).isActive = true
     }
     
     
