@@ -246,7 +246,6 @@ import UIKit
         _tableview.backgroundColor = UIColor.clear
         self.backgroundColor = UIColor.clear
         addSubview(_tableview)
-        _tableview.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor).isActive = true
         _tableview.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor).isActive = true
         _tableview.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor).isActive = true
     }
@@ -283,6 +282,7 @@ import UIKit
         cell.backgroundColor = UIColor.clear
         cell.backgroundView?.backgroundColor = UIColor.clear
         cell.contentView.backgroundColor = UIColor.clear
+        cell.layer.backgroundColor = UIColor.clear.cgColor
     }
 }
 
