@@ -229,6 +229,9 @@ import UIKit
     
     private func setupTableviewDropdown() {
         _tableview.frame = CGRect.init(x: 0, y: _defaultHeight, width: frame.width - 20, height: _dropdownViewHeight)
+        _tableview.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor).isActive = true
+        _tableview.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor).isActive = true
+        _tableview.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor).isActive = true
         _tableview.dataSource = self
         _tableview.delegate = self
         _tableview.isHidden = true
@@ -264,8 +267,6 @@ import UIKit
         cell.textLabel?.text = ABDropDown._listItems?[indexPath.row]
         cell.textLabel?.textColor = textColor
         cell.textLabel?.font = _font
-        cell.backgroundColor = self.backgroundColor
-        cell.contentView.backgroundColor = self.backgroundColor
         return cell
     }
     
@@ -275,7 +276,6 @@ import UIKit
     }
     
     public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.backgroundColor = self.backgroundColor
         cell.backgroundColor = UIColor.clear
         cell.backgroundView?.backgroundColor = UIColor.clear
         cell.contentView.backgroundColor = UIColor.clear
