@@ -202,10 +202,10 @@ import UIKit
     }
     
     public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.backgroundColor = UIColor.clear
         cell.backgroundView?.backgroundColor = UIColor.clear
         cell.contentView.backgroundColor = UIColor.clear
         cell.textLabel?.textColor = self.textColor
+        cell.layer.backgroundColor = self.backgroundColor
         NSLog("cell setup")
     }
 
