@@ -184,7 +184,8 @@ import UIKit
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if _listItems != nil {
+        _tableview.isHidden = true
+        if _listItems != nil && _listItems.count > 0{
             return (_listItems?.count)!
         }
         return 0
