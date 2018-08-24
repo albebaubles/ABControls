@@ -273,5 +273,10 @@ import UIKit
         self.index = indexPath.row
         showList()
     }
+    
+    public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = self.backgroundColor
+        cell.textLabel?.textColor = self.textColor
+    }
 }
 

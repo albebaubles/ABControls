@@ -198,4 +198,10 @@ import UIKit
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         index = indexPath.row
     }
+    
+    public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = self.backgroundColor
+        cell.textLabel?.textColor = self.textColor
+    }
+
 }
