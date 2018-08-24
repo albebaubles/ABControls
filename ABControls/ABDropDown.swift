@@ -222,6 +222,7 @@ import UIKit
             _button.frame = CGRect.init(x: bounds.width - 30, y: 2.5, width: 25, height: 25)
             _button.setImage(ABControlsStyleKit.imageOfDownArrow, for: .normal)
             _button.titleLabel?.font = _font
+            _button.tintColor = textColor
             addSubview(_button)
             setNeedsDisplay()
             #if !TARGET_INTERFACE_BUILDER
@@ -244,7 +245,7 @@ import UIKit
         _tableview.alwaysBounceVertical = false
         _tableview.alwaysBounceHorizontal = false
         _tableview.backgroundColor = self.backgroundColor
-        self.backgroundColor = UIColor.clear
+        self.backgroundColor = self.backgroundColor
         addSubview(_tableview)
         _tableview.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor).isActive = true
         _tableview.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor).isActive = true

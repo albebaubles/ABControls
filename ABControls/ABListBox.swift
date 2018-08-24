@@ -134,7 +134,7 @@ import UIKit
         label.text = "ABListBox"
             layer.masksToBounds = true
             layer.borderWidth = 0.5
-            layer.borderColor = UIColor.black.cgColor
+            layer.borderColor = textColor.cgColor
         addSubview(label)
         }
     }
