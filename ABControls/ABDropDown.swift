@@ -270,6 +270,7 @@ import UIKit
         cell.textLabel?.text = ABDropDown._listItems?[indexPath.row]
         cell.textLabel?.textColor = textColor
         cell.textLabel?.font = _font
+        cell.layer.backgroundColor = UIColor.clear
         return cell
     }
     
