@@ -276,6 +276,7 @@ import UIKit
     
     public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.backgroundColor = self.backgroundColor
+        cell.contentView.backgroundColor = self.backgroundColor
         cell.textLabel?.textColor = self.textColor
     }
 }
