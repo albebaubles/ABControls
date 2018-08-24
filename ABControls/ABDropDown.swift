@@ -223,6 +223,7 @@ import UIKit
             _button.setImage(ABControlsStyleKit.imageOfDownArrow, for: .normal)
             _button.titleLabel?.font = _font
             _button.tintColor = textColor
+            _button.titleLabel?.textColor = textColor
             addSubview(_button)
             setNeedsDisplay()
             #if !TARGET_INTERFACE_BUILDER
