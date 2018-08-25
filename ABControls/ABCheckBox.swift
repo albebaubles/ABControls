@@ -34,7 +34,7 @@ import UIKit
             setNeedsDisplay()
             #if !TARGET_INTERFACE_BUILDER
             NotificationCenter.default.post(name: NSNotification.Name(  ABCheckBox.ABCheckBoxDidChange), object: self)
-            delegate?.didChangeCheckboxSelection!(self)
+            delegate?.didChangeCheckboxSelection!(self as! ABCheckBoxDelegate)
             #endif
         }
     }
