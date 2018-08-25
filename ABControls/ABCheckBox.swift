@@ -33,7 +33,7 @@ import UIKit
             _button.frame = bounds
             setNeedsDisplay()
             #if !TARGET_INTERFACE_BUILDER
-            NotificationCenter.default.post(name: NSNotification.Name(  ABCheckBox.ABCheckBoxDidChange), object: isChecked)
+            NotificationCenter.default.post(name: NSNotification.Name(  ABCheckBox.ABCheckBoxDidChange), object: self)
             delegate?.didChangeCheckboxSelection!(isChecked)
             #endif
         }
