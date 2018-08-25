@@ -13,7 +13,7 @@ import UIKit
     /// Fires anytime the checkbox is checked or unchecked
     ///
     /// - Parameter checked: true if checked
-    @objc optional func didChangeCheckboxSelection(_ sender : ABCheckBoxDelegate)
+    @objc optional func didChangeCheckboxSelection(_ sender : ABCheckBox)
 }
 
 @objc @IBDesignable public class ABCheckBox: ABControl {
@@ -34,7 +34,7 @@ import UIKit
             setNeedsDisplay()
             #if !TARGET_INTERFACE_BUILDER
             NotificationCenter.default.post(name: NSNotification.Name(  ABCheckBox.ABCheckBoxDidChange), object: self)
-            delegate?.didChangeCheckboxSelection!(self as! ABCheckBoxDelegate)
+            delegate?.didChangeCheckboxSelection!(self as! ABCheckBox)
             #endif
         }
     }
