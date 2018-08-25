@@ -32,7 +32,7 @@ import UIKit
     private var _selected : Int = NSNotFound
     private var _font : UIFont = UIFont.systemFont(ofSize: 14)
     private var _label: UILabel!
-    private var _button : UIButton!
+    private var _button : UIButton =  UIButton.init(type: .system)
     private var _tableview: UITableView! = UITableView.init()
     private let _dropdownHeight: CGFloat = 160
     private let _defaultHeight: CGFloat = 30
@@ -48,9 +48,7 @@ import UIKit
             super.textColor = textColor
             _tableview.reloadData()
             layer.borderColor = textColor.cgColor
-            if (_button != nil) {
             _button.tintColor = textColor
-            }
             setNeedsDisplay()
         }
     }
@@ -77,8 +75,8 @@ import UIKit
                 _tableview.selectRow(at: IndexPath.init(row: _selected, section: 0), animated: false, scrollPosition: .middle)
                 
                 #if !TARGET_INTERFACE_BUILDER
-                    NotificationCenter.default.post(name: NSNotification.Name(  ABDropDown.ABDropDownDidChangeIndex), object: _selected)
-                    delegate?.didChangeIndex!(index)
+                NotificationCenter.default.post(name: NSNotification.Name(  ABDropDown.ABDropDownDidChangeIndex), object: _selected)
+                delegate?.didChangeIndex!(index)
                 #endif
                 
                 if _selected == NSNotFound {
@@ -208,6 +206,7 @@ import UIKit
         setupTableviewDropdown()
         _label.textColor = self.textColor
         _label.font = _font
+        _button.tintColor = textColor
     }
     
     private func setupLabel() {
@@ -221,19 +220,17 @@ import UIKit
     
     
     private func setupDropdownButton() {
-        if _button == nil {
-            let _button = UIButton.init(type: .system)
-            _button.frame = CGRect.init(x: bounds.width - 30, y: 2.5, width: 25, height: 25)
-            _button.setImage(ABControlsStyleKit.imageOfDownArrow, for: .normal)
-            _button.titleLabel?.font = _font
-            _button.tintColor = textColor
-            _button.titleLabel?.textColor = textColor
-            addSubview(_button)
-            setNeedsDisplay()
-            #if !TARGET_INTERFACE_BUILDER
-            _button.addTarget(self, action: #selector(showList), for: UIControlEvents.touchUpInside)
-            #endif
-        }
+        _button.removeFromSuperview()
+        _button.frame = CGRect.init(x: bounds.width - 30, y: 2.5, width: 25, height: 25)
+        _button.setImage(ABControlsStyleKit.imageOfDownArrow, for: .normal)
+        _button.titleLabel?.font = _font
+        _button.tintColor = textColor
+        _button.titleLabel?.textColor = textColor
+        addSubview(_button)
+        setNeedsDisplay()
+        #if !TARGET_INTERFACE_BUILDER
+        _button.addTarget(self, action: #selector(showList), for: UIControlEvents.touchUpInside)
+        #endif
         
     }
     
