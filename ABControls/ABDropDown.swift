@@ -48,7 +48,9 @@ import UIKit
             super.textColor = textColor
             _tableview.reloadData()
             layer.borderColor = textColor.cgColor
+            if (_button != nil) {
             _button.tintColor = textColor
+            }
             setNeedsDisplay()
         }
     }
