@@ -14,7 +14,7 @@ import UIKit
     /// Fires when the selected has changed
     ///
     /// - Parameter index: index of the selected value
-    @objc optional func didChangeIndex(_ index : Int)
+    @objc optional func didChangeIndex(_ sender : ABDropDown, _ index : Int)
     
     /// Fires when the dropdown is visible
     @objc optional func didShowDropdown()
@@ -76,7 +76,7 @@ import UIKit
                 
                 #if !TARGET_INTERFACE_BUILDER
                 NotificationCenter.default.post(name: NSNotification.Name(  ABDropDown.ABDropDownDidChangeIndex), object: _selected)
-                delegate?.didChangeIndex!(index)
+                delegate?.didChangeIndex!(self, index)
                 #endif
                 
                 if _selected == NSNotFound {
