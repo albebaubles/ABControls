@@ -28,7 +28,7 @@ import UIKit
 @objc @IBDesignable public class ABDropDown: ABTextualControl, UITableViewDelegate, UITableViewDataSource {
     public weak var delegate : ABDropDownDelegate?
     private var _frame : CGRect = CGRect.init()
-    private static var _listItems: [String]?
+    private  var _listItems: [String]?
     private var _selected : Int = NSNotFound
     private var _font : UIFont = UIFont.systemFont(ofSize: 14)
     private var _label: UILabel!
@@ -59,8 +59,8 @@ import UIKit
      */
     @IBInspectable  public var items : String = "" {
         didSet{
-            ABDropDown._listItems = items.components(separatedBy: "\n")
-            updateListItems(items: ABDropDown._listItems!)
+            _listItems = items.components(separatedBy: "\n")
+            updateListItems(items: _listItems!)
             index = 0
             setNeedsDisplay()
         }
@@ -70,7 +70,7 @@ import UIKit
     /// The currently selected index
     @IBInspectable  public var index : Int = 0 {
         didSet{
-            if index < (ABDropDown._listItems?.count)! && index >= 0 {
+            if index < (_listItems?.count)! && index >= 0 {
                 _selected = index
                 _tableview.selectRow(at: IndexPath.init(row: _selected, section: 0), animated: false, scrollPosition: .middle)
                 
@@ -112,7 +112,7 @@ import UIKit
     /// the current text being displayed based on the index
     public func text() -> String {
         if _selected != NSNotFound {
-            return ABDropDown._listItems![_selected]
+            return _listItems![_selected]
         }
         return ""
     }
@@ -193,8 +193,8 @@ import UIKit
         sharedInit()
         _tableview.selectRow(at: IndexPath.init(row: self.index, section: 0), animated: false, scrollPosition: .top)
         
-        if ABDropDown._listItems != nil && ABDropDown._listItems!.count > 0 && self.index != NSNotFound {
-            _label.text = ABDropDown._listItems![self.index]
+        if _listItems != nil && _listItems!.count > 0 && self.index != NSNotFound {
+            _label.text = _listItems![self.index]
         }
     }
     
@@ -264,8 +264,8 @@ import UIKit
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if ABDropDown._listItems != nil {
-            return (ABDropDown._listItems?.count)!
+        if _listItems != nil {
+            return (_listItems?.count)!
         }
         return 0
     }
@@ -273,7 +273,7 @@ import UIKit
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell.init(style: .default, reuseIdentifier: "cell")
         cell.isUserInteractionEnabled = true
-        cell.textLabel?.text = ABDropDown._listItems?[indexPath.row]
+        cell.textLabel?.text = _listItems?[indexPath.row]
         cell.textLabel?.textColor = textColor
         cell.textLabel?.font = _font
         cell.layer.backgroundColor = UIColor.clear.cgColor
