@@ -191,7 +191,9 @@ import UIKit
     override public func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         sharedInit()
+        if index != NSNotFound {
         _tableview.selectRow(at: IndexPath.init(row: self.index, section: 0), animated: false, scrollPosition: .top)
+        }
         
         if _listItems != nil && _listItems!.count > 0 && self.index != NSNotFound {
             _label.text = _listItems![self.index]

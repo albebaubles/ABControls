@@ -14,7 +14,7 @@ class ABCheckBoxViewController: UIViewController, ABCheckBoxDelegate {
     @IBOutlet weak var checkbox2: ABCheckBox!
     @IBOutlet weak var button: UIButton!
     
-    func didChangeCheckboxSelection(_ checked: Bool) {
+    func didChangeCheckboxSelection(_ sender: ABCheckBox) {
         if checkbox1.isChecked && checkbox2.isChecked {
             button.isEnabled = true
         } else {

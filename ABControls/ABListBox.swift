@@ -127,7 +127,9 @@ import UIKit
     override public func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         sharedInit()
+        if self.index != NSNotFound {
         _tableview.selectRow(at: IndexPath.init(row: self.index, section: 0), animated: false, scrollPosition: .top)
+        }
         if items.count == 0 {
         let label = UILabel.init(frame: bounds.insetBy(dx: 20, dy: 20))
         label.textAlignment = .center
