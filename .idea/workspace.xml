@@ -23,14 +23,7 @@
     <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="897abc6c-0fc4-43b9-a3cc-6d3e62b40fe6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ABControls.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ABControls.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ABControls/ABGradientLinear.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ABControls/ABGradientLinear.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ABControlsTestHarness/ABControlsTestHarness.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ABControlsTestHarness/ABControlsTestHarness.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ABControlsTestHarness/ABControlsTestHarness/ABGradientViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ABControlsTestHarness/ABControlsTestHarness/ABGradientViewController.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ABControlsTestHarness/ABControlsTestHarness/Base.lproj/Main.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/ABControlsTestHarness/ABControlsTestHarness/Base.lproj/Main.storyboard" afterDir="false" />
-    </list>
+    <list default="true" id="897abc6c-0fc4-43b9-a3cc-6d3e62b40fe6" name="Default Changelist" comment="" />
     <ignored path="$USER_HOME$/Library/Developer/Xcode/DerivedData/ABControls-hjirvxksxkqyscbmvpxkodwhhlif/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,14 +36,15 @@
     <session id="-1354863498">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -58,8 +52,16 @@
           <entry key="md" value="1286" />
         </counts>
       </usages-collector>
-      <usages-collector id="statistics.file.extensions.open" />
-      <usages-collector id="statistics.file.types.open" />
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="Project Settings" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="XcodeWorkspace" value="1" />
+        </counts>
+      </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="1286" />
@@ -86,7 +88,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -96,6 +98,11 @@
               <second_editor />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="appcode.project-settings://bd73ef22">
+          <provider selected="true" editor-type-id="AppCode.ProjectSettings" />
         </entry>
       </file>
     </leaf>
@@ -117,8 +124,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="909" />
-    <option name="y" value="442" />
+    <option name="x" value="1148" />
+    <option name="y" value="189" />
     <option name="width" value="2230" />
     <option name="height" value="1501" />
   </component>
@@ -167,7 +174,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.ABControls">
-    <configuration name="ABControls" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ABControls" TARGET_NAME="ABControls" CONFIG_NAME="Debug" SCHEME_NAME="ABControls" IS_LOCATION_SIMULATION_ALLOWED="true" MAKE_ACTIVE="TRUE">
+    <configuration default="false" name="ABControls" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ABControls" TARGET_NAME="ABControls" CONFIG_NAME="Debug" SCHEME_NAME="ABControls" IS_LOCATION_SIMULATION_ALLOWED="true" MAKE_ACTIVE="TRUE">
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
         <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
       </EXTENSION>
@@ -195,14 +202,15 @@
       <workItem from="1534609412590" duration="338000" />
       <workItem from="1534783382598" duration="303000" />
       <workItem from="1534876737992" duration="5000" />
+      <workItem from="1535568062785" duration="120000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7821000" />
+    <option name="totallyTimeSpent" value="7941000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="909" y="442" width="2230" height="1501" extended-state="0" />
+    <frame x="1148" y="189" width="2230" height="1501" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4966936" weight="0.25803488" />
@@ -257,6 +265,9 @@
         </state>
       </provider>
       <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="appcode.project-settings://bd73ef22">
+      <provider selected="true" editor-type-id="AppCode.ProjectSettings" />
     </entry>
   </component>
 </project>
