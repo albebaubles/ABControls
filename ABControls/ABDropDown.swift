@@ -26,7 +26,7 @@ import UIKit
 /// Provides a dropdown list as a replacement for a UIPickerView.  If the dropdown cannot display without falling off the window, it will popUP
 /// - Attention: fires notification 'ABDropDownDidChangeIndex' which returns the selected index
 @objc @IBDesignable public class ABDropDown: ABTextualControl, UITableViewDelegate, UITableViewDataSource {
-    public weak var delegate : ABDropDownDelegate?
+   @objc  public weak var delegate : ABDropDownDelegate?
     private var _frame : CGRect = CGRect.init()
     private  var _listItems: [String]?
     private var _selected : Int = NSNotFound
