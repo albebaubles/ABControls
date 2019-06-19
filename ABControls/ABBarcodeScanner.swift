@@ -5,235 +5,199 @@
 //  Created by Alan Corbett on 8/5/18.
 //  Copyright © 2018 AlbeBaubles LLC. All rights reserved.
 //
-
 import UIKit
 import AVFoundation
 
-
 /// ABBarcode contains the data and type of barcode
-@objc public class ABBarCode : NSObject {
-    @objc public var  type : String?
-    @objc public var  stringData : String?
-    
-    
-    /// Converts the AVMetadata to barcode data
-    ///
-    /// - Parameter meta: the AVMetadata to convert ot barcode data
-    /// - Returns: an ABBarcode
-    @objc internal static func processBarcode(meta : AVMetadataMachineReadableCodeObject) -> ABBarCode {
-        let code = ABBarCode.init()
-        code.type = meta.type.rawValue
-        code.stringData = meta.stringValue
-        
-        return code
-    }
-    
-    
-    /// returns an image object based on it's barcode data and type
-    ///
-    /// - Returns: returns an UIImage of the barcodes data in the object
-    ///
-    /**
-     ABBarCode.init("CIQRCodeGenerator", "0122333223484984").image()
-     ABBarCode.init("CIAztecCodeGenerator", "43543323535433").image()
+public class ABBarCode: NSObject {
+	public var type: String?
+	public var stringData: String?
+
+	/// Converts the AVMetadata to barcode data
+	///
+	/// - Parameter meta: the AVMetadata to convert ot barcode data
+	/// - Returns: an ABBarcode
+	internal static func processBarcode(meta: AVMetadataMachineReadableCodeObject) -> ABBarCode {
+		let code = ABBarCode()
+		code.type = meta.type.rawValue
+		code.stringData = meta.stringValue
+		return code
+	}
+
+	/// returns an image object based on it's barcode data and type
+	///
+	/// - Returns: returns an UIImage of the barcodes data in the object
+	///
+	/**
+     ABBarCode("CIQRCodeGenerator", "0122333223484984").image()
+     ABBarCode("CIAztecCodeGenerator", "43543323535433").image()
      
-     let barcode = ABBarCode.init("CIQRCodeGenerator", "24342344")
+     let barcode = ABBarCode("CIQRCodeGenerator", "24342344")
      let myImage = barcode.image()
      CIQRCodeGenerator
  */
-    @objc public func image() -> UIImage {
-        guard let data = stringData!.data(using: .ascii),
-            let filter = CIFilter(name: type!) else {
-                NSLog("did fail to create image")
-                return UIImage.init()
-        }
-        filter.setValue(data, forKey: "inputMessage")
-        guard let image = filter.outputImage else {
-            return UIImage.init()
-        }
-        return UIImage(ciImage: image)
-    }
-    
-    
-    /// Creates a UIImage object from barcode data
-    ///
-    /// - Parameters:
-    ///   - type: barcode type, eg. - CICode128BarcodeGenerator...
-    ///   - stringData: the data that comprisies the barcode info
-    /// - Returns: UIImage
-    ///
-    /**
-     let barcode = ABBarCode.init("CICode128BarcodeGenerator", "0100859619004301171811182118061-05")
-     */
-    @objc public static func `init`(_ type : String, _ stringData : String) -> ABBarCode {
-        let bc = ABBarCode.init()
-        bc.type = type
-        bc.stringData = stringData
-        return bc
-    }
-}
+	public func image() -> UIImage {
+		guard let data = stringData!.data(using: .ascii),
+			let filter = CIFilter(name: type!) else {
+				NSLog("did fail to create image")
+				return UIImage()
+		}
+		filter.setValue(data, forKey: "inputMessage")
+		guard let image = filter.outputImage else {
+			return UIImage()
+		}
+		return UIImage(ciImage: image)
+	}
 
+	/// Creates a UIImage object from barcode data
+	///
+	/// - Parameters:
+	///   - type: barcode type, eg. - CICode128BarcodeGenerator...
+	///   - stringData: the data that comprisies the barcode info
+	/// - Returns: UIImage
+	///
+	/**
+     let barcode = ABBarCode("CICode128BarcodeGenerator", "0100859619004301171811182118061-05")
+     */
+	public static func `init`(_ type: String, _ stringData: String) -> ABBarCode {
+		let barc = ABBarCode()
+		barc.type = type
+		barc.stringData = stringData
+		return barc
+	}
+}
 
 /// In this iteration the scanner object is always on and active
-@objc public protocol ABBarcodeScannerDelegate : class {
-    
-    /// Fires when the control has found and proceessed a barcode
-    ///
-    /// - Parameter code: reutns an ABBarcode object
-    @objc func didReceiveBarcode(_ code : ABBarCode)
-    
-    
-    /// Fires anytime a problem occurs while attempting to scan a barcode
-    ///
-    /// - Parameter message: string indicating the problem/issue
-    @objc func didFail(_ message : String)
+public protocol ABBarcodeScannerDelegate: class {
+	/// Fires when the control has found and proceessed a barcode
+	///
+	/// - Parameter code: reutns an ABBarcode object
+	func didReceiveBarcode(_ code: ABBarCode)
+	/// Fires anytime a problem occurs while attempting to scan a barcode
+	///
+	/// - Parameter message: string indicating the problem/issue
+	func didFail(_ message: String)
 }
-
-
 
 /// Uses the camera to scan a barcode
-@objc @IBDesignable public class  ABBarcodeScanner : ABControl, AVCaptureMetadataOutputObjectsDelegate {
-    public weak var delegate : ABBarcodeScannerDelegate?
-    private let _camera =  AVCaptureDevice.default(for: .video)
-    private let _session = AVCaptureSession.init()
-    private var _video : AVCaptureDeviceInput?
-    private var _previewLayer =  AVCaptureVideoPreviewLayer.init()
-    private var _meta = AVCaptureMetadataOutput.init()
-    
-    /// Notifications
-    @objc  public static let ABBarcodeScannerDidReceiveBarcode : String = "ABBarcodeScannerDidReceiveBarcode"
-    @objc  public static let ABBarcodeScannerDidFail : String = "ABBarcodeScannerDidFail"
+@IBDesignable
+public class ABBarcodeScanner: ABControl {
+	public weak var delegate: ABBarcodeScannerDelegate?
+	private let camera = AVCaptureDevice.default(for: .video)
+	private let session = AVCaptureSession()
+	private var video: AVCaptureDeviceInput?
+	private var previewLayer = AVCaptureVideoPreviewLayer()
+	private var meta = AVCaptureMetadataOutput()
 
-    
-    /// A string array of acceptable barcode types. A nil value will scan for all barcodetype
-    /// ex.
-    ///     CICode128BarcodeGenerator,
-    ///     CIAztecCodeGenerator,
-    ///     CICode128BarcodeGenerator
-    @objc @IBInspectable var barcodeTypes : [String] = [] {
-        didSet {
-        }
-    }
-    
-    
-    /// required for dev time
-    required  public init(frame: CGRect) {
-        super.init(frame:  frame)
-        invalidateIntrinsicContentSize()
-    }
-    
-    
-    /// require for runtime
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        
-        #if !TARGET_INTERFACE_BUILDER
-        sharedInit()
-        #endif
-    }
-    
-    override public func prepareForInterfaceBuilder() {
-        super.prepareForInterfaceBuilder()
-        sharedInit()
-    }
-    
-    private func sharedInit() {
-        autoresizingMask = .init(rawValue: 0)
-        let sv = UIView.init(frame: CGRect.init(x: 2, y: bounds.height / 2,
-                                                width: bounds.width - 4, height: 2))
-        sv.backgroundColor = UIColor.red
-        sv.layer.zPosition = 1
-        addSubview(sv)
-        
-        // display the controls type label while in IB
-        #if TARGET_INTERFACE_BUILDER
-        let label = UILabel.init(frame: bounds.insetBy(dx: 20, dy: 20))
-        label.textAlignment = .center
-        label.textColor = UIColor.lightGray
-        // \n so the label won't render on top of line
-        label.text = "ABBarcodeScanner\n"
-        label.numberOfLines = 2
-        label.layer.zPosition = 1
-        addSubview(label)
-        #endif
-        
-        AVCaptureDevice.requestAccess(for: AVMediaType.video) { response in
-            if response {
-                //access granted
-                self.setupBarcodeCapture()
-            } else {
-                self.delegate?.didFail("ABBarcodeScanner does not have access to the camera")
-                NotificationCenter.default.post(name: NSNotification.Name(  ABBarcodeScanner.ABBarcodeScannerDidFail), object: nil)
+	/// Notifications
+	public static let ABBarcodeScannerDidReceiveBarcode: String = "ABBarcodeScannerDidReceiveBarcode"
+	public static let ABBarcodeScannerDidFail: String = "ABBarcodeScannerDidFail"
 
-            }
-        }
-    }
-    
-    
-    /// 
-    private func setupBarcodeCapture() {
-        if _camera == nil {
-            delegate?.didFail("ABBarcodeScanner : device does not have a camera")
-            NotificationCenter.default.post(name: NSNotification.Name(  ABBarcodeScanner.ABBarcodeScannerDidFail), object: nil)
+	/// A string array of acceptable barcode types. A nil value will scan for all barcodetype
+	/// ex.
+	///     CICode128BarcodeGenerator,
+	///     CIAztecCodeGenerator,
+	///     CICode128BarcodeGenerator
+	var barcodeTypes: [String] = [] {
+		didSet {
+		}
+	}
 
-            return
-        }
-        
-        if AVCaptureDevice.authorizationStatus(for: .video) == .authorized {
-            do {
-                try _video = AVCaptureDeviceInput.init(device: _camera!)
-                if _session.canAddInput(_video!) {
-                    _session.addInput(_video!)
-                    
-                    _previewLayer = AVCaptureVideoPreviewLayer.init(session: _session)
-                    _previewLayer.videoGravity = .resizeAspectFill
-                    DispatchQueue.main.async {
-                        self._previewLayer.frame = self.bounds
-                        self.layer.addSublayer(self._previewLayer)
-                    }
-                    
-                    _meta.setMetadataObjectsDelegate(self, queue: DispatchQueue.init(label: "com.albebaubles.abbarcodecapturequeue"))
-                    
-                    if _session.canAddOutput(_meta) {
-                        _session.addOutput(_meta)
-                    }
-                }
-                _session.startRunning()
-                _meta.metadataObjectTypes = _meta.availableMetadataObjectTypes
-            } catch  {
-                
-                /// TODO : fire a delegate message, somethign went wrong
-            }
-        } else {
-            delegate?.didFail("ABBarcodeScanner did not receive access to the camera")
-            NotificationCenter.default.post(name: NSNotification.Name(  ABBarcodeScanner.ABBarcodeScannerDidFail), object: nil)
+	/// required for dev time
+	required public init(frame: CGRect) {
+		super.init(frame: frame)
+		invalidateIntrinsicContentSize()
+	}
 
-        }
-    }
-    
-    
+	/// require for runtime
+	required public init?(coder aDecoder: NSCoder) {
+		super.init(coder: aDecoder)
+		#if !TARGET_INTERFACE_BUILDER
+			sharedInit()
+		#endif
+	}
 
-    /// Fires when the camera has detected a barcode
-    ///
-    /// - Parameters:
-    ///   - output: the metadata associated with the barcode
-    ///   - metadataObjects: The metadat oobjects
-    ///   - connection: the capture connection this applies to
-    public func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-        for  metaData in metadataObjects {
-            if metaData is AVMetadataMachineReadableCodeObject {
-                let code = _previewLayer.transformedMetadataObject(for: metaData)
-                let barcode = ABBarCode.processBarcode(meta: code as! AVMetadataMachineReadableCodeObject)
-                if barcodeTypes.contains(code!.type.rawValue) || barcodeTypes.count == 0 {
-                    delegate?.didReceiveBarcode(barcode)
-                    NotificationCenter.default.post(name: NSNotification.Name(  ABBarcodeScanner.ABBarcodeScannerDidReceiveBarcode), object: barcode)
-                    _session.stopRunning()
-                }
-            }
-        }
-    }
+	override public func prepareForInterfaceBuilder() {
+		super.prepareForInterfaceBuilder()
+		sharedInit()
+	}
+
+	private func sharedInit() {
+		autoresizingMask = .init(rawValue: 0)
+		let share = UIView(frame: CGRect(x: 2, y: bounds.height / 2,
+			width: bounds.width - 4, height: 2))
+		share.backgroundColor = UIColor.red
+		share.layer.zPosition = 1
+		addSubview(share)
+		// display the controls type label while in IB
+		#if TARGET_INTERFACE_BUILDER
+			let label = UILabel(frame: bounds.insetBy(dx: 20, dy: 20))
+			label.textAlignment = .center
+			label.textColor = UIColor.lightGray
+			// \n so the label won't render on top of line
+			label.text = "ABBarcodeScanner\n"
+			label.numberOfLines = 2
+			label.layer.zPosition = 1
+			addSubview(label)
+		#endif
+		AVCaptureDevice.requestAccess(for: AVMediaType.video) { response in
+			if response {
+				//access granted
+				self.setupBarcodeCapture()
+			} else {
+				self.delegate?.didFail("ABBarcodeScanner does not have access to the camera")
+				NotificationCenter.default.post(name: NSNotification.Name(ABBarcodeScanner.ABBarcodeScannerDidFail), object: nil)
+			}
+		}
+	}
+
+	///
+	private func setupBarcodeCapture() {
+		if camera == nil {
+			delegate?.didFail("ABBarcodeScanner : device does not have a camera")
+			NotificationCenter.default.post(name: NSNotification.Name(ABBarcodeScanner.ABBarcodeScannerDidFail), object: nil)
+			return
+		}
+		if AVCaptureDevice.authorizationStatus(for: .video) == .authorized {
+			do {
+				try video = AVCaptureDeviceInput(device: camera!)
+				if session.canAddInput(video!) {
+					session.addInput(video!)
+					previewLayer = AVCaptureVideoPreviewLayer(session: session)
+					previewLayer.videoGravity = .resizeAspectFill
+					DispatchQueue.main.async {
+						self.previewLayer.frame = self.bounds
+						self.layer.addSublayer(self.previewLayer)
+					}
+					meta.setMetadataObjectsDelegate(self, queue: DispatchQueue(label: "com.albebaubles.abbarcodecapturequeue"))
+					if session.canAddOutput(meta) {
+						session.addOutput(meta)
+					}
+				}
+				session.startRunning()
+				meta.metadataObjectTypes = meta.availableMetadataObjectTypes
+			} catch {
+				/// TODO : fire a delegate message, somethign went wrong
+			}
+		} else {
+			delegate?.didFail("ABBarcodeScanner did not receive access to the camera")
+			NotificationCenter.default.post(name: NSNotification.Name(ABBarcodeScanner.ABBarcodeScannerDidFail), object: nil)
+		}
+	}
 }
 
-
-
-
+extension ABBarcodeScanner: AVCaptureMetadataOutputObjectsDelegate {
+	public func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+		for metaData in metadataObjects {
+			if let code = previewLayer.transformedMetadataObject(for: metaData) as? AVMetadataMachineReadableCodeObject {
+				if metaData is AVMetadataMachineReadableCodeObject {
+					let barcode = ABBarCode.processBarcode(meta: code) as ABBarCode
+					if barcodeTypes.contains(code.type.rawValue) || barcodeTypes.isEmpty {
+						self.delegate?.didReceiveBarcode(barcode)
+						self.session.stopRunning()
+					}
+				}
+			}
+		}
+	}
+}
