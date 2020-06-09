@@ -10,11 +10,11 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 	var window: UIWindow?
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-		// Override point for customization after application launch.
-		let splitViewController = window!.rootViewController as? UISplitViewController
-		let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count - 1] as? UINavigationController
-		navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
-		splitViewController.delegate = self
+
+        let splitViewController = window!.rootViewController as? UISplitViewController
+        let navigationController = splitViewController?.viewControllers.last as? UINavigationController
+        navigationController?.topViewController!.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+        splitViewController!.delegate = self as? UISplitViewControllerDelegate
 		return true
 	}
 }

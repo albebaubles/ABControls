@@ -8,29 +8,29 @@
 import UIKit
 import ABControls
 class ABDropDownViewController: UIViewController, ABDropDownDelegate {
-	@IBOutlet weak private var textview: UITextView!
-	@IBOutlet weak private var dropdown: ABDropDown!
+    func didChangeIndex(_ sender: ABDropDown, _ index: Int) {
 
-	func didChangeIndex(_ index: Int) {
-		switch index {
-		case 0:
-			textview.textColor = .red
-		case 1:
-			textview.textColor = .green
-		case 2:
-			textview.textColor = .blue
-		case 3:
-			textview.textColor = .black
-		case 4:
-			textview.textColor = .gray
-		default:
-			textview.textColor = .brown
-		}
-	}
+    }
 
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		dropdown.delegate = self
-		// Do any additional setup after loading the view.
-	}
+    func didShowDropdown() {
+
+    }
+
+    func didHideDropdown() {
+
+    }
+
+    @IBOutlet weak private var textview: UITextView!
+    @IBOutlet weak private var dropdown: ABDropDown!
+    private let colors: [UIColor] = [.red, .green, .blue, .black, .brown]
+
+    func didChangeIndex(_ index: Int) {
+        textview.textColor = colors[index]
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        dropdown?.delegate = self
+    }
 }

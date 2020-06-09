@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H1p-Uh-vWS">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14845" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H1p-Uh-vWS">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14799.2"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="iOS 13.0 system colors" minToolsVersion="11.0"/>
     </dependencies>
     <scenes>
         <!--Master-->
@@ -15,7 +14,7 @@
             <objects>
                 <navigationController title="Master" id="RMx-3f-FxP" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Pmd-2v-anx">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -80,49 +79,75 @@ ABAudioRecorder</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fzu-cL-bew" customClass="ABBarcodeScanner" customModule="ABControls">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fzu-cL-bew" customClass="ABBarcodeScanner" customModule="ABControlsTestHarness" customModuleProvider="target">
                                 <rect key="frame" x="30" y="105" width="314" height="133"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scan Barcode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ue3-zX-tqa">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Scan Barcode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ue3-zX-tqa">
                                 <rect key="frame" x="130" y="33" width="114" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h4O-T8-UqT">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h4O-T8-UqT">
                                 <rect key="frame" x="123" y="493" width="128" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="jqB-cf-Y3y"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create Barcode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDN-Ie-ePg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Create Barcode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDN-Ie-ePg">
                                 <rect key="frame" x="128" y="464" width="120" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UVI-kB-XGJ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UVI-kB-XGJ">
                                 <rect key="frame" x="124" y="296" width="128" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="558-aa-XSh"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scanned Barcode as QR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3H-aY-HEh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Scanned Barcode as QR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3H-aY-HEh">
                                 <rect key="frame" x="96" y="267" width="185" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olq-in-k2N">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olq-in-k2N">
                                 <rect key="frame" x="130" y="424" width="116" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="qZ4-JY-tAp"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ue3-zX-tqa" firstAttribute="centerX" secondItem="fzu-cL-bew" secondAttribute="centerX" id="3u7-Se-AL0"/>
+                            <constraint firstItem="fDN-Ie-ePg" firstAttribute="top" secondItem="olq-in-k2N" secondAttribute="bottom" constant="19" id="6OT-Op-iCJ"/>
+                            <constraint firstItem="xkQ-gH-ZLR" firstAttribute="bottom" secondItem="h4O-T8-UqT" secondAttribute="bottom" constant="46" id="6p5-65-pTa"/>
+                            <constraint firstItem="UVI-kB-XGJ" firstAttribute="centerX" secondItem="fgy-50-Dxk" secondAttribute="centerX" id="8Mb-zt-oKj"/>
+                            <constraint firstItem="ue3-zX-tqa" firstAttribute="leading" secondItem="xkQ-gH-ZLR" secondAttribute="leading" constant="130" id="9ZJ-Qx-KP7"/>
+                            <constraint firstItem="b3H-aY-HEh" firstAttribute="leading" secondItem="xkQ-gH-ZLR" secondAttribute="leading" constant="96" id="BeK-lB-d88"/>
+                            <constraint firstItem="UVI-kB-XGJ" firstAttribute="centerX" secondItem="olq-in-k2N" secondAttribute="centerX" id="C5I-WH-JK0"/>
+                            <constraint firstItem="h4O-T8-UqT" firstAttribute="top" secondItem="fDN-Ie-ePg" secondAttribute="bottom" constant="8" id="DFb-7S-iQA"/>
+                            <constraint firstItem="olq-in-k2N" firstAttribute="top" secondItem="UVI-kB-XGJ" secondAttribute="bottom" id="DeX-dK-Rrz"/>
+                            <constraint firstItem="ue3-zX-tqa" firstAttribute="leading" secondItem="olq-in-k2N" secondAttribute="leading" id="GIJ-ew-50e"/>
+                            <constraint firstItem="h4O-T8-UqT" firstAttribute="leading" secondItem="xkQ-gH-ZLR" secondAttribute="leading" constant="123" id="GoC-RA-1fU"/>
+                            <constraint firstItem="fzu-cL-bew" firstAttribute="top" secondItem="ue3-zX-tqa" secondAttribute="bottom" constant="51" id="Gzf-xp-AX3"/>
+                            <constraint firstItem="fzu-cL-bew" firstAttribute="centerX" secondItem="h4O-T8-UqT" secondAttribute="centerX" id="JzB-yH-81A"/>
+                            <constraint firstItem="fzu-cL-bew" firstAttribute="leading" secondItem="xkQ-gH-ZLR" secondAttribute="leading" constant="30" id="T8M-zH-xMk"/>
+                            <constraint firstItem="b3H-aY-HEh" firstAttribute="centerX" secondItem="UVI-kB-XGJ" secondAttribute="centerX" id="UDQ-MU-kml"/>
+                            <constraint firstItem="fDN-Ie-ePg" firstAttribute="leading" secondItem="xkQ-gH-ZLR" secondAttribute="leading" constant="128" id="Y5X-Wh-IO0"/>
+                            <constraint firstItem="olq-in-k2N" firstAttribute="centerX" secondItem="fDN-Ie-ePg" secondAttribute="centerX" id="Zb1-7K-muO"/>
+                            <constraint firstItem="ue3-zX-tqa" firstAttribute="top" secondItem="fgy-50-Dxk" secondAttribute="topMargin" constant="-11" id="bPf-lj-cVL"/>
+                            <constraint firstItem="UVI-kB-XGJ" firstAttribute="top" secondItem="b3H-aY-HEh" secondAttribute="bottom" constant="8" id="h9W-BR-Yb0"/>
+                            <constraint firstItem="ue3-zX-tqa" firstAttribute="centerX" secondItem="fgy-50-Dxk" secondAttribute="centerX" id="hPt-US-bWI"/>
+                            <constraint firstItem="b3H-aY-HEh" firstAttribute="top" secondItem="fzu-cL-bew" secondAttribute="bottom" constant="29" id="jJg-qI-WPs"/>
+                            <constraint firstItem="UVI-kB-XGJ" firstAttribute="leading" secondItem="xkQ-gH-ZLR" secondAttribute="leading" constant="124" id="s90-2s-bBt"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xkQ-gH-ZLR"/>
                     </view>
                     <connections>
@@ -144,7 +169,7 @@ ABAudioRecorder</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lOk-cJ-nnX" customClass="ABGradientLinear" customModule="ABControls">
+                            <view autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lOk-cJ-nnX" customClass="ABGradientLinear" customModule="ABControlsTestHarness" customModuleProvider="target">
                                 <rect key="frame" x="76" y="126" width="222" height="193"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -160,7 +185,7 @@ ABAudioRecorder</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LWH-D1-lax" customClass="ABGradientRadial" customModule="ABControls">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LWH-D1-lax" customClass="ABGradientRadial" customModule="ABControlsTestHarness" customModuleProvider="target">
                                 <rect key="frame" x="61" y="373" width="253" height="214"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -210,10 +235,7 @@ ABAudioRecorder</string>
                                 <rect key="frame" x="28" y="73" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isChecked" value="NO"/>
-                                </userDefinedRuntimeAttributes>
+                                <color key="tintColor" cocoaTouchSystemColor="systemTealColor"/>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DJQ-Md-pmj">
                                 <rect key="frame" x="78" y="54" width="240" height="200"/>
@@ -235,9 +257,9 @@ ABAudioRecorder</string>
                                 <rect key="frame" x="22" y="297" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" cocoaTouchSystemColor="systemPinkColor"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isChecked" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="checked" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vWY-F7-1kQ">
@@ -279,7 +301,7 @@ ABAudioRecorder</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cw7-hO-VJ5" customClass="ABDropDown" customModule="ABControls">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cw7-hO-VJ5" customClass="ABDropDown" customModule="ABControlsTestHarness">
                                 <rect key="frame" x="16" y="129" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -359,7 +381,7 @@ grey</string>
             <objects>
                 <navigationController id="vC3-pB-5Vb" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="DjV-YW-jjY">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
