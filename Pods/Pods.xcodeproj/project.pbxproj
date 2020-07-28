@@ -19,16 +19,16 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		53B34758655D97B486B20EC6E48A9ED2 /* Pods-ABControls-Static-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B1C85D4601F1F56712EABC4CC6BD47 /* Pods-ABControls-Static-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7F60FD7F6E48F0A76856932BB44187FB /* Pods-ABControls-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 638A1E54F7D4108C179EE81C13C2C4B7 /* Pods-ABControls-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8CF63947061F7D60F64D899B70F00827 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		94C39B71E64B825092CB724E53D6C82B /* Pods-ABControls-Static-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BB2F3F530EA5919366CCF381715F03 /* Pods-ABControls-Static-dummy.m */; };
 		B949EFB1E2680D3DFC3BBC40696DED24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		C37F24B7857237668C22E8440C50E07E /* Pods-ABControls-Static-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B1C85D4601F1F56712EABC4CC6BD47 /* Pods-ABControls-Static-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CCBD2E6CC08B51C53E77F64C28E92065 /* Pods-ABControls-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBD691DE6BCB76E76FD5C36361D2BE0 /* Pods-ABControls-dummy.m */; };
-		EB41C3E2AD7BCF4AE435BF1C79B95D8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		ED754AF66106D968CC65DA051D03FFB7 /* Pods-ABControls-Static-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BB2F3F530EA5919366CCF381715F03 /* Pods-ABControls-Static-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3D5EDC4EE11F8550031E8547D339380C /* PBXContainerItemProxy */ = {
+		1D08380FAB675B5A522EFF205C29FD71 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -63,19 +63,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		10578CF5826425DD67DFDDA24D2789AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CF63947061F7D60F64D899B70F00827 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		48CB1E77EF97A8F1D787FE74CF51ECC7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B949EFB1E2680D3DFC3BBC40696DED24 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8C59F07146ACE732F4AD4BF44886EC8B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EB41C3E2AD7BCF4AE435BF1C79B95D8C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,11 +197,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		408999B5CF9FE4940455BA561DEE3ABA /* Headers */ = {
+		D9AD78193DFDD4A1825AA6FC1780AB37 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C37F24B7857237668C22E8440C50E07E /* Pods-ABControls-Static-umbrella.h in Headers */,
+				53B34758655D97B486B20EC6E48A9ED2 /* Pods-ABControls-Static-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,17 +210,17 @@
 /* Begin PBXNativeTarget section */
 		5EF9CB73660E40FAC4BEB1AD4FC1DDEB /* Pods-ABControls-Static */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 076F4251497A17ACB6E22D5A24A2AE5B /* Build configuration list for PBXNativeTarget "Pods-ABControls-Static" */;
+			buildConfigurationList = FA6956C38FD3512BF636B3F6C692FCD5 /* Build configuration list for PBXNativeTarget "Pods-ABControls-Static" */;
 			buildPhases = (
-				408999B5CF9FE4940455BA561DEE3ABA /* Headers */,
-				32840E236CD82CEA96D53E94ECF91BC7 /* Sources */,
-				8C59F07146ACE732F4AD4BF44886EC8B /* Frameworks */,
-				9741D14E572E7D9815554743341ED101 /* Resources */,
+				D9AD78193DFDD4A1825AA6FC1780AB37 /* Headers */,
+				1FE047D22E400C6C9ACB562535CB7815 /* Sources */,
+				10578CF5826425DD67DFDDA24D2789AB /* Frameworks */,
+				91AB083D3BC76A8DF660DF6B7AC28FDF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F64D566F49F066B4B2DD92DFAB2B5AAF /* PBXTargetDependency */,
+				4C072A33A58301A04252FFB5EFC5ED4E /* PBXTargetDependency */,
 			);
 			name = "Pods-ABControls-Static";
 			productName = "Pods-ABControls-Static";
@@ -282,7 +282,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9741D14E572E7D9815554743341ED101 /* Resources */ = {
+		91AB083D3BC76A8DF660DF6B7AC28FDF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -292,11 +292,11 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		32840E236CD82CEA96D53E94ECF91BC7 /* Sources */ = {
+		1FE047D22E400C6C9ACB562535CB7815 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED754AF66106D968CC65DA051D03FFB7 /* Pods-ABControls-Static-dummy.m in Sources */,
+				94C39B71E64B825092CB724E53D6C82B /* Pods-ABControls-Static-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,11 +311,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F64D566F49F066B4B2DD92DFAB2B5AAF /* PBXTargetDependency */ = {
+		4C072A33A58301A04252FFB5EFC5ED4E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftLint;
 			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
-			targetProxy = 3D5EDC4EE11F8550031E8547D339380C /* PBXContainerItemProxy */;
+			targetProxy = 1D08380FAB675B5A522EFF205C29FD71 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -452,7 +452,7 @@
 			};
 			name = Release;
 		};
-		5C5FB31187BF70AEAAFE81D9C3D4244B /* Release */ = {
+		9BE0001EF6B9BC12BEAA1CED6966909B /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 651185E8E4D96A04852614C9F99FA7A2 /* Pods-ABControls-Static.release.xcconfig */;
 			buildSettings = {
@@ -555,7 +555,7 @@
 			};
 			name = Debug;
 		};
-		B1E5C82B35D927EAD9A2C3ADE961083D /* Debug */ = {
+		C3F904DF311D5CB0911564D1F44BEB85 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2A1B94715D651875DD0C817FE5392E3C /* Pods-ABControls-Static.debug.xcconfig */;
 			buildSettings = {
@@ -634,15 +634,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		076F4251497A17ACB6E22D5A24A2AE5B /* Build configuration list for PBXNativeTarget "Pods-ABControls-Static" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B1E5C82B35D927EAD9A2C3ADE961083D /* Debug */,
-				5C5FB31187BF70AEAAFE81D9C3D4244B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4049F2172EC99403FACD9C16981B2DFF /* Build configuration list for PBXNativeTarget "Pods-ABControls" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -666,6 +657,15 @@
 			buildConfigurations = (
 				46EECD2DED30D7C5FE141C0B267C2D3F /* Debug */,
 				55DD740115BE746C8DBB7753806D85D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA6956C38FD3512BF636B3F6C692FCD5 /* Build configuration list for PBXNativeTarget "Pods-ABControls-Static" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3F904DF311D5CB0911564D1F44BEB85 /* Debug */,
+				9BE0001EF6B9BC12BEAA1CED6966909B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
