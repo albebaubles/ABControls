@@ -13,7 +13,7 @@ public protocol ABListBoxDelegate: class {
 	func didChangeListBoxIndex(_ index: Int)
 }
 @IBDesignable
-public class ABListBox: ABTextualControl, UITableViewDelegate, UITableViewDataSource {
+public class ABListBox: ABTextualControl {
 	public weak var
 	delegate: ABListBoxDelegate?
 	private var _frame: CGRect = CGRect()
@@ -101,6 +101,7 @@ public class ABListBox: ABTextualControl, UITableViewDelegate, UITableViewDataSo
 		#endif
 		layer.backgroundColor = self.backgroundColor?.cgColor
 	}
+    
 	override public func prepareForInterfaceBuilder() {
 		super.prepareForInterfaceBuilder()
 		sharedInit()
@@ -125,6 +126,7 @@ public class ABListBox: ABTextualControl, UITableViewDelegate, UITableViewDataSo
 		setupTableview()
 		_tableview.reloadData()
 	}
+    
 	private func setupTableview() {
 		_tableview.autoresizingMask = .init(rawValue: 0)
 		_tableview.dataSource = self
@@ -149,32 +151,43 @@ public class ABListBox: ABTextualControl, UITableViewDelegate, UITableViewDataSo
 		layer.borderColor = self.textColor.cgColor
 		layer.borderWidth = 0.5
 	}
-	// MARK: - Table view data source
+}
+
+extension ABListBox: UITableViewDelegate {
+	// MARK: - Table view delegate
 	//
-	public func numberOfSections(in tableView: UITableView) -> Int {
-		return 1
-	}
-	public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		_tableview.isHidden = true
-		if _listItems != nil {
-			_tableview.isHidden = false
-			return (_listItems?.count)!
-		}
-		return 0
-	}
-	public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-		cell.isUserInteractionEnabled = true
-		cell.textLabel?.text = _listItems?[indexPath.row]
-		cell.textLabel?.font = _font
-		cell.textLabel?.textColor = self.textColor
-		cell.layer.backgroundColor = self.backgroundColor?.cgColor
-		return cell
-	}
 	public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		index = indexPath.row
 	}
+    
 	public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
 		cell.layer.backgroundColor = self.backgroundColor?.cgColor
 	}
+}
+
+extension ABListBox: UITableViewDataSource {
+    // MARK: - Table view data source
+    //
+    public func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        _tableview.isHidden = true
+        if _listItems != nil {
+            _tableview.isHidden = false
+            return (_listItems?.count)!
+        }
+        return 0
+    }
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+        cell.isUserInteractionEnabled = true
+        cell.textLabel?.text = _listItems?[indexPath.row]
+        cell.textLabel?.font = _font
+        cell.textLabel?.textColor = self.textColor
+        cell.layer.backgroundColor = self.backgroundColor?.cgColor
+        return cell
+    }
 }

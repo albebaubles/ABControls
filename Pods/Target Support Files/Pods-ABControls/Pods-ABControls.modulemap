@@ -1,6 +1,0 @@
-framework module Pods_ABControls {
-  umbrella header "Pods-ABControls-umbrella.h"
-
-  export *
-  module * { export * }
-}

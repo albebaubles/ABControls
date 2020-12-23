@@ -9,7 +9,7 @@ import UIKit
 
 @IBDesignable
 public class ABGradientRadial: ABControl {
-	public var colors: CFArray = [UIColor.green.cgColor, UIColor.blue.cgColor] as CFArray {
+    public var colors: CFArray = [UIColor.green.cgColor, UIColor.yellow.cgColor] as CFArray {
 		didSet {
 			setNeedsDisplay()
 		}

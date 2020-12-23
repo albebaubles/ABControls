@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B410EB0D2593DFF700F21116 /* ABControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B410EB072593DFCD00F21116 /* ABControls.framework */; };
+		B410EB0E2593DFF700F21116 /* ABControls.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B410EB072593DFCD00F21116 /* ABControls.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B44311C922E67126008BEA0C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B44311C822E67125008BEA0C /* UIKit.framework */; };
 		B487264722E3D4480006BB08 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B487264622E3D4480006BB08 /* CoreGraphics.framework */; };
-		B4CC1AF721288C6400FF1A75 /* ABControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CC1AF621288C6400FF1A75 /* ABControls.framework */; };
-		B4CC1AF821288C6400FF1A75 /* ABControls.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B4CC1AF621288C6400FF1A75 /* ABControls.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B4FA156C2127409B000A9C53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA156B2127409B000A9C53 /* AppDelegate.swift */; };
 		B4FA156E2127409B000A9C53 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA156D2127409B000A9C53 /* MasterViewController.swift */; };
 		B4FA15702127409B000A9C53 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA156F2127409B000A9C53 /* DetailViewController.swift */; };
@@ -43,13 +43,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B4FA159E21274241000A9C53 /* Embed Frameworks */ = {
+		B410EB0F2593DFF700F21116 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B4CC1AF821288C6400FF1A75 /* ABControls.framework in Embed Frameworks */,
+				B410EB0E2593DFF700F21116 /* ABControls.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,10 +57,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B410EB072593DFCD00F21116 /* ABControls.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ABControls.framework; path = "../../../Library/Developer/Xcode/DerivedData/ABControls-hintaetwtixowlfwgazuuctxikwu/Build/Products/Debug-maccatalyst/ABControls.framework"; sourceTree = "<group>"; };
 		B44311C822E67125008BEA0C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B44311CA22E7A54D008BEA0C /* ABControlsTestHarness.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ABControlsTestHarness.entitlements; sourceTree = "<group>"; };
 		B487264622E3D4480006BB08 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		B4CC1AF621288C6400FF1A75 /* ABControls.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ABControls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4FA15682127409B000A9C53 /* ABControlsTestHarness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ABControlsTestHarness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4FA156B2127409B000A9C53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4FA156D2127409B000A9C53 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -87,8 +87,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B487264722E3D4480006BB08 /* CoreGraphics.framework in Frameworks */,
+				B410EB0D2593DFF700F21116 /* ABControls.framework in Frameworks */,
 				B44311C922E67126008BEA0C /* UIKit.framework in Frameworks */,
-				B4CC1AF721288C6400FF1A75 /* ABControls.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +112,7 @@
 		B487264522E3D4480006BB08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B410EB072593DFCD00F21116 /* ABControls.framework */,
 				B44311C822E67125008BEA0C /* UIKit.framework */,
 				B487264622E3D4480006BB08 /* CoreGraphics.framework */,
 			);
@@ -121,7 +122,6 @@
 		B4FA155F2127409B000A9C53 = {
 			isa = PBXGroup;
 			children = (
-				B4CC1AF621288C6400FF1A75 /* ABControls.framework */,
 				B4FA156A2127409B000A9C53 /* ABControlsTestHarness */,
 				B4FA15812127409D000A9C53 /* ABControlsTestHarnessTests */,
 				B4FA158C2127409D000A9C53 /* ABControlsTestHarnessUITests */,
@@ -187,7 +187,7 @@
 				B4FA15642127409B000A9C53 /* Sources */,
 				B4FA15652127409B000A9C53 /* Frameworks */,
 				B4FA15662127409B000A9C53 /* Resources */,
-				B4FA159E21274241000A9C53 /* Embed Frameworks */,
+				B410EB0F2593DFF700F21116 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -241,7 +241,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = "AlbeBaubles LLC";
 				TargetAttributes = {
 					B4FA15672127409B000A9C53 = {
@@ -399,6 +399,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -424,7 +425,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -460,6 +461,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -479,7 +481,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -498,16 +500,20 @@
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 4NN457KWJ4;
 				INFOPLIST_FILE = ABControlsTestHarness/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.albebaubles.ABControlsTestHarness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macOS";
 				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "2,6";
 			};
 			name = Debug;
 		};
@@ -520,16 +526,19 @@
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 4NN457KWJ4;
 				INFOPLIST_FILE = ABControlsTestHarness/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.albebaubles.ABControlsTestHarness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macOS";
 				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "2,6";
 			};
 			name = Release;
 		};

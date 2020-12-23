@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		21BA023A461CAEE591A8C01B /* Pods_ABControls_Static.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E328A7617847BE8FB9FB63A6 /* Pods_ABControls_Static.framework */; };
-		8B51D65DD947329353867623 /* Pods_ABControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5109E79ECD1E091F5C9BFBE2 /* Pods_ABControls.framework */; };
 		B4248EB1212265250026D3BF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B4248EB0212265250026D3BF /* README.md */; };
 		B43C887B211FAA9900A079F0 /* ABPotentiometerRadial.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43C887A211FAA9900A079F0 /* ABPotentiometerRadial.swift */; };
 		B43C887D211FAAAF00A079F0 /* ABPotentiometerLinear.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43C887C211FAAAF00A079F0 /* ABPotentiometerLinear.swift */; };
@@ -30,6 +28,8 @@
 		B487264922E3D4790006BB08 /* ABGradientRadial.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E66DCC2127764D005932EC /* ABGradientRadial.swift */; };
 		B48AFCF7211F6F680067BA86 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = B48AFCF6211F6F680067BA86 /* LICENSE.md */; };
 		B4ACB3FB211B697900140837 /* ABTextualControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ACB3FA211B697900140837 /* ABTextualControl.swift */; };
+		B4BA8CF82593B25500A17274 /* ABBarcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BA8CF72593B25500A17274 /* ABBarcode.swift */; };
+		B4BA8CFD2593B32200A17274 /* ABBarcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BA8CF72593B25500A17274 /* ABBarcode.swift */; };
 		B4BF62E6212389EB003CD938 /* ABGradientLinear.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BF62E5212389EB003CD938 /* ABGradientLinear.swift */; };
 		B4BF62E721238BCA003CD938 /* ABGradientLinear.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4BF62E5212389EB003CD938 /* ABGradientLinear.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		B4CC1AF921288D8C00FF1A75 /* ABPotentiometerLinear.swift in Headers */ = {isa = PBXBuildFile; fileRef = B43C887C211FAAAF00A079F0 /* ABPotentiometerLinear.swift */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -78,10 +78,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		06B34348D7B17F3251F42088 /* Pods-ABControls-Static.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ABControls-Static.release.xcconfig"; path = "Target Support Files/Pods-ABControls-Static/Pods-ABControls-Static.release.xcconfig"; sourceTree = "<group>"; };
-		5109E79ECD1E091F5C9BFBE2 /* Pods_ABControls.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABControls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		60202EF8214B7AACC88DEC28 /* Pods-ABControls-Static.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ABControls-Static.debug.xcconfig"; path = "Target Support Files/Pods-ABControls-Static/Pods-ABControls-Static.debug.xcconfig"; sourceTree = "<group>"; };
-		91BCC3AA9AAD031CA8088832 /* Pods-ABControls.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ABControls.debug.xcconfig"; path = "Target Support Files/Pods-ABControls/Pods-ABControls.debug.xcconfig"; sourceTree = "<group>"; };
 		B4248EB0212265250026D3BF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		B43C887A211FAA9900A079F0 /* ABPotentiometerRadial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABPotentiometerRadial.swift; sourceTree = "<group>"; };
 		B43C887C211FAAAF00A079F0 /* ABPotentiometerLinear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABPotentiometerLinear.swift; sourceTree = "<group>"; };
@@ -93,6 +89,7 @@
 		B4720EAC21177712001DBBF2 /* ABVideoRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABVideoRecorder.swift; sourceTree = "<group>"; };
 		B48AFCF6211F6F680067BA86 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		B4ACB3FA211B697900140837 /* ABTextualControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABTextualControl.swift; sourceTree = "<group>"; };
+		B4BA8CF72593B25500A17274 /* ABBarcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABBarcode.swift; sourceTree = "<group>"; };
 		B4BF62E5212389EB003CD938 /* ABGradientLinear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABGradientLinear.swift; sourceTree = "<group>"; };
 		B4DA3C9021164A39006B1AB2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B4DA3C9921164CB9006B1AB2 /* ABControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABControls.h; sourceTree = "<group>"; };
@@ -104,8 +101,6 @@
 		B4FEDCE8211620DD00223E77 /* ABCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABCheckBox.swift; sourceTree = "<group>"; };
 		B4FEDD022116419200223E77 /* ABControls.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ABControls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4FEDD052116419200223E77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E328A7617847BE8FB9FB63A6 /* Pods_ABControls_Static.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABControls_Static.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E494AF8743C3CCCEEAFD3C38 /* Pods-ABControls.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ABControls.release.xcconfig"; path = "Target Support Files/Pods-ABControls/Pods-ABControls.release.xcconfig"; sourceTree = "<group>"; };
 		EF73BD29212324EF001BEBE1 /* ABControls.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ABControls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -115,7 +110,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4DA3C9121164A39006B1AB2 /* UIKit.framework in Frameworks */,
-				8B51D65DD947329353867623 /* Pods_ABControls.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,31 +118,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF73BD22212324EF001BEBE1 /* UIKit.framework in Frameworks */,
-				21BA023A461CAEE591A8C01B /* Pods_ABControls_Static.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2F84B405E596AFDCE318DD0A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				91BCC3AA9AAD031CA8088832 /* Pods-ABControls.debug.xcconfig */,
-				E494AF8743C3CCCEEAFD3C38 /* Pods-ABControls.release.xcconfig */,
-				60202EF8214B7AACC88DEC28 /* Pods-ABControls-Static.debug.xcconfig */,
-				06B34348D7B17F3251F42088 /* Pods-ABControls-Static.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		B46D4E1A2114C05F00A58C71 = {
 			isa = PBXGroup;
 			children = (
 				B46D4E252114C05F00A58C71 /* ABControls */,
 				B46D4E242114C05F00A58C71 /* Products */,
 				B4FEDCFB2116411700223E77 /* Frameworks */,
-				2F84B405E596AFDCE318DD0A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				B4720EAA211776E9001DBBF2 /* ABAudioRecorder.swift */,
+				B4BA8CF72593B25500A17274 /* ABBarcode.swift */,
 				B4FAE12321176773008707E7 /* ABBarcodeScanner.swift */,
 				B4FEDCE8211620DD00223E77 /* ABCheckBox.swift */,
 				B459874D2117D19400519520 /* ABControl.swift */,
@@ -192,8 +174,6 @@
 			isa = PBXGroup;
 			children = (
 				B4DA3C9021164A39006B1AB2 /* UIKit.framework */,
-				5109E79ECD1E091F5C9BFBE2 /* Pods_ABControls.framework */,
-				E328A7617847BE8FB9FB63A6 /* Pods_ABControls_Static.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -250,8 +230,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B4FEDD192116419300223E77 /* Build configuration list for PBXNativeTarget "ABControls" */;
 			buildPhases = (
-				C540C2313FE67C8DD382A573 /* [CP] Check Pods Manifest.lock */,
-				B4961DED22B9B9910075E3EA /* ShellScript */,
 				B4FEDCFD2116419200223E77 /* Headers */,
 				B4FEDCFE2116419200223E77 /* Sources */,
 				B4FEDCFF2116419200223E77 /* Frameworks */,
@@ -270,7 +248,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF73BD26212324EF001BEBE1 /* Build configuration list for PBXNativeTarget "ABControls-Static" */;
 			buildPhases = (
-				73794F8E8BE3F8925AA24193 /* [CP] Check Pods Manifest.lock */,
 				EF73BD05212324EF001BEBE1 /* Headers */,
 				EF73BD12212324EF001BEBE1 /* Sources */,
 				EF73BD21212324EF001BEBE1 /* Frameworks */,
@@ -292,7 +269,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = "AlbeBaubles LLC";
 				TargetAttributes = {
 					B4FEDD012116419200223E77 = {
@@ -341,70 +318,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		73794F8E8BE3F8925AA24193 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ABControls-Static-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B4961DED22B9B9910075E3EA /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
-		};
-		C540C2313FE67C8DD382A573 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ABControls-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		B4FEDCFE2116419200223E77 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -420,6 +333,7 @@
 				B43C887D211FAAAF00A079F0 /* ABPotentiometerLinear.swift in Sources */,
 				B4FEDD22211641A500223E77 /* ABControlsStyleKit.swift in Sources */,
 				B4720EAD21177712001DBBF2 /* ABVideoRecorder.swift in Sources */,
+				B4BA8CF82593B25500A17274 /* ABBarcode.swift in Sources */,
 				B4FAE1262117678C008707E7 /* ABImageViewer.swift in Sources */,
 				B4ACB3FB211B697900140837 /* ABTextualControl.swift in Sources */,
 				B4FAE12421176773008707E7 /* ABBarcodeScanner.swift in Sources */,
@@ -443,6 +357,7 @@
 				EF73BD19212324EF001BEBE1 /* ABControlsStyleKit.swift in Sources */,
 				EF73BD1A212324EF001BEBE1 /* ABVideoRecorder.swift in Sources */,
 				EF73BD1B212324EF001BEBE1 /* ABImageViewer.swift in Sources */,
+				B4BA8CFD2593B32200A17274 /* ABBarcode.swift in Sources */,
 				EF73BD1C212324EF001BEBE1 /* ABTextualControl.swift in Sources */,
 				EF73BD1D212324EF001BEBE1 /* ABBarcodeScanner.swift in Sources */,
 				EF73BD1E212324EF001BEBE1 /* ABTouchDraw.swift in Sources */,
@@ -481,6 +396,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -506,7 +422,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -541,6 +457,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -560,7 +477,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -571,7 +488,6 @@
 		};
 		B4FEDD1A2116419300223E77 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91BCC3AA9AAD031CA8088832 /* Pods-ABControls.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -583,7 +499,8 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/ABControls/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=iphoneos*]" = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -595,9 +512,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.albebaubles.ABControls;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = NO;
+				SUPPORTED_PLATFORMS = "iphonesimulator macOS iphoneos";
 				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
+				TVOS_DEPLOYMENT_TARGET = 14.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -605,7 +525,6 @@
 		};
 		B4FEDD1B2116419300223E77 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E494AF8743C3CCCEEAFD3C38 /* Pods-ABControls.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -617,7 +536,8 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/ABControls/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=iphoneos*]" = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -627,9 +547,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.albebaubles.ABControls;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = NO;
+				SUPPORTED_PLATFORMS = "iphonesimulator macOS iphoneos";
 				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
+				TVOS_DEPLOYMENT_TARGET = 14.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -637,7 +560,6 @@
 		};
 		EF73BD27212324EF001BEBE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 60202EF8214B7AACC88DEC28 /* Pods-ABControls-Static.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
@@ -650,7 +572,8 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/ABControls/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -663,9 +586,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.albebaubles.ABControls;
 				PRODUCT_NAME = ABControls;
 				SKIP_INSTALL = NO;
-				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
+				TVOS_DEPLOYMENT_TARGET = 14.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -673,7 +598,6 @@
 		};
 		EF73BD28212324EF001BEBE1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 06B34348D7B17F3251F42088 /* Pods-ABControls-Static.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
@@ -686,7 +610,8 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/ABControls/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -697,9 +622,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.albebaubles.ABControls;
 				PRODUCT_NAME = ABControls;
 				SKIP_INSTALL = NO;
-				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
+				TVOS_DEPLOYMENT_TARGET = 14.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};

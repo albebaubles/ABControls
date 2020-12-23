@@ -7,8 +7,24 @@
 //
 import UIKit
 import ABControls
-class ABDropDownViewController: UIViewController, ABDropDownDelegate {
+
+class ABDropDownViewController: UIViewController {
+    
+    @IBOutlet weak private var textview: UITextView!
+    @IBOutlet weak private var dropdown: ABDropDown!
+    private let colors: [UIColor] = [.red, .green, .blue, .black, .brown, .purple]
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        dropdown?.delegate = self
+    }
+}
+
+extension ABDropDownViewController: ABDropDownDelegate {
+    
     func didChangeIndex(_ sender: ABDropDown, _ index: Int) {
+        textview.textColor = colors[index]
 
     }
 
@@ -18,19 +34,5 @@ class ABDropDownViewController: UIViewController, ABDropDownDelegate {
 
     func didHideDropdown() {
 
-    }
-
-    @IBOutlet weak private var textview: UITextView!
-    @IBOutlet weak private var dropdown: ABDropDown!
-    private let colors: [UIColor] = [.red, .green, .blue, .black, .brown]
-
-    func didChangeIndex(_ index: Int) {
-        textview.textColor = colors[index]
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        dropdown?.delegate = self
     }
 }

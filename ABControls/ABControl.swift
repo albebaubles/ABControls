@@ -7,6 +7,7 @@
 //
 import UIKit
 
+@IBDesignable
 public class ABControl: UIView {
 	private struct Cache {
 		static var textColor = UIColor.black

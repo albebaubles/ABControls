@@ -14,8 +14,8 @@ public class ABGradientLinear: ABControl {
 		didSet { setNeedsDisplay() }
 	}
 
-	public var startPoint = CGPoint(x: 0, y: 1)
-	public var endPoint = CGPoint(x: 1, y: 0)
+    @IBInspectable public var startPoint = CGPoint(x: 0, y: 1)
+    @IBInspectable public var endPoint = CGPoint(x: 1, y: 0)
 
 	/// required for dev time
 	required public init(frame: CGRect) {

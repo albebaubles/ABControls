@@ -8,73 +8,13 @@
 import UIKit
 import AVFoundation
 
-/// ABBarcode contains the data and type of barcode
-public class ABBarCode: NSObject {
-
-    public var type: String?
-    public var stringData: String?
-
-    /// Converts the AVMetadata to barcode data
-    ///
-    /// - Parameter meta: the AVMetadata to convert ot barcode data
-    /// - Returns: an ABBarcode
-    internal static func processBarcode(meta: AVMetadataMachineReadableCodeObject) -> ABBarCode {
-        let code = ABBarCode()
-        code.type = meta.type.rawValue
-        code.stringData = meta.stringValue
-        return code
-    }
-
-    /// returns an image object based on it's barcode data and type
-    ///
-    /// - Returns: returns an UIImage of the barcodes data in the object
-    ///
-    /**
-     ABBarCode("CIQRCodeGenerator", "0122333223484984").image()
-     ABBarCode("CIAztecCodeGenerator", "43543323535433").image()
-     
-     let barcode = ABBarCode("CIQRCodeGenerator", "24342344")
-     let myImage = barcode.image()
-     CIQRCodeGenerator
- */
-    public func image() -> UIImage {
-        guard let data = stringData!.data(using: .ascii),
-            let filter = CIFilter(name: type!) else {
-                NSLog("did fail to create image")
-                return UIImage()
-        }
-        filter.setValue(data, forKey: "inputMessage")
-        guard let image = filter.outputImage else {
-            return UIImage()
-        }
-        return UIImage(ciImage: image)
-    }
-
-    /// Creates a UIImage object from barcode data
-    ///
-    /// - Parameters:
-    ///   - type: barcode type, eg. - CICode128BarcodeGenerator...
-    ///   - stringData: the data that comprisies the barcode info
-    /// - Returns: UIImage
-    ///
-    /**
-     let barcode = ABBarCode("CICode128BarcodeGenerator", "0100859619004301171811182118061-05")
-     */
-    public static func `init`(_ type: String, _ stringData: String) -> ABBarCode {
-        let barc = ABBarCode()
-        barc.type = type
-        barc.stringData = stringData
-        return barc
-    }
-}
-
 /// In this iteration the scanner object is always on and active
 public protocol ABBarcodeScannerDelegate: class {
 
     /// Fires when the control has found and proceessed a barcode
     ///
     /// - Parameter code: reutns an ABBarcode object
-    func didReceiveBarcode(_ code: ABBarCode)
+    func didReceiveBarcode(_ code: ABBarcode)
     /// Fires anytime a problem occurs while attempting to scan a barcode
     ///
     /// - Parameter message: string indicating the problem/issue
@@ -146,6 +86,7 @@ public class ABBarcodeScanner: ABControl {
             label.layer.zPosition = 1
             addSubview(label)
         #endif
+        #if !TARGET_INTERFACE_BUILDER
         AVCaptureDevice.requestAccess(for: AVMediaType.video) { response in
             if response {
                 // Access granted
@@ -155,6 +96,7 @@ public class ABBarcodeScanner: ABControl {
                 NotificationCenter.default.post(name: NSNotification.Name(ABBarcodeScanner.ABBarcodeScannerDidFail), object: nil)
             }
         }
+        #endif
     }
 
     ///
@@ -175,7 +117,7 @@ public class ABBarcodeScanner: ABControl {
                         self.previewLayer.frame = self.bounds
                         self.layer.addSublayer(self.previewLayer)
                     }
-                    meta.setMetadataObjectsDelegate(self, queue: DispatchQueue(label: "com.albebaubles.abbarcodecapturequeue"))
+                    meta.setMetadataObjectsDelegate(self, queue: DispatchQueue(label: "com.albebaubles.ABBarcodecapturequeue"))
                     if session.canAddOutput(meta) {
                         session.addOutput(meta)
                     }
@@ -198,7 +140,7 @@ extension ABBarcodeScanner: AVCaptureMetadataOutputObjectsDelegate {
         for metaData in metadataObjects {
             if let code = previewLayer.transformedMetadataObject(for: metaData) as? AVMetadataMachineReadableCodeObject {
                 if metaData is AVMetadataMachineReadableCodeObject {
-                    let barcode = ABBarCode.processBarcode(meta: code) as ABBarCode
+                    let barcode = ABBarcode.processBarcode(meta: code) as ABBarcode
                     if barcodeTypes.contains(code.type.rawValue) || barcodeTypes.isEmpty {
                         self.delegate?.didReceiveBarcode(barcode)
                         self.session.stopRunning()

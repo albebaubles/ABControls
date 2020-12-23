@@ -22,7 +22,7 @@ public protocol ABDropDownDelegate: class {
 /// Provides a dropdown list as a replacement for a UIPickerView.  If the dropdown cannot display without falling off the window, it will popUP
 /// - Attention: fires notification 'ABDropDownDidChangeIndex' which returns the selected index
 @IBDesignable
-public class ABDropDown: ABTextualControl, UITableViewDelegate, UITableViewDataSource {
+public class ABDropDown: ABTextualControl {
     public weak var delegate: ABDropDownDelegate?
     private var frameRect = CGRect()
     private var listItems: [String]?
@@ -155,7 +155,6 @@ public class ABDropDown: ABTextualControl, UITableViewDelegate, UITableViewDataS
     required public init(frame: CGRect) {
         frameRect = frame
         super.init(frame: frame)
-
         textColor = UIColor.black
     }
 
@@ -216,7 +215,7 @@ public class ABDropDown: ABTextualControl, UITableViewDelegate, UITableViewDataS
     }
 
     private func setupTableviewDropdown() {
-        tableview.frame = CGRect(x: 0, y: defaultHeight, width: frame.width - 20, height: dropdownViewHeight)
+        tableview.frame = CGRect(x: 0, y: defaultHeight, width: frame.width - 5, height: dropdownViewHeight)
         tableview.dataSource = self
         tableview.delegate = self
         tableview.isHidden = true
@@ -224,12 +223,12 @@ public class ABDropDown: ABTextualControl, UITableViewDelegate, UITableViewDataS
         tableview.isUserInteractionEnabled = true
         tableview.flashScrollIndicators()
         tableview.rowHeight = 25
-        tableview.bounces = false
-        tableview.alwaysBounceVertical = false
+        tableview.bounces = true
+        tableview.alwaysBounceVertical = true
         tableview.alwaysBounceHorizontal = false
         tableview.backgroundColor = self.backgroundColor
-        self.backgroundColor = self.backgroundColor
         addSubview(tableview)
+
         tableview.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor).isActive = true
         tableview.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor).isActive = true
         layer.backgroundColor = self.backgroundColor?.cgColor
@@ -237,8 +236,22 @@ public class ABDropDown: ABTextualControl, UITableViewDelegate, UITableViewDataS
         layer.borderWidth = 0.5
     }
 
+}
+
+extension ABDropDown: UITableViewDelegate {
     // MARK: - Table view data source
     //
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.index = indexPath.row
+        showList()
+    }
+
+    public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.layer.backgroundColor = self.backgroundColor?.cgColor
+    }
+}
+
+extension ABDropDown: UITableViewDataSource {
     public func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -256,13 +269,22 @@ public class ABDropDown: ABTextualControl, UITableViewDelegate, UITableViewDataS
         cell.layer.backgroundColor = UIColor.clear.cgColor
         return cell
     }
+}
 
-    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.index = indexPath.row
-        showList()
+extension ABDropDown: ABDropDownDelegate {
+    
+    /// Fires when the selected has changed
+    ///
+    /// - Parameter index: index of the selected value
+    public func didChangeIndex(_ sender: ABDropDown, _ index: Int) {
+        
     }
-
-    public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.layer.backgroundColor = self.backgroundColor?.cgColor
+    /// Fires when the dropdown is visible
+    public func didShowDropdown() {
+        
+    }
+    /// Fires when the dropdown is hidden
+    public func didHideDropdown() {
+        
     }
 }
