@@ -6,23 +6,23 @@
 //  Copyright © 2018 AlbeBaubles LLC. All rights reserved.
 //
 import UIKit
-public protocol ABListBoxDelegate: class {
+public protocol ABListboxDelegate: class {
 	/// Fires when the listbox selection has changed
 	///
 	/// - Parameter index: index of the selected item
 	func didChangeListBoxIndex(_ index: Int)
 }
 @IBDesignable
-public class ABListBox: ABTextualControl {
+public class ABListbox: ABTextualControl {
 	public weak var
-	delegate: ABListBoxDelegate?
+	delegate: ABListboxDelegate?
 	private var _frame: CGRect = CGRect()
 	private var _listItems: [String]?
 	private var _selected: Int = NSNotFound
 	private var _font: UIFont = UIFont.systemFont(ofSize: 14)
 	private var _tableview: UITableView! = UITableView()
 	/// Notifications
-	public static let ABListBoxDidChangeIndex: String = "ABListBoxDidChangeIndex"
+	public static let ABListboxDidChangeIndex: String = "ABListBoxDidChangeIndex"
 	/// Sets the textcolor for text and the dropdown arrow
 	override public var textColor: UIColor {
 		didSet {
@@ -37,6 +37,7 @@ public class ABListBox: ABTextualControl {
 			_tableview.layer.cornerRadius = cornerRadius
 		}
 	}
+    
 	@IBInspectable public var rowHeight: Float = 40 {
 		didSet {
 			_tableview.rowHeight = CGFloat(rowHeight)
@@ -63,7 +64,7 @@ public class ABListBox: ABTextualControl {
 			_selected = index
 			#if !TARGET_INTERFACE_BUILDER
 				_tableview.selectRow(at: IndexPath(row: _selected, section: 0), animated: false, scrollPosition: .middle)
-				NotificationCenter.default.post(name: NSNotification.Name(ABListBox.ABListBoxDidChangeIndex), object: _selected)
+				NotificationCenter.default.post(name: NSNotification.Name(ABListbox.ABListboxDidChangeIndex), object: _selected)
 				delegate?.didChangeListBoxIndex(index)
 			#endif
 		}
@@ -153,7 +154,7 @@ public class ABListBox: ABTextualControl {
 	}
 }
 
-extension ABListBox: UITableViewDelegate {
+extension ABListbox: UITableViewDelegate {
 	// MARK: - Table view delegate
 	//
 	public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -165,7 +166,7 @@ extension ABListBox: UITableViewDelegate {
 	}
 }
 
-extension ABListBox: UITableViewDataSource {
+extension ABListbox: UITableViewDataSource {
     // MARK: - Table view data source
     //
     public func numberOfSections(in tableView: UITableView) -> Int {

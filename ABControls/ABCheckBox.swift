@@ -7,29 +7,29 @@
 //
 import UIKit
 
-public protocol ABCheckBoxDelegate: class {
+public protocol ABCheckboxDelegate: class {
 
     /// Fires anytime the checkbox is checked or unchecked
     ///
     /// - Parameter checked: true if checked
-    func didChangeCheckboxSelection(_ sender: ABCheckBox)
+    func didChangeCheckboxSelection(_ sender: ABCheckbox)
 }
 
 @IBDesignable
-public class ABCheckBox: ABControl {
+public class ABCheckbox: ABControl {
 
-    public weak var delegate: ABCheckBoxDelegate?
+    public weak var delegate: ABCheckboxDelegate?
     private var button = UIButton()
 
     /// Notifications
-    // ABCheckBoxDidChange
-    public static let ABCheckBoxDidChange: String = "ABCheckBoxDidChange"
+    // ABCheckboxDidChange
+    public static let ABCheckboxDidChange: String = "ABCheckboxDidChange"
     @IBInspectable public var checked: Bool = false {
         didSet {
             button.setImage(checked ? ABControlsStyleKit.imageOfCheckedBox : ABControlsStyleKit.imageOfUncheckedBox,
                             for: .normal)
             #if !TARGET_INTERFACE_BUILDER
-                NotificationCenter.default.post(name: NSNotification.Name(ABCheckBox.ABCheckBoxDidChange),
+                NotificationCenter.default.post(name: NSNotification.Name(ABCheckbox.ABCheckboxDidChange),
                                                 object: self)
                 delegate?.didChangeCheckboxSelection(self)
             #endif

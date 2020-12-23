@@ -7,12 +7,12 @@
 //
 import UIKit
 
-public protocol ABDropDownDelegate: class {
+public protocol ABDropdownDelegate: class {
 
     /// Fires when the selected has changed
     ///
     /// - Parameter index: index of the selected value
-    func didChangeIndex(_ sender: ABDropDown, _ index: Int)
+    func didChangeIndex(_ sender: ABDropdown, _ index: Int)
     /// Fires when the dropdown is visible
     func didShowDropdown()
     /// Fires when the dropdown is hidden
@@ -20,10 +20,10 @@ public protocol ABDropDownDelegate: class {
 }
 
 /// Provides a dropdown list as a replacement for a UIPickerView.  If the dropdown cannot display without falling off the window, it will popUP
-/// - Attention: fires notification 'ABDropDownDidChangeIndex' which returns the selected index
+/// - Attention: fires notification 'ABDropdownDidChangeIndex' which returns the selected index
 @IBDesignable
-public class ABDropDown: ABTextualControl {
-    public weak var delegate: ABDropDownDelegate?
+public class ABDropdown: ABTextualControl {
+    public weak var delegate: ABDropdownDelegate?
     private var frameRect = CGRect()
     private var listItems: [String]?
     private var selected: Int = NSNotFound
@@ -36,7 +36,7 @@ public class ABDropDown: ABTextualControl {
     private let dropdownViewHeight = CGFloat(130)
 
     /// Notifications
-    public static let ABDropDownDidChangeIndex = "ABDropDownDidChangeIndex"
+    public static let ABDropdownDidChangeIndex = "ABDropdownDidChangeIndex"
 
     /// Sets the textcolor for text
     override public var textColor: UIColor {
@@ -69,7 +69,7 @@ public class ABDropDown: ABTextualControl {
                 selected = index
                 tableview.selectRow(at: IndexPath(row: selected, section: 0), animated: false, scrollPosition: .middle)
                 #if !TARGET_INTERFACE_BUILDER
-                    NotificationCenter.default.post(name: NSNotification.Name(ABDropDown.ABDropDownDidChangeIndex), object: selected)
+                    NotificationCenter.default.post(name: NSNotification.Name(ABDropdown.ABDropdownDidChangeIndex), object: selected)
                     delegate?.didChangeIndex(self, index)
                 #endif
                 if selected == NSNotFound {
@@ -234,11 +234,12 @@ public class ABDropDown: ABTextualControl {
         layer.backgroundColor = self.backgroundColor?.cgColor
         layer.borderColor = self.textColor.cgColor
         layer.borderWidth = 0.5
+        layer.cornerRadius = self.cornerRadius
     }
 
 }
 
-extension ABDropDown: UITableViewDelegate {
+extension ABDropdown: UITableViewDelegate {
     // MARK: - Table view data source
     //
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -251,7 +252,7 @@ extension ABDropDown: UITableViewDelegate {
     }
 }
 
-extension ABDropDown: UITableViewDataSource {
+extension ABDropdown: UITableViewDataSource {
     public func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -271,12 +272,12 @@ extension ABDropDown: UITableViewDataSource {
     }
 }
 
-extension ABDropDown: ABDropDownDelegate {
+extension ABDropdown: ABDropdownDelegate {
     
     /// Fires when the selected has changed
     ///
     /// - Parameter index: index of the selected value
-    public func didChangeIndex(_ sender: ABDropDown, _ index: Int) {
+    public func didChangeIndex(_ sender: ABDropdown, _ index: Int) {
         
     }
     /// Fires when the dropdown is visible

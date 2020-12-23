@@ -8,8 +8,8 @@
 import UIKit
 import ABControls
 // swiftlint:disable inclusive_language
-class MasterViewController: UIViewController, ABListBoxDelegate {
-    @IBOutlet weak private var listbox: ABListBox!
+class MasterViewController: UIViewController, ABListboxDelegate {
+    @IBOutlet weak private var listbox: ABListbox!
     var detailViewController: DetailViewController?
     var objects = [Any]()
     func didChangeListBoxIndex(_ index: Int) {

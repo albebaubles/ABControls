@@ -28,7 +28,7 @@
         <scene sceneID="AF5-h5-ESU">
             <objects>
                 <viewController id="cp8-9Z-eKR" customClass="MasterViewController" customModule="ABControlsTestHarness" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="TPd-vt-D9G" customClass="ABListBox" customModule="ABControls">
+                    <view key="view" contentMode="scaleToFill" id="TPd-vt-D9G" customClass="ABListbox" customModule="ABControls">
                         <rect key="frame" x="0.0" y="0.0" width="420" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="MrU-2Y-cia"/>
@@ -82,7 +82,7 @@ ABAudioRecorder</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fzu-cL-bew" customClass="ABBarcodeScanner" customModule="ABControls">
-                                <rect key="frame" x="43" y="105" width="290" height="81"/>
+                                <rect key="frame" x="43" y="73" width="290" height="113"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -99,11 +99,11 @@ ABAudioRecorder</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h4O-T8-UqT">
-                                <rect key="frame" x="124" y="441" width="128" height="128"/>
+                                <rect key="frame" x="124" y="496" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create Barcode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDN-Ie-ePg">
-                                <rect key="frame" x="135" y="412" width="120" height="21"/>
+                                <rect key="frame" x="128" y="467" width="120" height="21"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -120,8 +120,8 @@ ABAudioRecorder</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olq-in-k2N">
-                                <rect key="frame" x="130" y="372" width="116" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olq-in-k2N">
+                                <rect key="frame" x="43" y="372" width="290" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <nil key="textColor"/>
@@ -140,7 +140,7 @@ ABAudioRecorder</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zov-lR-raF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1478" y="-639"/>
+            <point key="canvasLocation" x="1477.734375" y="-639.09224011713025"/>
         </scene>
         <!--Gradient View Controller-->
         <scene sceneID="sib-FJ-nOR">
@@ -212,15 +212,15 @@ ABAudioRecorder</string>
             </objects>
             <point key="canvasLocation" x="1900" y="87.706146926536732"/>
         </scene>
-        <!--Check Box View Controller-->
+        <!--Checkbox View Controller-->
         <scene sceneID="ZOb-mx-ZcA">
             <objects>
-                <viewController id="I3j-Us-NT1" customClass="ABCheckBoxViewController" customModule="ABControlsTestHarness" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="I3j-Us-NT1" customClass="ABCheckboxViewController" customModule="ABControlsTestHarness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YSd-Dk-Aa5">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cyD-0W-p1X" customClass="ABCheckBox" customModule="ABControls">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cyD-0W-p1X" customClass="ABCheckbox" customModule="ABControls">
                                 <rect key="frame" x="56" y="170" width="25" height="25"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" systemColor="systemTealColor"/>
@@ -239,7 +239,7 @@ ABAudioRecorder</string>
                                 </accessibility>
                                 <state key="normal" title="Accept Agreement"/>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ujQ-WE-u8h" customClass="ABCheckBox" customModule="ABControls">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ujQ-WE-u8h" customClass="ABCheckbox" customModule="ABControls">
                                 <rect key="frame" x="50" y="394" width="25" height="25"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" systemColor="systemPinkColor"/>
@@ -291,10 +291,10 @@ ABAudioRecorder</string>
             </objects>
             <point key="canvasLocation" x="2189.5999999999999" y="-639.13043478260875"/>
         </scene>
-        <!--Drop Down View Controller-->
+        <!--Dropdown View Controller-->
         <scene sceneID="tJ2-g3-uyW">
             <objects>
-                <viewController id="e0Z-ie-fn2" customClass="ABDropDownViewController" customModule="ABControlsTestHarness" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="e0Z-ie-fn2" customClass="ABDropdownViewController" customModule="ABControlsTestHarness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="isv-VW-i9N">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -308,9 +308,9 @@ ABAudioRecorder</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cw7-hO-VJ5" customClass="ABDropDown" customModule="ABControls">
-                                <rect key="frame" x="23" y="129" width="977" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cw7-hO-VJ5" customClass="ABDropdown" customModule="ABControls">
+                                <rect key="frame" x="23" y="129" width="329" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="items">
@@ -321,6 +321,9 @@ black
 grey
 purple
 cyan</string>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -335,7 +338,7 @@ cyan</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vb4-bH-imt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2888.8000000000002" y="-640.02998500749629"/>
+            <point key="canvasLocation" x="2888.671875" y="-640.40995607613468"/>
         </scene>
         <!--Detail-->
         <scene sceneID="yUG-lL-AsK">

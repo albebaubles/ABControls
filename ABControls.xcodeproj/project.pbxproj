@@ -12,7 +12,7 @@
 		B43C887D211FAAAF00A079F0 /* ABPotentiometerLinear.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43C887C211FAAAF00A079F0 /* ABPotentiometerLinear.swift */; };
 		B44974072119016900F3553F /* ABBarcodeScanner.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4FAE12321176773008707E7 /* ABBarcodeScanner.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		B44974082119016900F3553F /* ABImageViewer.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4FAE1252117678C008707E7 /* ABImageViewer.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		B44974092119016900F3553F /* ABListBox.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4FAE12121176759008707E7 /* ABListBox.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		B44974092119016900F3553F /* ABListbox.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4FAE12121176759008707E7 /* ABListbox.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		B449740A2119016900F3553F /* ABSignatureCapture.swift in Headers */ = {isa = PBXBuildFile; fileRef = B459874B2117CC7E00519520 /* ABSignatureCapture.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		B449740B2119016900F3553F /* ABTouchDraw.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4720EA8211776D5001DBBF2 /* ABTouchDraw.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		B449740C2119016900F3553F /* ABVideoRecorder.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4720EAC21177712001DBBF2 /* ABVideoRecorder.swift */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -37,32 +37,32 @@
 		B4DA3C9121164A39006B1AB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DA3C9021164A39006B1AB2 /* UIKit.framework */; };
 		B4DA3C9A21164CB9006B1AB2 /* ABControls.h in Headers */ = {isa = PBXBuildFile; fileRef = B4DA3C9921164CB9006B1AB2 /* ABControls.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B4E66DCD2127764D005932EC /* ABGradientRadial.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E66DCC2127764D005932EC /* ABGradientRadial.swift */; };
-		B4FAE12221176759008707E7 /* ABListBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FAE12121176759008707E7 /* ABListBox.swift */; };
+		B4FAE12221176759008707E7 /* ABListbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FAE12121176759008707E7 /* ABListbox.swift */; };
 		B4FAE12421176773008707E7 /* ABBarcodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FAE12321176773008707E7 /* ABBarcodeScanner.swift */; };
 		B4FAE1262117678C008707E7 /* ABImageViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FAE1252117678C008707E7 /* ABImageViewer.swift */; };
-		B4FEDD20211641A100223E77 /* ABCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FEDCE8211620DD00223E77 /* ABCheckBox.swift */; };
+		B4FEDD20211641A100223E77 /* ABCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FEDCE8211620DD00223E77 /* ABCheckbox.swift */; };
 		B4FEDD22211641A500223E77 /* ABControlsStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FC45602114EBC8006B8A15 /* ABControlsStyleKit.swift */; };
-		B4FEDD23211641A900223E77 /* ABDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46D4E542114C07600A58C71 /* ABDropDown.swift */; };
-		B4FEDD6A2116487C00223E77 /* ABCheckBox.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4FEDCE8211620DD00223E77 /* ABCheckBox.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4FEDD23211641A900223E77 /* ABDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46D4E542114C07600A58C71 /* ABDropdown.swift */; };
+		B4FEDD6A2116487C00223E77 /* ABCheckbox.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4FEDCE8211620DD00223E77 /* ABCheckbox.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		B4FEDD6C2116487C00223E77 /* ABControlsStyleKit.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4FC45602114EBC8006B8A15 /* ABControlsStyleKit.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		B4FEDD6D2116487C00223E77 /* ABDropDown.swift in Headers */ = {isa = PBXBuildFile; fileRef = B46D4E542114C07600A58C71 /* ABDropDown.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4FEDD6D2116487C00223E77 /* ABDropdown.swift in Headers */ = {isa = PBXBuildFile; fileRef = B46D4E542114C07600A58C71 /* ABDropdown.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF73BD06212324EF001BEBE1 /* ABControls.h in Headers */ = {isa = PBXBuildFile; fileRef = B4DA3C9921164CB9006B1AB2 /* ABControls.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF73BD07212324EF001BEBE1 /* ABBarcodeScanner.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4FAE12321176773008707E7 /* ABBarcodeScanner.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF73BD08212324EF001BEBE1 /* ABCheckBox.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4FEDCE8211620DD00223E77 /* ABCheckBox.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF73BD08212324EF001BEBE1 /* ABCheckbox.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4FEDCE8211620DD00223E77 /* ABCheckbox.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF73BD09212324EF001BEBE1 /* ABControlsStyleKit.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4FC45602114EBC8006B8A15 /* ABControlsStyleKit.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF73BD0A212324EF001BEBE1 /* ABDropDown.swift in Headers */ = {isa = PBXBuildFile; fileRef = B46D4E542114C07600A58C71 /* ABDropDown.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF73BD0A212324EF001BEBE1 /* ABDropdown.swift in Headers */ = {isa = PBXBuildFile; fileRef = B46D4E542114C07600A58C71 /* ABDropdown.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF73BD0B212324EF001BEBE1 /* ABImageViewer.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4FAE1252117678C008707E7 /* ABImageViewer.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF73BD0C212324EF001BEBE1 /* ABListBox.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4FAE12121176759008707E7 /* ABListBox.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF73BD0C212324EF001BEBE1 /* ABListbox.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4FAE12121176759008707E7 /* ABListbox.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF73BD0D212324EF001BEBE1 /* ABSignatureCapture.swift in Headers */ = {isa = PBXBuildFile; fileRef = B459874B2117CC7E00519520 /* ABSignatureCapture.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF73BD0E212324EF001BEBE1 /* ABTouchDraw.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4720EA8211776D5001DBBF2 /* ABTouchDraw.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF73BD0F212324EF001BEBE1 /* ABVideoRecorder.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4720EAC21177712001DBBF2 /* ABVideoRecorder.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF73BD10212324EF001BEBE1 /* ABAudioRecorder.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4720EAA211776E9001DBBF2 /* ABAudioRecorder.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF73BD11212324EF001BEBE1 /* ABControl.swift in Headers */ = {isa = PBXBuildFile; fileRef = B459874D2117D19400519520 /* ABControl.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF73BD13212324EF001BEBE1 /* ABSignatureCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B459874B2117CC7E00519520 /* ABSignatureCapture.swift */; };
-		EF73BD14212324EF001BEBE1 /* ABCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FEDCE8211620DD00223E77 /* ABCheckBox.swift */; };
+		EF73BD14212324EF001BEBE1 /* ABCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FEDCE8211620DD00223E77 /* ABCheckbox.swift */; };
 		EF73BD15212324EF001BEBE1 /* ABControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B459874D2117D19400519520 /* ABControl.swift */; };
-		EF73BD16212324EF001BEBE1 /* ABListBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FAE12121176759008707E7 /* ABListBox.swift */; };
-		EF73BD17212324EF001BEBE1 /* ABDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46D4E542114C07600A58C71 /* ABDropDown.swift */; };
+		EF73BD16212324EF001BEBE1 /* ABListbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FAE12121176759008707E7 /* ABListbox.swift */; };
+		EF73BD17212324EF001BEBE1 /* ABDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46D4E542114C07600A58C71 /* ABDropdown.swift */; };
 		EF73BD18212324EF001BEBE1 /* ABPotentiometerLinear.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43C887C211FAAAF00A079F0 /* ABPotentiometerLinear.swift */; };
 		EF73BD19212324EF001BEBE1 /* ABControlsStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FC45602114EBC8006B8A15 /* ABControlsStyleKit.swift */; };
 		EF73BD1A212324EF001BEBE1 /* ABVideoRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4720EAC21177712001DBBF2 /* ABVideoRecorder.swift */; };
@@ -83,7 +83,7 @@
 		B43C887C211FAAAF00A079F0 /* ABPotentiometerLinear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABPotentiometerLinear.swift; sourceTree = "<group>"; };
 		B459874B2117CC7E00519520 /* ABSignatureCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABSignatureCapture.swift; sourceTree = "<group>"; };
 		B459874D2117D19400519520 /* ABControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABControl.swift; sourceTree = "<group>"; };
-		B46D4E542114C07600A58C71 /* ABDropDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABDropDown.swift; sourceTree = "<group>"; };
+		B46D4E542114C07600A58C71 /* ABDropdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABDropdown.swift; sourceTree = "<group>"; };
 		B4720EA8211776D5001DBBF2 /* ABTouchDraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABTouchDraw.swift; sourceTree = "<group>"; };
 		B4720EAA211776E9001DBBF2 /* ABAudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABAudioRecorder.swift; sourceTree = "<group>"; };
 		B4720EAC21177712001DBBF2 /* ABVideoRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABVideoRecorder.swift; sourceTree = "<group>"; };
@@ -94,11 +94,11 @@
 		B4DA3C9021164A39006B1AB2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B4DA3C9921164CB9006B1AB2 /* ABControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABControls.h; sourceTree = "<group>"; };
 		B4E66DCC2127764D005932EC /* ABGradientRadial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABGradientRadial.swift; sourceTree = "<group>"; };
-		B4FAE12121176759008707E7 /* ABListBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListBox.swift; sourceTree = "<group>"; };
+		B4FAE12121176759008707E7 /* ABListbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListbox.swift; sourceTree = "<group>"; };
 		B4FAE12321176773008707E7 /* ABBarcodeScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABBarcodeScanner.swift; sourceTree = "<group>"; };
 		B4FAE1252117678C008707E7 /* ABImageViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABImageViewer.swift; sourceTree = "<group>"; };
 		B4FC45602114EBC8006B8A15 /* ABControlsStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABControlsStyleKit.swift; sourceTree = "<group>"; };
-		B4FEDCE8211620DD00223E77 /* ABCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABCheckBox.swift; sourceTree = "<group>"; };
+		B4FEDCE8211620DD00223E77 /* ABCheckbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABCheckbox.swift; sourceTree = "<group>"; };
 		B4FEDD022116419200223E77 /* ABControls.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ABControls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4FEDD052116419200223E77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF73BD29212324EF001BEBE1 /* ABControls.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ABControls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,15 +148,15 @@
 				B4720EAA211776E9001DBBF2 /* ABAudioRecorder.swift */,
 				B4BA8CF72593B25500A17274 /* ABBarcode.swift */,
 				B4FAE12321176773008707E7 /* ABBarcodeScanner.swift */,
-				B4FEDCE8211620DD00223E77 /* ABCheckBox.swift */,
+				B4FEDCE8211620DD00223E77 /* ABCheckbox.swift */,
 				B459874D2117D19400519520 /* ABControl.swift */,
 				B4DA3C9921164CB9006B1AB2 /* ABControls.h */,
 				B4FC45602114EBC8006B8A15 /* ABControlsStyleKit.swift */,
-				B46D4E542114C07600A58C71 /* ABDropDown.swift */,
+				B46D4E542114C07600A58C71 /* ABDropdown.swift */,
 				B4BF62E5212389EB003CD938 /* ABGradientLinear.swift */,
 				B4E66DCC2127764D005932EC /* ABGradientRadial.swift */,
 				B4FAE1252117678C008707E7 /* ABImageViewer.swift */,
-				B4FAE12121176759008707E7 /* ABListBox.swift */,
+				B4FAE12121176759008707E7 /* ABListbox.swift */,
 				B43C887C211FAAAF00A079F0 /* ABPotentiometerLinear.swift */,
 				B43C887A211FAA9900A079F0 /* ABPotentiometerRadial.swift */,
 				B459874B2117CC7E00519520 /* ABSignatureCapture.swift */,
@@ -187,11 +187,11 @@
 			files = (
 				B4DA3C9A21164CB9006B1AB2 /* ABControls.h in Headers */,
 				B44974072119016900F3553F /* ABBarcodeScanner.swift in Headers */,
-				B4FEDD6A2116487C00223E77 /* ABCheckBox.swift in Headers */,
+				B4FEDD6A2116487C00223E77 /* ABCheckbox.swift in Headers */,
 				B4FEDD6C2116487C00223E77 /* ABControlsStyleKit.swift in Headers */,
-				B4FEDD6D2116487C00223E77 /* ABDropDown.swift in Headers */,
+				B4FEDD6D2116487C00223E77 /* ABDropdown.swift in Headers */,
 				B44974082119016900F3553F /* ABImageViewer.swift in Headers */,
-				B44974092119016900F3553F /* ABListBox.swift in Headers */,
+				B44974092119016900F3553F /* ABListbox.swift in Headers */,
 				B4BF62E721238BCA003CD938 /* ABGradientLinear.swift in Headers */,
 				B47CBFE7212B299500629096 /* ABGradientRadial.swift in Headers */,
 				B449740A2119016900F3553F /* ABSignatureCapture.swift in Headers */,
@@ -210,11 +210,11 @@
 			files = (
 				EF73BD06212324EF001BEBE1 /* ABControls.h in Headers */,
 				EF73BD07212324EF001BEBE1 /* ABBarcodeScanner.swift in Headers */,
-				EF73BD08212324EF001BEBE1 /* ABCheckBox.swift in Headers */,
+				EF73BD08212324EF001BEBE1 /* ABCheckbox.swift in Headers */,
 				EF73BD09212324EF001BEBE1 /* ABControlsStyleKit.swift in Headers */,
-				EF73BD0A212324EF001BEBE1 /* ABDropDown.swift in Headers */,
+				EF73BD0A212324EF001BEBE1 /* ABDropdown.swift in Headers */,
 				EF73BD0B212324EF001BEBE1 /* ABImageViewer.swift in Headers */,
-				EF73BD0C212324EF001BEBE1 /* ABListBox.swift in Headers */,
+				EF73BD0C212324EF001BEBE1 /* ABListbox.swift in Headers */,
 				EF73BD0D212324EF001BEBE1 /* ABSignatureCapture.swift in Headers */,
 				EF73BD0E212324EF001BEBE1 /* ABTouchDraw.swift in Headers */,
 				EF73BD0F212324EF001BEBE1 /* ABVideoRecorder.swift in Headers */,
@@ -324,10 +324,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B459874C2117CC7E00519520 /* ABSignatureCapture.swift in Sources */,
-				B4FEDD20211641A100223E77 /* ABCheckBox.swift in Sources */,
+				B4FEDD20211641A100223E77 /* ABCheckbox.swift in Sources */,
 				B459874E2117D19400519520 /* ABControl.swift in Sources */,
-				B4FAE12221176759008707E7 /* ABListBox.swift in Sources */,
-				B4FEDD23211641A900223E77 /* ABDropDown.swift in Sources */,
+				B4FAE12221176759008707E7 /* ABListbox.swift in Sources */,
+				B4FEDD23211641A900223E77 /* ABDropdown.swift in Sources */,
 				B4E66DCD2127764D005932EC /* ABGradientRadial.swift in Sources */,
 				B4BF62E6212389EB003CD938 /* ABGradientLinear.swift in Sources */,
 				B43C887D211FAAAF00A079F0 /* ABPotentiometerLinear.swift in Sources */,
@@ -348,11 +348,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF73BD13212324EF001BEBE1 /* ABSignatureCapture.swift in Sources */,
-				EF73BD14212324EF001BEBE1 /* ABCheckBox.swift in Sources */,
+				EF73BD14212324EF001BEBE1 /* ABCheckbox.swift in Sources */,
 				B487264822E3D4760006BB08 /* ABGradientLinear.swift in Sources */,
 				EF73BD15212324EF001BEBE1 /* ABControl.swift in Sources */,
-				EF73BD16212324EF001BEBE1 /* ABListBox.swift in Sources */,
-				EF73BD17212324EF001BEBE1 /* ABDropDown.swift in Sources */,
+				EF73BD16212324EF001BEBE1 /* ABListbox.swift in Sources */,
+				EF73BD17212324EF001BEBE1 /* ABDropdown.swift in Sources */,
 				EF73BD18212324EF001BEBE1 /* ABPotentiometerLinear.swift in Sources */,
 				EF73BD19212324EF001BEBE1 /* ABControlsStyleKit.swift in Sources */,
 				EF73BD1A212324EF001BEBE1 /* ABVideoRecorder.swift in Sources */,

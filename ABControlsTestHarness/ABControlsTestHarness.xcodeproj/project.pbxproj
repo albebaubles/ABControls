@@ -20,8 +20,8 @@
 		B4FA15832127409D000A9C53 /* ABControlsTestHarnessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA15822127409D000A9C53 /* ABControlsTestHarnessTests.swift */; };
 		B4FA158E2127409D000A9C53 /* ABControlsTestHarnessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA158D2127409D000A9C53 /* ABControlsTestHarnessUITests.swift */; };
 		B4FA15A021274E53000A9C53 /* ABScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA159F21274E53000A9C53 /* ABScannerViewController.swift */; };
-		B4FA15A2212760DC000A9C53 /* ABCheckBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA15A1212760DC000A9C53 /* ABCheckBoxViewController.swift */; };
-		B4FA15A4212764D5000A9C53 /* ABDropDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA15A3212764D5000A9C53 /* ABDropDownViewController.swift */; };
+		B4FA15A2212760DC000A9C53 /* ABCheckboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA15A1212760DC000A9C53 /* ABCheckboxViewController.swift */; };
+		B4FA15A4212764D5000A9C53 /* ABDropdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA15A3212764D5000A9C53 /* ABDropdownViewController.swift */; };
 		B4FA15A621276868000A9C53 /* ABGradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA15A521276868000A9C53 /* ABGradientViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,8 +76,8 @@
 		B4FA158D2127409D000A9C53 /* ABControlsTestHarnessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABControlsTestHarnessUITests.swift; sourceTree = "<group>"; };
 		B4FA158F2127409D000A9C53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4FA159F21274E53000A9C53 /* ABScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABScannerViewController.swift; sourceTree = "<group>"; };
-		B4FA15A1212760DC000A9C53 /* ABCheckBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABCheckBoxViewController.swift; sourceTree = "<group>"; };
-		B4FA15A3212764D5000A9C53 /* ABDropDownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABDropDownViewController.swift; sourceTree = "<group>"; };
+		B4FA15A1212760DC000A9C53 /* ABCheckboxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABCheckboxViewController.swift; sourceTree = "<group>"; };
+		B4FA15A3212764D5000A9C53 /* ABDropdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABDropdownViewController.swift; sourceTree = "<group>"; };
 		B4FA15A521276868000A9C53 /* ABGradientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABGradientViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,8 +152,8 @@
 				B4FA15762127409D000A9C53 /* LaunchScreen.storyboard */,
 				B4FA15792127409D000A9C53 /* Info.plist */,
 				B4FA159F21274E53000A9C53 /* ABScannerViewController.swift */,
-				B4FA15A1212760DC000A9C53 /* ABCheckBoxViewController.swift */,
-				B4FA15A3212764D5000A9C53 /* ABDropDownViewController.swift */,
+				B4FA15A1212760DC000A9C53 /* ABCheckboxViewController.swift */,
+				B4FA15A3212764D5000A9C53 /* ABDropdownViewController.swift */,
 				B4FA15A521276868000A9C53 /* ABGradientViewController.swift */,
 			);
 			path = ABControlsTestHarness;
@@ -314,11 +314,11 @@
 			files = (
 				B4FA15A021274E53000A9C53 /* ABScannerViewController.swift in Sources */,
 				B4FA15702127409B000A9C53 /* DetailViewController.swift in Sources */,
-				B4FA15A4212764D5000A9C53 /* ABDropDownViewController.swift in Sources */,
+				B4FA15A4212764D5000A9C53 /* ABDropdownViewController.swift in Sources */,
 				B4FA15A621276868000A9C53 /* ABGradientViewController.swift in Sources */,
 				B4FA156E2127409B000A9C53 /* MasterViewController.swift in Sources */,
 				B4FA156C2127409B000A9C53 /* AppDelegate.swift in Sources */,
-				B4FA15A2212760DC000A9C53 /* ABCheckBoxViewController.swift in Sources */,
+				B4FA15A2212760DC000A9C53 /* ABCheckboxViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
