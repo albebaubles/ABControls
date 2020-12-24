@@ -9,7 +9,7 @@ import UIKit
 
 /// currently only a placeholder -- this control will display an adjustable circlular element
 @IBDesignable
-class ABPotentiometerRadial: ABControl {
+public class ABPotentiometerRadial: ABControl {
 	@IBInspectable var percentComplete: Float = 100
 	/// required for dev time
 	required public init(frame: CGRect) {
@@ -36,6 +36,6 @@ class ABPotentiometerRadial: ABControl {
 	}
 
 	private func setupRadial() {
-		ABControlsStyleKit.drawPotentiometerRadial(frame: bounds, resizing: .aspectFit, ovalWidth: 20, percentComplete: CGFloat(percentComplete))
+//		ABControlsStyleKit.drawPotentiometerRadial(frame: bounds, resizing: .aspectFit, ovalWidth: 20, percentComplete: CGFloat(percentComplete))
 	}
 }

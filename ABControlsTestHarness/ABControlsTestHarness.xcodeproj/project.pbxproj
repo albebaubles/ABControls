@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B410EB0D2593DFF700F21116 /* ABControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B410EB072593DFCD00F21116 /* ABControls.framework */; };
-		B410EB0E2593DFF700F21116 /* ABControls.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B410EB072593DFCD00F21116 /* ABControls.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B44311C922E67126008BEA0C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B44311C822E67125008BEA0C /* UIKit.framework */; };
+		B46620462593F8130038739C /* PotentiometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46620452593F8130038739C /* PotentiometerViewController.swift */; };
+		B46620472593F8130038739C /* PotentiometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46620452593F8130038739C /* PotentiometerViewController.swift */; };
+		B46620482593F8130038739C /* PotentiometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46620452593F8130038739C /* PotentiometerViewController.swift */; };
 		B487264722E3D4480006BB08 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B487264622E3D4480006BB08 /* CoreGraphics.framework */; };
+		B4970CBA2594FFFF00317DF4 /* ABControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B410EB072593DFCD00F21116 /* ABControls.framework */; };
+		B4970CBB2594FFFF00317DF4 /* ABControls.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B410EB072593DFCD00F21116 /* ABControls.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B4970CC22595193D00317DF4 /* SignatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4970CC12595193D00317DF4 /* SignatureViewController.swift */; };
 		B4FA156C2127409B000A9C53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA156B2127409B000A9C53 /* AppDelegate.swift */; };
 		B4FA156E2127409B000A9C53 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA156D2127409B000A9C53 /* MasterViewController.swift */; };
 		B4FA15702127409B000A9C53 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA156F2127409B000A9C53 /* DetailViewController.swift */; };
@@ -19,10 +23,10 @@
 		B4FA15782127409D000A9C53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4FA15762127409D000A9C53 /* LaunchScreen.storyboard */; };
 		B4FA15832127409D000A9C53 /* ABControlsTestHarnessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA15822127409D000A9C53 /* ABControlsTestHarnessTests.swift */; };
 		B4FA158E2127409D000A9C53 /* ABControlsTestHarnessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA158D2127409D000A9C53 /* ABControlsTestHarnessUITests.swift */; };
-		B4FA15A021274E53000A9C53 /* ABScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA159F21274E53000A9C53 /* ABScannerViewController.swift */; };
-		B4FA15A2212760DC000A9C53 /* ABCheckboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA15A1212760DC000A9C53 /* ABCheckboxViewController.swift */; };
-		B4FA15A4212764D5000A9C53 /* ABDropdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA15A3212764D5000A9C53 /* ABDropdownViewController.swift */; };
-		B4FA15A621276868000A9C53 /* ABGradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA15A521276868000A9C53 /* ABGradientViewController.swift */; };
+		B4FA15A021274E53000A9C53 /* BarcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA159F21274E53000A9C53 /* BarcodeViewController.swift */; };
+		B4FA15A2212760DC000A9C53 /* CheckboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA15A1212760DC000A9C53 /* CheckboxViewController.swift */; };
+		B4FA15A4212764D5000A9C53 /* DropdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA15A3212764D5000A9C53 /* DropdownViewController.swift */; };
+		B4FA15A621276868000A9C53 /* GradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA15A521276868000A9C53 /* GradientViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,13 +47,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B410EB0F2593DFF700F21116 /* Embed Frameworks */ = {
+		B4970CBC2594FFFF00317DF4 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B410EB0E2593DFF700F21116 /* ABControls.framework in Embed Frameworks */,
+				B4970CBB2594FFFF00317DF4 /* ABControls.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,7 +64,9 @@
 		B410EB072593DFCD00F21116 /* ABControls.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ABControls.framework; path = "../../../Library/Developer/Xcode/DerivedData/ABControls-hintaetwtixowlfwgazuuctxikwu/Build/Products/Debug-maccatalyst/ABControls.framework"; sourceTree = "<group>"; };
 		B44311C822E67125008BEA0C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B44311CA22E7A54D008BEA0C /* ABControlsTestHarness.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ABControlsTestHarness.entitlements; sourceTree = "<group>"; };
+		B46620452593F8130038739C /* PotentiometerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotentiometerViewController.swift; sourceTree = "<group>"; };
 		B487264622E3D4480006BB08 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B4970CC12595193D00317DF4 /* SignatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureViewController.swift; sourceTree = "<group>"; };
 		B4FA15682127409B000A9C53 /* ABControlsTestHarness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ABControlsTestHarness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4FA156B2127409B000A9C53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4FA156D2127409B000A9C53 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -75,10 +81,10 @@
 		B4FA15892127409D000A9C53 /* ABControlsTestHarnessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ABControlsTestHarnessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4FA158D2127409D000A9C53 /* ABControlsTestHarnessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABControlsTestHarnessUITests.swift; sourceTree = "<group>"; };
 		B4FA158F2127409D000A9C53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B4FA159F21274E53000A9C53 /* ABScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABScannerViewController.swift; sourceTree = "<group>"; };
-		B4FA15A1212760DC000A9C53 /* ABCheckboxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABCheckboxViewController.swift; sourceTree = "<group>"; };
-		B4FA15A3212764D5000A9C53 /* ABDropdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABDropdownViewController.swift; sourceTree = "<group>"; };
-		B4FA15A521276868000A9C53 /* ABGradientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABGradientViewController.swift; sourceTree = "<group>"; };
+		B4FA159F21274E53000A9C53 /* BarcodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeViewController.swift; sourceTree = "<group>"; };
+		B4FA15A1212760DC000A9C53 /* CheckboxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxViewController.swift; sourceTree = "<group>"; };
+		B4FA15A3212764D5000A9C53 /* DropdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownViewController.swift; sourceTree = "<group>"; };
+		B4FA15A521276868000A9C53 /* GradientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +93,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B487264722E3D4480006BB08 /* CoreGraphics.framework in Frameworks */,
-				B410EB0D2593DFF700F21116 /* ABControls.framework in Frameworks */,
+				B4970CBA2594FFFF00317DF4 /* ABControls.framework in Frameworks */,
 				B44311C922E67126008BEA0C /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,6 +115,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B466204D2593F8ED0038739C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B4FA159F21274E53000A9C53 /* BarcodeViewController.swift */,
+				B4FA15A1212760DC000A9C53 /* CheckboxViewController.swift */,
+				B4FA156F2127409B000A9C53 /* DetailViewController.swift */,
+				B4FA15A3212764D5000A9C53 /* DropdownViewController.swift */,
+				B4FA15A521276868000A9C53 /* GradientViewController.swift */,
+				B4FA156D2127409B000A9C53 /* MasterViewController.swift */,
+				B46620452593F8130038739C /* PotentiometerViewController.swift */,
+				B4970CC12595193D00317DF4 /* SignatureViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		B487264522E3D4480006BB08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,18 +164,13 @@
 		B4FA156A2127409B000A9C53 /* ABControlsTestHarness */ = {
 			isa = PBXGroup;
 			children = (
+				B466204D2593F8ED0038739C /* View Controllers */,
 				B44311CA22E7A54D008BEA0C /* ABControlsTestHarness.entitlements */,
 				B4FA156B2127409B000A9C53 /* AppDelegate.swift */,
-				B4FA156F2127409B000A9C53 /* DetailViewController.swift */,
-				B4FA156D2127409B000A9C53 /* MasterViewController.swift */,
-				B4FA15712127409B000A9C53 /* Main.storyboard */,
 				B4FA15742127409D000A9C53 /* Assets.xcassets */,
-				B4FA15762127409D000A9C53 /* LaunchScreen.storyboard */,
 				B4FA15792127409D000A9C53 /* Info.plist */,
-				B4FA159F21274E53000A9C53 /* ABScannerViewController.swift */,
-				B4FA15A1212760DC000A9C53 /* ABCheckboxViewController.swift */,
-				B4FA15A3212764D5000A9C53 /* ABDropdownViewController.swift */,
-				B4FA15A521276868000A9C53 /* ABGradientViewController.swift */,
+				B4FA15762127409D000A9C53 /* LaunchScreen.storyboard */,
+				B4FA15712127409B000A9C53 /* Main.storyboard */,
 			);
 			path = ABControlsTestHarness;
 			sourceTree = "<group>";
@@ -187,7 +203,7 @@
 				B4FA15642127409B000A9C53 /* Sources */,
 				B4FA15652127409B000A9C53 /* Frameworks */,
 				B4FA15662127409B000A9C53 /* Resources */,
-				B410EB0F2593DFF700F21116 /* Embed Frameworks */,
+				B4970CBC2594FFFF00317DF4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -312,13 +328,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4FA15A021274E53000A9C53 /* ABScannerViewController.swift in Sources */,
+				B4FA15A021274E53000A9C53 /* BarcodeViewController.swift in Sources */,
 				B4FA15702127409B000A9C53 /* DetailViewController.swift in Sources */,
-				B4FA15A4212764D5000A9C53 /* ABDropdownViewController.swift in Sources */,
-				B4FA15A621276868000A9C53 /* ABGradientViewController.swift in Sources */,
+				B4970CC22595193D00317DF4 /* SignatureViewController.swift in Sources */,
+				B4FA15A4212764D5000A9C53 /* DropdownViewController.swift in Sources */,
+				B4FA15A621276868000A9C53 /* GradientViewController.swift in Sources */,
+				B46620462593F8130038739C /* PotentiometerViewController.swift in Sources */,
 				B4FA156E2127409B000A9C53 /* MasterViewController.swift in Sources */,
 				B4FA156C2127409B000A9C53 /* AppDelegate.swift in Sources */,
-				B4FA15A2212760DC000A9C53 /* ABCheckboxViewController.swift in Sources */,
+				B4FA15A2212760DC000A9C53 /* CheckboxViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B46620472593F8130038739C /* PotentiometerViewController.swift in Sources */,
 				B4FA15832127409D000A9C53 /* ABControlsTestHarnessTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B46620482593F8130038739C /* PotentiometerViewController.swift in Sources */,
 				B4FA158E2127409D000A9C53 /* ABControlsTestHarnessUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

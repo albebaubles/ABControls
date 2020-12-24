@@ -19,7 +19,7 @@ public class ABBarcode: NSObject {
     ///
     /// - Parameter meta: the AVMetadata to convert ot barcode data
     /// - Returns: an ABBarcode
-    internal static func processBarcode(meta: AVMetadataMachineReadableCodeObject) -> ABBarcode {
+    internal static func process(meta: AVMetadataMachineReadableCodeObject) -> ABBarcode {
         let code = ABBarcode()
         code.type = meta.type.rawValue
         code.stringData = meta.stringValue
@@ -61,6 +61,11 @@ public class ABBarcode: NSObject {
     /**
      let barcode = ABBarcode("CICode128BarcodeGenerator", "0100859619004301171811182118061-05")
      */
+    @available(*, deprecated, renamed: "create")
+    public static func `init`(_ type: String, _ stringData: String) -> ABBarcode {
+        fatalError("deprecated method.  Please use 'create' instead")
+    }
+
     public static func create(_ type: String, _ stringData: String) -> ABBarcode {
         let barc = ABBarcode()
         barc.type = type

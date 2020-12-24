@@ -136,12 +136,14 @@ public class ABBarcodeScanner: ABControl {
 
 extension ABBarcodeScanner: AVCaptureMetadataOutputObjectsDelegate {
 
-    public func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+    public func metadataOutput(_ output: AVCaptureMetadataOutput,
+                               didOutput metadataObjects: [AVMetadataObject],
+                               from connection: AVCaptureConnection) {
         for metaData in metadataObjects {
             if let code = previewLayer.transformedMetadataObject(for: metaData) as? AVMetadataMachineReadableCodeObject {
                 if metaData is AVMetadataMachineReadableCodeObject {
-                    let barcode = ABBarcode.processBarcode(meta: code) as ABBarcode
-                    if barcodeTypes.contains(code.type.rawValue) || barcodeTypes.isEmpty {
+                    let barcode = ABBarcode.process(meta: code) as ABBarcode
+                    if  barcodeTypes.contains(code.type.rawValue) || barcodeTypes.isEmpty {
                         self.delegate?.didReceiveBarcode(barcode)
                         self.session.stopRunning()
                     }

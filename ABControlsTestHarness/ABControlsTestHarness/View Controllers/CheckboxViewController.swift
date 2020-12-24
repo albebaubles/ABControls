@@ -1,5 +1,5 @@
 //
-//  ABCheckBoxViewController.swift
+//  ABCheckboxViewController.swift
 //  ABControlsTestHarness
 //
 //  Created by Alan Corbett on 8/17/18.
@@ -7,7 +7,7 @@
 //
 import UIKit
 import ABControls
-class ABCheckboxViewController: UIViewController {
+class CheckboxViewController: UIViewController {
 	@IBOutlet private weak var checkbox1: ABCheckbox!
 	@IBOutlet private weak var checkbox2: ABCheckbox!
 	@IBOutlet private weak var button: UIButton!
@@ -20,7 +20,7 @@ class ABCheckboxViewController: UIViewController {
 	}
 }
 
-extension ABCheckboxViewController : ABCheckboxDelegate {
+extension CheckboxViewController : ABCheckboxDelegate {
     func didChangeCheckboxSelection(_ sender: ABCheckbox) {
         if checkbox1.checked && checkbox2.checked {
             button.isEnabled = true

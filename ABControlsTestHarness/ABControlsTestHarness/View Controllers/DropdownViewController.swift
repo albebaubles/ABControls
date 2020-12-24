@@ -8,11 +8,11 @@
 import UIKit
 import ABControls
 
-class ABDropdownViewController: UIViewController {
+class DropdownViewController: UIViewController {
     
     @IBOutlet weak private var textview: UITextView!
     @IBOutlet weak private var dropdown: ABDropdown!
-    private let colors: [UIColor] = [.red, .green, .blue, .black, .brown, .purple]
+    private let colors: [UIColor] = [.red, .green, .blue, .black, .gray, .purple, .cyan]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,7 @@ class ABDropdownViewController: UIViewController {
     }
 }
 
-extension ABDropdownViewController: ABDropdownDelegate {
+extension DropdownViewController: ABDropdownDelegate {
     
     func didChangeIndex(_ sender: ABDropdown, _ index: Int) {
         textview.textColor = colors[index]
