@@ -28,9 +28,15 @@ class BarcodeViewController: UIViewController, ABBarcodeScannerDelegate {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		scanner.delegate = self
-        created.image = ABBarcode.create("CIQRCodeGenerator", "ABControls Rock!").image()
+        scanner.startCapturing()
+        // CIPDF417BarcodeGenerator
+        created.image = ABBarcode.create("CIPDF417BarcodeGenerator", "ABControls Rock!").image()
 		// Do any additional setup after loading the view.
 	}
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        scanner.stopCapturing()
+    }
     
 	/*
     // MARK: - Navigation

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H1p-Uh-vWS">
+    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -28,7 +29,7 @@
             <objects>
                 <viewController id="cp8-9Z-eKR" customClass="MasterViewController" customModule="ABControlsTestHarness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TPd-vt-D9G" customClass="ABListbox" customModule="ABControls">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="420" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="MrU-2Y-cia"/>
                         <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -79,7 +80,7 @@ ABAudioRecorder</string>
             <objects>
                 <viewController id="rOn-0u-kJg" customClass="BarcodeViewController" customModule="ABControlsTestHarness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fgy-50-Dxk">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fzu-cL-bew" customClass="ABBarcodeScanner" customModule="ABControls">
@@ -99,10 +100,6 @@ ABAudioRecorder</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h4O-T8-UqT">
-                                <rect key="frame" x="124" y="496" width="128" height="128"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create Barcode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDN-Ie-ePg">
                                 <rect key="frame" x="128" y="467" width="120" height="21"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -128,6 +125,10 @@ ABAudioRecorder</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h4O-T8-UqT">
+                                <rect key="frame" x="124" y="496" width="255" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xkQ-gH-ZLR"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -148,11 +149,11 @@ ABAudioRecorder</string>
             <objects>
                 <viewController id="vll-bB-gyq" customClass="GradientViewController" customModule="ABControlsTestHarness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Huo-AQ-CHI">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="62" translatesAutoresizingMaskIntoConstraints="NO" id="v96-Kc-McE">
-                                <rect key="frame" x="61" y="74" width="253" height="568"/>
+                                <rect key="frame" x="61" y="80" width="253" height="568"/>
                                 <subviews>
                                     <view autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lOk-cJ-nnX" customClass="ABGradientLinear" customModule="ABControls">
                                         <rect key="frame" x="0.0" y="0.0" width="253" height="253"/>
@@ -210,12 +211,12 @@ ABAudioRecorder</string>
             <objects>
                 <viewController id="Em3-oX-eoU" customClass="PotentiometerViewController" customModule="ABControlsTestHarness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="34j-9v-Qpo">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4p7-0v-2rG" customClass="ABPotentiometerLinear" customModule="ABControls">
-                                <rect key="frame" x="197" y="171" width="584" height="415"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="40" y="77" width="392" height="155"/>
+                                <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="percentComplete">
@@ -224,8 +225,8 @@ ABAudioRecorder</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SrU-QC-2ne" customClass="ABPotentiometerRadial" customModule="ABControls">
-                                <rect key="frame" x="197" y="717" width="584" height="415"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="40" y="279" width="250" height="250"/>
+                                <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="percentComplete">
@@ -251,42 +252,44 @@ ABAudioRecorder</string>
             <objects>
                 <viewController id="I3j-Us-NT1" customClass="CheckboxViewController" customModule="ABControlsTestHarness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YSd-Dk-Aa5">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cyD-0W-p1X" customClass="ABCheckbox" customModule="ABControls">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cyD-0W-p1X" customClass="ABCheckbox" customModule="ABControls">
                                 <rect key="frame" x="56" y="170" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" systemColor="systemTealColor"/>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DJQ-Md-pmj">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DJQ-Md-pmj">
                                 <rect key="frame" x="106" y="151" width="216" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3K-IT-CzH">
-                                <rect key="frame" x="106" y="583" width="128" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3K-IT-CzH">
+                                <rect key="frame" x="106" y="583" width="168" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <bool key="isElement" value="NO"/>
                                 </accessibility>
                                 <state key="normal" title="Accept Agreement"/>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ujQ-WE-u8h" customClass="ABCheckbox" customModule="ABControls">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ujQ-WE-u8h" customClass="ABCheckbox" customModule="ABControls">
                                 <rect key="frame" x="50" y="394" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" systemColor="systemPinkColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="checked" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vWY-F7-1kQ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vWY-F7-1kQ">
                                 <rect key="frame" x="106" y="382" width="240" height="152"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="152" id="zkK-6a-gAN"/>
-                                </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -294,26 +297,6 @@ ABAudioRecorder</string>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jQo-xv-zqQ"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="DJQ-Md-pmj" firstAttribute="leading" secondItem="cyD-0W-p1X" secondAttribute="trailing" constant="25" id="0Mi-on-Aq3"/>
-                            <constraint firstItem="jQo-xv-zqQ" firstAttribute="trailing" secondItem="DJQ-Md-pmj" secondAttribute="trailing" constant="702" id="5Vk-DV-xbN"/>
-                            <constraint firstItem="jQo-xv-zqQ" firstAttribute="trailing" secondItem="z3K-IT-CzH" secondAttribute="trailing" constant="750" id="7WF-Q1-1bo"/>
-                            <constraint firstItem="vWY-F7-1kQ" firstAttribute="leading" secondItem="z3K-IT-CzH" secondAttribute="leading" id="EZs-g0-lBv"/>
-                            <constraint firstItem="DJQ-Md-pmj" firstAttribute="top" secondItem="jQo-xv-zqQ" secondAttribute="top" constant="101" id="F3T-Q7-Woo"/>
-                            <constraint firstItem="z3K-IT-CzH" firstAttribute="leading" secondItem="jQo-xv-zqQ" secondAttribute="leading" constant="106" id="GCE-if-m4S"/>
-                            <constraint firstItem="DJQ-Md-pmj" firstAttribute="leading" secondItem="vWY-F7-1kQ" secondAttribute="leading" id="K6r-by-IWU"/>
-                            <constraint firstItem="ujQ-WE-u8h" firstAttribute="leading" secondItem="jQo-xv-zqQ" secondAttribute="leading" constant="50" id="NwZ-SG-UW5"/>
-                            <constraint firstItem="jQo-xv-zqQ" firstAttribute="trailing" secondItem="vWY-F7-1kQ" secondAttribute="trailing" constant="678" id="T8C-oM-LRe"/>
-                            <constraint firstItem="jQo-xv-zqQ" firstAttribute="bottom" secondItem="z3K-IT-CzH" secondAttribute="bottom" constant="733" id="ZBV-3j-co9"/>
-                            <constraint firstItem="vWY-F7-1kQ" firstAttribute="top" secondItem="DJQ-Md-pmj" secondAttribute="bottom" constant="31" id="csG-Vd-lP4"/>
-                            <constraint firstItem="cyD-0W-p1X" firstAttribute="top" secondItem="jQo-xv-zqQ" secondAttribute="top" constant="120" id="eHm-Dq-y2d"/>
-                            <constraint firstItem="jQo-xv-zqQ" firstAttribute="bottom" secondItem="ujQ-WE-u8h" secondAttribute="bottom" constant="927" id="s28-bJ-SQo"/>
-                            <constraint firstItem="z3K-IT-CzH" firstAttribute="top" secondItem="vWY-F7-1kQ" secondAttribute="bottom" constant="49" id="ss2-lG-JcJ"/>
-                            <constraint firstItem="cyD-0W-p1X" firstAttribute="leading" secondItem="jQo-xv-zqQ" secondAttribute="leading" constant="56" id="stf-SW-z0s"/>
-                            <constraint firstItem="vWY-F7-1kQ" firstAttribute="leading" secondItem="ujQ-WE-u8h" secondAttribute="trailing" constant="31" id="tpT-pP-Td1"/>
-                            <constraint firstItem="ujQ-WE-u8h" firstAttribute="top" secondItem="YSd-Dk-Aa5" secondAttribute="top" constant="394" id="xhY-xc-9eT"/>
-                            <constraint firstAttribute="bottom" secondItem="cyD-0W-p1X" secondAttribute="bottom" constant="1171" id="z9V-xS-XdO"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="button" destination="z3K-IT-CzH" id="4pl-9n-y0y"/>
@@ -330,11 +313,11 @@ ABAudioRecorder</string>
             <objects>
                 <viewController id="e0Z-ie-fn2" customClass="DropdownViewController" customModule="ABControlsTestHarness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="isv-VW-i9N">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6h6-HZ-gJV">
-                                <rect key="frame" x="23" y="192" width="553" height="360"/>
+                                <rect key="frame" x="23" y="192" width="977" height="360"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -379,11 +362,11 @@ cyan</string>
             <objects>
                 <viewController title="Detail" id="JEX-9P-axG" customClass="DetailViewController" customModule="ABControlsTestHarness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="svH-Pt-448">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="0XM-y9-sOw">
-                                <rect key="frame" x="20" y="290" width="560" height="20"/>
+                                <rect key="frame" x="20" y="673" width="984" height="20"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="darkTextColor"/>
@@ -443,12 +426,12 @@ cyan</string>
             <objects>
                 <viewController id="6Y8-9o-XDo" customClass="SignatureViewController" customModule="ABControlsTestHarness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1kj-PR-hEe">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qVk-ph-wFu" customClass="ABSignatureCapture" customModule="ABControls">
                                 <rect key="frame" x="154" y="321" width="717" height="187"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

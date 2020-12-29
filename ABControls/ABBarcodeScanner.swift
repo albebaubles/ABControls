@@ -43,6 +43,7 @@ public class ABBarcodeScanner: ABControl {
     ///     CICode128BarcodeGenerator
     var barcodeTypes: [String] = [] {
         didSet {
+            setupBarcodeCapture()
         }
     }
 
@@ -52,6 +53,7 @@ public class ABBarcodeScanner: ABControl {
 
         invalidateIntrinsicContentSize()
     }
+    
 
     /// require for runtime
     required public init?(coder aDecoder: NSCoder) {
@@ -68,6 +70,14 @@ public class ABBarcodeScanner: ABControl {
         sharedInit()
     }
 
+    public func startCapturing() {
+        session.startRunning()
+    }
+    
+    public func stopCapturing() {
+        session.stopRunning()
+    }
+    
     private func sharedInit() {
         autoresizingMask = .init(rawValue: 0)
         let share = UIView(frame: CGRect(x: 2, y: bounds.height / 2,
@@ -122,7 +132,7 @@ public class ABBarcodeScanner: ABControl {
                         session.addOutput(meta)
                     }
                 }
-                session.startRunning()
+  
                 meta.metadataObjectTypes = meta.availableMetadataObjectTypes
             } catch {
                 /// TODO : fire a delegate message, somethign went wrong
@@ -145,7 +155,6 @@ extension ABBarcodeScanner: AVCaptureMetadataOutputObjectsDelegate {
                     let barcode = ABBarcode.process(meta: code) as ABBarcode
                     if  barcodeTypes.contains(code.type.rawValue) || barcodeTypes.isEmpty {
                         self.delegate?.didReceiveBarcode(barcode)
-                        self.session.stopRunning()
                     }
                 }
             }

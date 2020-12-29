@@ -37,6 +37,11 @@ public class ABPotentiometerLinear: ABControl {
     }
 
     private func setupRadial() {
+//        ABControlsStyleKit.drawPotentiometerRadial(frame: bounds, resizing: .aspectFit, ovalWidth: 20, percentComplete: CGFloat(percentComplete))
+    }
+    
+    public override func draw(_ rect: CGRect) {
+        super.draw(rect)
         ABControlsStyleKit.drawPotentiometerRadial(frame: bounds, resizing: .aspectFit, ovalWidth: 20, percentComplete: CGFloat(percentComplete))
     }
 }

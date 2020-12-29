@@ -37,8 +37,7 @@ public class ABCheckbox: ABControl {
     }
 
     /// Fires when the on/off value ofthe checkbox changes
-    @objc
-    private func checkboxChanged() {
+    @objc private func checkboxChanged() {
         self.checked = !self.checked
         setNeedsDisplay()
     }

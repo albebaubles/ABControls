@@ -16,6 +16,9 @@ class PotentiometerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        radial.value = 99
+        radial.color = UIColor.yellow
+        radial.barWidth = 20
 
         // Do any additional setup after loading the view.
     }
