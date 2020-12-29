@@ -220,6 +220,34 @@ public class ABControlsStyleKit : NSObject {
 
     }
 
+    @objc dynamic public class func drawPotentiometerLinear(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 100, height: 15), resizing: ResizingBehavior = .aspectFit, knobColor: UIColor = UIColor(red: 0.800, green: 0.320, blue: 0.320, alpha: 1.000), percentComplete: CGFloat = 94) {
+        //// General Declarations
+        let context = UIGraphicsGetCurrentContext()!
+        
+        //// Resize to Target Frame
+        context.saveGState()
+        let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 100, height: 15), target: targetFrame)
+        context.translateBy(x: resizedFrame.minX, y: resizedFrame.minY)
+        context.scaleBy(x: resizedFrame.width / 100, y: resizedFrame.height / 15)
+        let resizedShadowScale: CGFloat = min(resizedFrame.width / 100, resizedFrame.height / 15)
+
+
+        //// Rectangle Drawing
+        let rectanglePath = UIBezierPath(rect: CGRect(x: 0, y: 0, width: percentComplete, height: 15))
+        knobColor.setFill()
+        rectanglePath.fill()
+
+
+        //// Rectangle 2 Drawing
+        let rectangle2Path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 100, height: 15))
+        knobColor.setStroke()
+        rectangle2Path.lineWidth = 1
+        rectangle2Path.stroke()
+        
+        context.restoreGState()
+
+    }
+
     //// Generated Images
 
     @objc dynamic public class var imageOfDownArrow: UIImage {

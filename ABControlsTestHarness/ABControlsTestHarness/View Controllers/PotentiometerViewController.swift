@@ -11,11 +11,11 @@ import ABControls
 
 class PotentiometerViewController: UIViewController {
     @IBOutlet weak private var linear: ABPotentiometerLinear!
-    
     @IBOutlet weak private var radial: ABPotentiometerRadial!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         radial.value = 99
         radial.color = UIColor.yellow
         radial.barWidth = 20

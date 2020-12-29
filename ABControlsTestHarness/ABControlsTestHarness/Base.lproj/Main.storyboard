@@ -42,8 +42,7 @@ ABDropDown
 ABGradientLinear / ABGradientRadial
 ABImageViewer
 ABListBox
-ABPotentiometerLinear
-ABPotentiometerRadial
+ABPotentiometerLinear / ABPotentiometerRadial
 ABSignatureCapture
 ABTouchDraw
 ABVideoRecorder
@@ -53,7 +52,7 @@ ABAudioRecorder</string>
                                 <real key="value" value="40"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="value" systemColor="systemOrangeColor"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <real key="value" value="5"/>
@@ -214,22 +213,31 @@ ABAudioRecorder</string>
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4p7-0v-2rG" customClass="ABPotentiometerLinear" customModule="ABControls">
-                                <rect key="frame" x="40" y="77" width="392" height="155"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="ABPotentiometerLinear" translatesAutoresizingMaskIntoConstraints="NO" id="4p7-0v-2rG" customClass="ABPotentiometerLinear" customModule="ABControls">
+                                <rect key="frame" x="20" y="228" width="173" height="25"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="percentComplete">
-                                        <real key="value" value="25"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                        <real key="value" value="50"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SrU-QC-2ne" customClass="ABPotentiometerRadial" customModule="ABControls">
-                                <rect key="frame" x="40" y="279" width="250" height="250"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="ABPotentiometerRadial" translatesAutoresizingMaskIntoConstraints="NO" id="SrU-QC-2ne" customClass="ABPotentiometerRadial" customModule="ABControls">
+                                <rect key="frame" x="20" y="269" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="percentComplete">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="barWidth">
                                         <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
@@ -455,6 +463,9 @@ cyan</string>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

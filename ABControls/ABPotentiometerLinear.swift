@@ -11,7 +11,7 @@ import UIKit
 @IBDesignable
 public class ABPotentiometerLinear: ABControl {
     
-    @IBInspectable var percentComplete: Float = 100
+    @IBInspectable var value: Float = 100
     /// required for dev time
     required public init(frame: CGRect) {
         super.init(frame: frame)
@@ -42,6 +42,6 @@ public class ABPotentiometerLinear: ABControl {
     
     public override func draw(_ rect: CGRect) {
         super.draw(rect)
-        ABControlsStyleKit.drawPotentiometerRadial(frame: bounds, resizing: .aspectFit, ovalWidth: 20, percentComplete: CGFloat(percentComplete))
+        ABControlsStyleKit.drawPotentiometerLinear(frame: bounds, resizing: .aspectFit, knobColor: UIColor.cyan, percentComplete: 30)
     }
 }

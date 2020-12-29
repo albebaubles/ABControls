@@ -24,12 +24,9 @@
 		B4720EAB211776E9001DBBF2 /* ABAudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4720EAA211776E9001DBBF2 /* ABAudioRecorder.swift */; };
 		B4720EAD21177712001DBBF2 /* ABVideoRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4720EAC21177712001DBBF2 /* ABVideoRecorder.swift */; };
 		B47CBFE7212B299500629096 /* ABGradientRadial.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4E66DCC2127764D005932EC /* ABGradientRadial.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		B487264822E3D4760006BB08 /* ABGradientLinear.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BF62E5212389EB003CD938 /* ABGradientLinear.swift */; };
-		B487264922E3D4790006BB08 /* ABGradientRadial.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E66DCC2127764D005932EC /* ABGradientRadial.swift */; };
 		B48AFCF7211F6F680067BA86 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = B48AFCF6211F6F680067BA86 /* LICENSE.md */; };
 		B4ACB3FB211B697900140837 /* ABTextualControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ACB3FA211B697900140837 /* ABTextualControl.swift */; };
 		B4BA8CF82593B25500A17274 /* ABBarcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BA8CF72593B25500A17274 /* ABBarcode.swift */; };
-		B4BA8CFD2593B32200A17274 /* ABBarcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BA8CF72593B25500A17274 /* ABBarcode.swift */; };
 		B4BF62E6212389EB003CD938 /* ABGradientLinear.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BF62E5212389EB003CD938 /* ABGradientLinear.swift */; };
 		B4BF62E721238BCA003CD938 /* ABGradientLinear.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4BF62E5212389EB003CD938 /* ABGradientLinear.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		B4CC1AF921288D8C00FF1A75 /* ABPotentiometerLinear.swift in Headers */ = {isa = PBXBuildFile; fileRef = B43C887C211FAAAF00A079F0 /* ABPotentiometerLinear.swift */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -46,35 +43,6 @@
 		B4FEDD6A2116487C00223E77 /* ABCheckbox.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4FEDCE8211620DD00223E77 /* ABCheckbox.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		B4FEDD6C2116487C00223E77 /* ABControlsStyleKit.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4FC45602114EBC8006B8A15 /* ABControlsStyleKit.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		B4FEDD6D2116487C00223E77 /* ABDropdown.swift in Headers */ = {isa = PBXBuildFile; fileRef = B46D4E542114C07600A58C71 /* ABDropdown.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF73BD06212324EF001BEBE1 /* ABControls.h in Headers */ = {isa = PBXBuildFile; fileRef = B4DA3C9921164CB9006B1AB2 /* ABControls.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF73BD07212324EF001BEBE1 /* ABBarcodeScanner.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4FAE12321176773008707E7 /* ABBarcodeScanner.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF73BD08212324EF001BEBE1 /* ABCheckbox.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4FEDCE8211620DD00223E77 /* ABCheckbox.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF73BD09212324EF001BEBE1 /* ABControlsStyleKit.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4FC45602114EBC8006B8A15 /* ABControlsStyleKit.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF73BD0A212324EF001BEBE1 /* ABDropdown.swift in Headers */ = {isa = PBXBuildFile; fileRef = B46D4E542114C07600A58C71 /* ABDropdown.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF73BD0B212324EF001BEBE1 /* ABImageViewer.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4FAE1252117678C008707E7 /* ABImageViewer.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF73BD0C212324EF001BEBE1 /* ABListbox.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4FAE12121176759008707E7 /* ABListbox.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF73BD0D212324EF001BEBE1 /* ABSignatureCapture.swift in Headers */ = {isa = PBXBuildFile; fileRef = B459874B2117CC7E00519520 /* ABSignatureCapture.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF73BD0E212324EF001BEBE1 /* ABTouchDraw.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4720EA8211776D5001DBBF2 /* ABTouchDraw.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF73BD0F212324EF001BEBE1 /* ABVideoRecorder.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4720EAC21177712001DBBF2 /* ABVideoRecorder.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF73BD10212324EF001BEBE1 /* ABAudioRecorder.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4720EAA211776E9001DBBF2 /* ABAudioRecorder.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF73BD11212324EF001BEBE1 /* ABControl.swift in Headers */ = {isa = PBXBuildFile; fileRef = B459874D2117D19400519520 /* ABControl.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF73BD13212324EF001BEBE1 /* ABSignatureCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B459874B2117CC7E00519520 /* ABSignatureCapture.swift */; };
-		EF73BD14212324EF001BEBE1 /* ABCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FEDCE8211620DD00223E77 /* ABCheckbox.swift */; };
-		EF73BD15212324EF001BEBE1 /* ABControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B459874D2117D19400519520 /* ABControl.swift */; };
-		EF73BD16212324EF001BEBE1 /* ABListbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FAE12121176759008707E7 /* ABListbox.swift */; };
-		EF73BD17212324EF001BEBE1 /* ABDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46D4E542114C07600A58C71 /* ABDropdown.swift */; };
-		EF73BD18212324EF001BEBE1 /* ABPotentiometerLinear.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43C887C211FAAAF00A079F0 /* ABPotentiometerLinear.swift */; };
-		EF73BD19212324EF001BEBE1 /* ABControlsStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FC45602114EBC8006B8A15 /* ABControlsStyleKit.swift */; };
-		EF73BD1A212324EF001BEBE1 /* ABVideoRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4720EAC21177712001DBBF2 /* ABVideoRecorder.swift */; };
-		EF73BD1B212324EF001BEBE1 /* ABImageViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FAE1252117678C008707E7 /* ABImageViewer.swift */; };
-		EF73BD1C212324EF001BEBE1 /* ABTextualControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ACB3FA211B697900140837 /* ABTextualControl.swift */; };
-		EF73BD1D212324EF001BEBE1 /* ABBarcodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FAE12321176773008707E7 /* ABBarcodeScanner.swift */; };
-		EF73BD1E212324EF001BEBE1 /* ABTouchDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4720EA8211776D5001DBBF2 /* ABTouchDraw.swift */; };
-		EF73BD1F212324EF001BEBE1 /* ABAudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4720EAA211776E9001DBBF2 /* ABAudioRecorder.swift */; };
-		EF73BD20212324EF001BEBE1 /* ABPotentiometerRadial.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43C887A211FAA9900A079F0 /* ABPotentiometerRadial.swift */; };
-		EF73BD22212324EF001BEBE1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DA3C9021164A39006B1AB2 /* UIKit.framework */; };
-		EF73BD24212324EF001BEBE1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B4248EB0212265250026D3BF /* README.md */; };
-		EF73BD25212324EF001BEBE1 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = B48AFCF6211F6F680067BA86 /* LICENSE.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,7 +69,6 @@
 		B4FEDCE8211620DD00223E77 /* ABCheckbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABCheckbox.swift; sourceTree = "<group>"; };
 		B4FEDD022116419200223E77 /* ABControls.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ABControls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4FEDD052116419200223E77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EF73BD29212324EF001BEBE1 /* ABControls.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ABControls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,14 +80,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EF73BD21212324EF001BEBE1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EF73BD22212324EF001BEBE1 /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -128,8 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				B46D4E252114C05F00A58C71 /* ABControls */,
-				B46D4E242114C05F00A58C71 /* Products */,
 				B4FEDCFB2116411700223E77 /* Frameworks */,
+				B46D4E242114C05F00A58C71 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,7 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				B4FEDD022116419200223E77 /* ABControls.framework */,
-				EF73BD29212324EF001BEBE1 /* ABControls.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -204,25 +162,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EF73BD05212324EF001BEBE1 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EF73BD06212324EF001BEBE1 /* ABControls.h in Headers */,
-				EF73BD07212324EF001BEBE1 /* ABBarcodeScanner.swift in Headers */,
-				EF73BD08212324EF001BEBE1 /* ABCheckbox.swift in Headers */,
-				EF73BD09212324EF001BEBE1 /* ABControlsStyleKit.swift in Headers */,
-				EF73BD0A212324EF001BEBE1 /* ABDropdown.swift in Headers */,
-				EF73BD0B212324EF001BEBE1 /* ABImageViewer.swift in Headers */,
-				EF73BD0C212324EF001BEBE1 /* ABListbox.swift in Headers */,
-				EF73BD0D212324EF001BEBE1 /* ABSignatureCapture.swift in Headers */,
-				EF73BD0E212324EF001BEBE1 /* ABTouchDraw.swift in Headers */,
-				EF73BD0F212324EF001BEBE1 /* ABVideoRecorder.swift in Headers */,
-				EF73BD10212324EF001BEBE1 /* ABAudioRecorder.swift in Headers */,
-				EF73BD11212324EF001BEBE1 /* ABControl.swift in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -242,24 +181,6 @@
 			name = ABControls;
 			productName = ABControlsFramework;
 			productReference = B4FEDD022116419200223E77 /* ABControls.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		EF73BD04212324EF001BEBE1 /* ABControls-Static */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EF73BD26212324EF001BEBE1 /* Build configuration list for PBXNativeTarget "ABControls-Static" */;
-			buildPhases = (
-				EF73BD05212324EF001BEBE1 /* Headers */,
-				EF73BD12212324EF001BEBE1 /* Sources */,
-				EF73BD21212324EF001BEBE1 /* Frameworks */,
-				EF73BD23212324EF001BEBE1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "ABControls-Static";
-			productName = ABControlsFramework;
-			productReference = EF73BD29212324EF001BEBE1 /* ABControls.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -292,7 +213,6 @@
 			projectRoot = "";
 			targets = (
 				B4FEDD012116419200223E77 /* ABControls */,
-				EF73BD04212324EF001BEBE1 /* ABControls-Static */,
 			);
 		};
 /* End PBXProject section */
@@ -304,15 +224,6 @@
 			files = (
 				B4248EB1212265250026D3BF /* README.md in Resources */,
 				B48AFCF7211F6F680067BA86 /* LICENSE.md in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EF73BD23212324EF001BEBE1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EF73BD24212324EF001BEBE1 /* README.md in Resources */,
-				EF73BD25212324EF001BEBE1 /* LICENSE.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,30 +251,6 @@
 				B4720EA9211776D5001DBBF2 /* ABTouchDraw.swift in Sources */,
 				B4720EAB211776E9001DBBF2 /* ABAudioRecorder.swift in Sources */,
 				B43C887B211FAA9900A079F0 /* ABPotentiometerRadial.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EF73BD12212324EF001BEBE1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EF73BD13212324EF001BEBE1 /* ABSignatureCapture.swift in Sources */,
-				EF73BD14212324EF001BEBE1 /* ABCheckbox.swift in Sources */,
-				B487264822E3D4760006BB08 /* ABGradientLinear.swift in Sources */,
-				EF73BD15212324EF001BEBE1 /* ABControl.swift in Sources */,
-				EF73BD16212324EF001BEBE1 /* ABListbox.swift in Sources */,
-				EF73BD17212324EF001BEBE1 /* ABDropdown.swift in Sources */,
-				EF73BD18212324EF001BEBE1 /* ABPotentiometerLinear.swift in Sources */,
-				EF73BD19212324EF001BEBE1 /* ABControlsStyleKit.swift in Sources */,
-				EF73BD1A212324EF001BEBE1 /* ABVideoRecorder.swift in Sources */,
-				EF73BD1B212324EF001BEBE1 /* ABImageViewer.swift in Sources */,
-				B4BA8CFD2593B32200A17274 /* ABBarcode.swift in Sources */,
-				EF73BD1C212324EF001BEBE1 /* ABTextualControl.swift in Sources */,
-				EF73BD1D212324EF001BEBE1 /* ABBarcodeScanner.swift in Sources */,
-				EF73BD1E212324EF001BEBE1 /* ABTouchDraw.swift in Sources */,
-				EF73BD1F212324EF001BEBE1 /* ABAudioRecorder.swift in Sources */,
-				EF73BD20212324EF001BEBE1 /* ABPotentiometerRadial.swift in Sources */,
-				B487264922E3D4790006BB08 /* ABGradientRadial.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,7 +311,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -512,11 +399,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.albebaubles.ABControls;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = NO;
-				SUPPORTED_PLATFORMS = "iphonesimulator macOS iphoneos";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,6";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TVOS_DEPLOYMENT_TARGET = 14.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -547,85 +434,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.albebaubles.ABControls;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = NO;
-				SUPPORTED_PLATFORMS = "iphonesimulator macOS iphoneos";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,6";
-				TVOS_DEPLOYMENT_TARGET = 14.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		EF73BD27212324EF001BEBE1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 4NN457KWJ4;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/ABControls/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.albebaubles.ABControls;
-				PRODUCT_NAME = ABControls;
-				SKIP_INSTALL = NO;
-				SUPPORTS_MACCATALYST = YES;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2,6";
-				TVOS_DEPLOYMENT_TARGET = 14.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		EF73BD28212324EF001BEBE1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 4NN457KWJ4;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/ABControls/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.albebaubles.ABControls;
-				PRODUCT_NAME = ABControls;
-				SKIP_INSTALL = NO;
-				SUPPORTS_MACCATALYST = YES;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2,6";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TVOS_DEPLOYMENT_TARGET = 14.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -649,15 +462,6 @@
 			buildConfigurations = (
 				B4FEDD1A2116419300223E77 /* Debug */,
 				B4FEDD1B2116419300223E77 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EF73BD26212324EF001BEBE1 /* Build configuration list for PBXNativeTarget "ABControls-Static" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EF73BD27212324EF001BEBE1 /* Debug */,
-				EF73BD28212324EF001BEBE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -3,18 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B44311C922E67126008BEA0C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B44311C822E67125008BEA0C /* UIKit.framework */; };
+		B44311C922E67126008BEA0C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B44311C822E67125008BEA0C /* UIKit.framework */; platformFilter = ios; };
 		B46620462593F8130038739C /* PotentiometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46620452593F8130038739C /* PotentiometerViewController.swift */; };
 		B46620472593F8130038739C /* PotentiometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46620452593F8130038739C /* PotentiometerViewController.swift */; };
 		B46620482593F8130038739C /* PotentiometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46620452593F8130038739C /* PotentiometerViewController.swift */; };
-		B487264722E3D4480006BB08 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B487264622E3D4480006BB08 /* CoreGraphics.framework */; };
+		B487264722E3D4480006BB08 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B487264622E3D4480006BB08 /* CoreGraphics.framework */; platformFilter = ios; };
 		B4970CC22595193D00317DF4 /* SignatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4970CC12595193D00317DF4 /* SignatureViewController.swift */; };
-		B4EDD540259B8CF6007ECABB /* ABControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4EDD53F259B8CF6007ECABB /* ABControls.framework */; };
-		B4EDD541259B8CF6007ECABB /* ABControls.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B4EDD53F259B8CF6007ECABB /* ABControls.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B4EDD5EB259BA9B3007ECABB /* ABControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4EDD5EA259BA9B3007ECABB /* ABControls.framework */; platformFilter = ios; };
+		B4EDD5EC259BA9B3007ECABB /* ABControls.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B4EDD5EA259BA9B3007ECABB /* ABControls.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B4FA156C2127409B000A9C53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA156B2127409B000A9C53 /* AppDelegate.swift */; };
 		B4FA156E2127409B000A9C53 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA156D2127409B000A9C53 /* MasterViewController.swift */; };
 		B4FA15702127409B000A9C53 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA156F2127409B000A9C53 /* DetailViewController.swift */; };
@@ -47,13 +47,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B4970CBC2594FFFF00317DF4 /* Embed Frameworks */ = {
+		B4EDD5E7259BA99A007ECABB /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B4EDD541259B8CF6007ECABB /* ABControls.framework in Embed Frameworks */,
+				B4EDD5EC259BA9B3007ECABB /* ABControls.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,7 +66,7 @@
 		B46620452593F8130038739C /* PotentiometerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotentiometerViewController.swift; sourceTree = "<group>"; };
 		B487264622E3D4480006BB08 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B4970CC12595193D00317DF4 /* SignatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureViewController.swift; sourceTree = "<group>"; };
-		B4EDD53F259B8CF6007ECABB /* ABControls.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ABControls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4EDD5EA259BA9B3007ECABB /* ABControls.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ABControls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4FA15682127409B000A9C53 /* ABControlsTestHarness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ABControlsTestHarness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4FA156B2127409B000A9C53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4FA156D2127409B000A9C53 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B487264722E3D4480006BB08 /* CoreGraphics.framework in Frameworks */,
-				B4EDD540259B8CF6007ECABB /* ABControls.framework in Frameworks */,
+				B4EDD5EB259BA9B3007ECABB /* ABControls.framework in Frameworks */,
 				B44311C922E67126008BEA0C /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,7 +133,7 @@
 		B487264522E3D4480006BB08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B4EDD53F259B8CF6007ECABB /* ABControls.framework */,
+				B4EDD5EA259BA9B3007ECABB /* ABControls.framework */,
 				B44311C822E67125008BEA0C /* UIKit.framework */,
 				B487264622E3D4480006BB08 /* CoreGraphics.framework */,
 			);
@@ -203,7 +203,7 @@
 				B4FA15642127409B000A9C53 /* Sources */,
 				B4FA15652127409B000A9C53 /* Frameworks */,
 				B4FA15662127409B000A9C53 /* Resources */,
-				B4970CBC2594FFFF00317DF4 /* Embed Frameworks */,
+				B4EDD5E7259BA99A007ECABB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -514,7 +514,6 @@
 		B4FA15932127409D000A9C53 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ABControlsTestHarness/ABControlsTestHarness.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
@@ -530,18 +529,17 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.albebaubles.ABControlsTestHarness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macOS";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SUPPORTS_MACCATALYST = YES;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "2,6";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Debug;
 		};
 		B4FA15942127409D000A9C53 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ABControlsTestHarness/ABControlsTestHarness.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
@@ -556,11 +554,11 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.albebaubles.ABControlsTestHarness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macOS";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SUPPORTS_MACCATALYST = YES;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "2,6";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Release;
 		};

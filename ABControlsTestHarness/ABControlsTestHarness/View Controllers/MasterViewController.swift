@@ -7,6 +7,7 @@
 //
 import UIKit
 import ABControls
+
 // swiftlint:disable inclusive_language
 class MasterViewController: UIViewController, ABListboxDelegate {
     @IBOutlet weak private var listbox: ABListbox!
