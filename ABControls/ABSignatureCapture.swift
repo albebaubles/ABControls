@@ -19,6 +19,7 @@ public class ABSignatureCapture: ABControl {
     public weak var delegate: ABBarcodeScannerDelegate?
     private var currentPosition = CGPoint()
 	public var sigPaths = UIBezierPath()
+    
 	/// Notifications
 	public static let ABSignatureCaptureDidDrawSignature: String = "ABSignatureCaptureDidDrawSignature"
 	/// Sets the textcolor for text and the dropdown arrow
@@ -47,7 +48,7 @@ public class ABSignatureCapture: ABControl {
         let pathAnimation = CAKeyframeAnimation(keyPath: "position")
         pathAnimation.duration = 3.0
         pathAnimation.calculationMode = .discrete
-        pathAnimation.path = sigPaths
+        pathAnimation.path = sigPaths.cgPath
         pathAnimation.fillMode = .forwards
         pathAnimation.isRemovedOnCompletion = true
         view.layer.add( pathAnimation, forKey: "center")
@@ -82,7 +83,8 @@ public class ABSignatureCapture: ABControl {
 	/// Clears the signature
 	public func clearSignature() {
 		sigPaths.removeAllPoints()
-		layer.sublayers = nil
+        layer.sublayers?.removeAll()
+        setNeedsDisplay()
 	}
 
     /// Clears the signature

@@ -229,7 +229,7 @@ public class ABControlsStyleKit : NSObject {
         let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 100, height: 15), target: targetFrame)
         context.translateBy(x: resizedFrame.minX, y: resizedFrame.minY)
         context.scaleBy(x: resizedFrame.width / 100, y: resizedFrame.height / 15)
-        let resizedShadowScale: CGFloat = min(resizedFrame.width / 100, resizedFrame.height / 15)
+        let _: CGFloat = min(resizedFrame.width / 100, resizedFrame.height / 15)
 
 
         //// Rectangle Drawing

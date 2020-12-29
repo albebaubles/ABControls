@@ -441,11 +441,11 @@ cyan</string>
                                 <rect key="frame" x="42" y="75" width="541" height="187"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="pencil" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="IZU-5z-Ksz">
-                                        <rect key="frame" x="18" y="137" width="40" height="40"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="cursorarrow" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="IZU-5z-Ksz">
+                                        <rect key="frame" x="18" y="-137" width="20" height="20"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="gHe-WE-45a"/>
-                                            <constraint firstAttribute="width" constant="40" id="wxM-oM-psa"/>
+                                            <constraint firstAttribute="height" constant="20" id="gHe-WE-45a"/>
+                                            <constraint firstAttribute="width" constant="20" id="wxM-oM-psa"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
@@ -487,7 +487,7 @@ cyan</string>
         </scene>
     </scenes>
     <resources>
-        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="cursorarrow" catalog="system" width="91" height="128"/>
         <image name="photo.on.rectangle.fill" catalog="system" width="128" height="96"/>
         <systemColor name="darkTextColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
