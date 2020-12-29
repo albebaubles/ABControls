@@ -163,10 +163,10 @@ ABAudioRecorder</string>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="10"/>
+                                                <real key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="point" keyPath="startPoint">
-                                                <point key="value" x="50" y="40"/>
+                                                <point key="value" x="50" y="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="point" keyPath="endPoint">
                                                 <point key="value" x="150" y="193"/>
