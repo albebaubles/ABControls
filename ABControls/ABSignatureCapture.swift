@@ -6,6 +6,8 @@
 //  Copyright © 2018 AlbeBaubles LLC. All rights reserved.
 //
 import UIKit
+import QuartzCore
+
 
 protocol ABSignatureCaptureDelegate: class {
 	func didAcceptSignature()
@@ -14,7 +16,9 @@ protocol ABSignatureCaptureDelegate: class {
 /// Control for capturing a signature
 @IBDesignable
 public class ABSignatureCapture: ABControl {
-	private var sigPaths = UIBezierPath()
+    public weak var delegate: ABBarcodeScannerDelegate?
+    private var currentPosition = CGPoint()
+	public var sigPaths = UIBezierPath()
 	/// Notifications
 	public static let ABSignatureCaptureDidDrawSignature: String = "ABSignatureCaptureDidDrawSignature"
 	/// Sets the textcolor for text and the dropdown arrow
@@ -39,6 +43,16 @@ public class ABSignatureCapture: ABControl {
 		}
 	}
 
+    public func animateDrawing(_ view: UIView) {
+        let pathAnimation = CAKeyframeAnimation(keyPath: "position")
+        pathAnimation.duration = 3.0
+        pathAnimation.calculationMode = .discrete
+        pathAnimation.path = sigPaths
+        pathAnimation.fillMode = .forwards
+        pathAnimation.isRemovedOnCompletion = true
+        view.layer.add( pathAnimation, forKey: "center")
+    }
+    
 	// Only override draw() if you perform custom drawing.
 	// An empty implementation adversely affects performance during animation.
 	override public func draw(_ rect: CGRect) {
@@ -53,6 +67,7 @@ public class ABSignatureCapture: ABControl {
 
 	override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 		sigPaths.move(to: (touches.first?.location(in: self))!)
+        currentPosition = (touches.first?.location(in: self))!
 	}
 
 	override public func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -61,11 +76,7 @@ public class ABSignatureCapture: ABControl {
 	}
 
 	override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-		let signature = self.signature().base64EncodedString(options: NSData.Base64EncodingOptions.endLineWithLineFeed)
-		#if !TARGET_INTERFACE_BUILDER
-			NotificationCenter.default.post(name: Notification.Name(ABSignatureCapture.ABSignatureCaptureDidDrawSignature),
-				object: signature)
-		#endif
+
 	}
 
 	/// Clears the signature
@@ -74,6 +85,16 @@ public class ABSignatureCapture: ABControl {
 		layer.sublayers = nil
 	}
 
+    /// Clears the signature
+    public func acceptSignature() {
+        let signature = self.signature().base64EncodedString(options: NSData.Base64EncodingOptions.endLineWithLineFeed)
+        #if !TARGET_INTERFACE_BUILDER
+            NotificationCenter.default.post(name: Notification.Name(ABSignatureCapture.ABSignatureCaptureDidDrawSignature),
+                object: signature)
+        #endif
+    }
+
+    
 	/// Returns the captured signature
 	///
 	/// - Returns: The bezier path of the signature as archive NSData

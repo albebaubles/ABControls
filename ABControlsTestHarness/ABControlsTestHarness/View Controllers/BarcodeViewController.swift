@@ -7,6 +7,7 @@
 //
 import UIKit
 import ABControls
+
 class BarcodeViewController: UIViewController, ABBarcodeScannerDelegate {
 	@IBOutlet weak private var scanner: ABBarcodeScanner!
 	@IBOutlet weak private var scanned: UIImageView!

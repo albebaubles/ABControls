@@ -25,6 +25,7 @@
 		B4720EAD21177712001DBBF2 /* ABVideoRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4720EAC21177712001DBBF2 /* ABVideoRecorder.swift */; };
 		B47CBFE7212B299500629096 /* ABGradientRadial.swift in Headers */ = {isa = PBXBuildFile; fileRef = B4E66DCC2127764D005932EC /* ABGradientRadial.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		B48AFCF7211F6F680067BA86 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = B48AFCF6211F6F680067BA86 /* LICENSE.md */; };
+		B49C171F259BD79100517712 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B49C171E259BD79100517712 /* QuartzCore.framework */; };
 		B4ACB3FB211B697900140837 /* ABTextualControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ACB3FA211B697900140837 /* ABTextualControl.swift */; };
 		B4BA8CF82593B25500A17274 /* ABBarcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BA8CF72593B25500A17274 /* ABBarcode.swift */; };
 		B4BF62E6212389EB003CD938 /* ABGradientLinear.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BF62E5212389EB003CD938 /* ABGradientLinear.swift */; };
@@ -56,6 +57,7 @@
 		B4720EAA211776E9001DBBF2 /* ABAudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABAudioRecorder.swift; sourceTree = "<group>"; };
 		B4720EAC21177712001DBBF2 /* ABVideoRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABVideoRecorder.swift; sourceTree = "<group>"; };
 		B48AFCF6211F6F680067BA86 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		B49C171E259BD79100517712 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		B4ACB3FA211B697900140837 /* ABTextualControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABTextualControl.swift; sourceTree = "<group>"; };
 		B4BA8CF72593B25500A17274 /* ABBarcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABBarcode.swift; sourceTree = "<group>"; };
 		B4BF62E5212389EB003CD938 /* ABGradientLinear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABGradientLinear.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B49C171F259BD79100517712 /* QuartzCore.framework in Frameworks */,
 				B4DA3C9121164A39006B1AB2 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -131,6 +134,7 @@
 		B4FEDCFB2116411700223E77 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B49C171E259BD79100517712 /* QuartzCore.framework */,
 				B4DA3C9021164A39006B1AB2 /* UIKit.framework */,
 			);
 			name = Frameworks;
@@ -310,11 +314,14 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macOS";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Debug;
 		};
@@ -365,10 +372,13 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macOS";
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -399,8 +409,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.albebaubles.ABControls;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = NO;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
-				SUPPORTS_MACCATALYST = NO;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macOS";
+				SUPPORTS_MACCATALYST = YES;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -434,8 +444,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.albebaubles.ABControls;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = NO;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
-				SUPPORTS_MACCATALYST = NO;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macOS";
+				SUPPORTS_MACCATALYST = YES;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

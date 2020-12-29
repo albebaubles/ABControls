@@ -21,13 +21,11 @@ public class ABControl: UIView {
 
 	/// required for dev time
 	required override public init(frame: CGRect) {
-//		cornerRadius = 0
 		super.init(frame: frame)
 	}
 
 	/// require for runtime
 	required public init?(coder aDecoder: NSCoder) {
-//		cornerRadius = 0
 		super.init(coder: aDecoder)
 		#if !TARGET_INTERFACE_BUILDER
 			sharedInit()

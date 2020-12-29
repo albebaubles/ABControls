@@ -25,7 +25,7 @@ class MasterViewController: UIViewController, ABListboxDelegate {
             performSegue(withIdentifier: "gradient", sender: nil)
         case 6:
             performSegue(withIdentifier: "potentiometer", sender: nil)
-        case 8:
+        case 7:
             performSegue(withIdentifier: "signature", sender: nil)
 
         default:

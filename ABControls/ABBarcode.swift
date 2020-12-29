@@ -50,7 +50,8 @@ public class ABBarcode: NSObject {
         }
         return UIImage(ciImage: image)
     }
-
+    
+    
     /// Creates a UIImage object from barcode data
     ///
     /// - Parameters:

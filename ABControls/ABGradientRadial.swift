@@ -41,6 +41,7 @@ public class ABGradientRadial: ABControl {
 	}
 
 	private func sharedInit() {
+        isUserInteractionEnabled = false
 	}
 
 	override public func draw(_ rect: CGRect) {
@@ -48,13 +49,13 @@ public class ABGradientRadial: ABControl {
 		let locations = [0.0, 1.0] as [CGFloat]
 		let center = CGPoint(x: self.bounds.size.width / 2, y: self.bounds.size.height / 2)
 		// Prepare a context and create a color space
-		let context = UIGraphicsGetCurrentContext()
-		context!.saveGState()
+		let context = UIGraphicsGetCurrentContext()!
+		context.saveGState()
 		let colorSpace = CGColorSpaceCreateDeviceRGB()
 		// Create gradient object from our color space, color components and locations
 		let gradient = CGGradient(colorsSpace: colorSpace, colors: colors, locations: locations)
 		// Draw a gradient
-		context!.drawRadialGradient(gradient!, startCenter: center, startRadius: 0.0, endCenter: center, endRadius: radius, options: CGGradientDrawingOptions(rawValue: 0))
-		context?.restoreGState()
+		context.drawRadialGradient(gradient!, startCenter: center, startRadius: 0.0, endCenter: center, endRadius: radius, options: CGGradientDrawingOptions(rawValue: 0))
+		context.restoreGState()
 	}
 }

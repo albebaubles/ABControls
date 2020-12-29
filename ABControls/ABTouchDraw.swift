@@ -13,9 +13,8 @@ public class ABTouchDraw: ABControl {
 		static var drawingPaths = UIBezierPath()
 	}
 	/// Notifications
-	public static let ABSignatureCaptureDidDrawSignature: String = "ABSignatureCaptureDidDrawSignature"
-	// Only override draw() if you perform custom drawing.
-	// An empty implementation adversely affects performance during animation.
+	public static let ABTouchDrawDidDraw: String = "ABTouchDrawDidDraw"
+
 	override public func draw(_ rect: CGRect) {
 		super.draw(rect)
 		UIColor.blue.setStroke()
@@ -38,8 +37,8 @@ public class ABTouchDraw: ABControl {
 	override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
 		setNeedsDisplay()
 		let string = self.drawing().base64EncodedString(options: NSData.Base64EncodingOptions.endLineWithLineFeed)
-		NotificationCenter.default.post(name: Notification.Name(ABSignatureCapture.ABSignatureCaptureDidDrawSignature),
-			object: string)
+//		NotificationCenter.default.post(name: Notification.Name(ABSignatureCapture.ABTouchDrawDidDraw),
+//			object: string)
 	}
 
 	public func clear() {
@@ -60,6 +59,7 @@ public class ABTouchDraw: ABControl {
 		Cache.drawingPaths = path
 		setNeedsDisplay()
 	}
+
 
 	override public func prepareForInterfaceBuilder() {
 		super.prepareForInterfaceBuilder()
