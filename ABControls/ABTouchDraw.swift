@@ -12,6 +12,7 @@ public class ABTouchDraw: ABControl {
 	private struct Cache {
 		static var drawingPaths = UIBezierPath()
 	}
+    
 	/// Notifications
 	public static let ABTouchDrawDidDraw: String = "ABTouchDrawDidDraw"
 
@@ -37,8 +38,8 @@ public class ABTouchDraw: ABControl {
 	override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
 		setNeedsDisplay()
 		let string = self.drawing().base64EncodedString(options: NSData.Base64EncodingOptions.endLineWithLineFeed)
-//		NotificationCenter.default.post(name: Notification.Name(ABSignatureCapture.ABTouchDrawDidDraw),
-//			object: string)
+        NotificationCenter.default.post(name: Notification.Name(ABSignatureCapture.ABSignatureCaptureDidDrawSignature),
+			object: string)
 	}
 
 	public func clear() {
@@ -59,7 +60,6 @@ public class ABTouchDraw: ABControl {
 		Cache.drawingPaths = path
 		setNeedsDisplay()
 	}
-
 
 	override public func prepareForInterfaceBuilder() {
 		super.prepareForInterfaceBuilder()

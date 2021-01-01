@@ -7,9 +7,16 @@
 //
 import UIKit
 
-/// currently only a placeholder -- this control will display an adjustable circlular element
+protocol ABPotentiometerRadialDelegate {
+    func didChangeValue(potentiometerRadial: ABPotentiometerRadial, value: Int)
+}
+
+
 @IBDesignable
 public class ABPotentiometerRadial: ABControl {
+    private var previousPoint: CGPoint?
+    private var delegate : ABPotentiometerRadialDelegate?
+    
     @IBInspectable public var value: Float = 50 {
         didSet {
             setNeedsLayout()
@@ -56,6 +63,22 @@ public class ABPotentiometerRadial: ABControl {
 //		ABControlsStyleKit.drawPotentiometerRadial(frame: bounds, resizing: .aspectFit, ovalWidth: 20, percentComplete: CGFloat(percentComplete))
 	}
     
+    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        previousPoint = (touches.first?.location(in: self))!
+    }
+
+    override public func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        setNeedsDisplay()
+    }
+
+    override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        previousPoint = (touches.first?.location(in: self))!
+        setNeedsDisplay()
+//        let string = self.drawing().base64EncodedString(options: NSData.Base64EncodingOptions.endLineWithLineFeed)
+//        NotificationCenter.default.post(name: Notification.Name(ABSignatureCapture.ABSignatureCaptureDidDrawSignature),
+//            object: string)
+    }
     
     public override func draw(_ rect: CGRect) {
         super.draw(rect)

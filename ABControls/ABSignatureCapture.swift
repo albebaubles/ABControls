@@ -77,7 +77,7 @@ public class ABSignatureCapture: ABControl {
 	}
 
 	override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-
+        sigPaths.close()
 	}
 
 	/// Clears the signature

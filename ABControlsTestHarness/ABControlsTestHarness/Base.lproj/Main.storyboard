@@ -99,7 +99,7 @@ ABAudioRecorder</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photo.on.rectangle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="UVI-kB-XGJ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photo.fill.on.rectangle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="UVI-kB-XGJ">
                                 <rect key="frame" x="43" y="244" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
@@ -488,12 +488,12 @@ cyan</string>
     </scenes>
     <resources>
         <image name="cursorarrow" catalog="system" width="91" height="128"/>
-        <image name="photo.on.rectangle.fill" catalog="system" width="128" height="96"/>
+        <image name="photo.fill.on.rectangle.fill" catalog="system" width="128" height="96"/>
         <systemColor name="darkTextColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -502,7 +502,7 @@ cyan</string>
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.33333333333333331" green="0.74509803921568629" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

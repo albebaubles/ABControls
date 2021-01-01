@@ -61,7 +61,6 @@ public class ABCheckbox: ABControl {
 
     override public func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
-
         sharedInit()
     }
 

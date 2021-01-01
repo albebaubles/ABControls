@@ -12,12 +12,20 @@ In the decade I've been writing iOS apps for clients I've written dozens of
 All of the controls support **@IBDesignable** and **@IBInspectable** - so they will render within InterfaceBuilder.  All objects inherit from UIView.    To use, simply drop a UIView on your viewcontroller.view in IB, change the  owner to ABControls and the class to the type of ABControl you'd like to use
 #### Current List of Implemented Controls:
 **ABBarcodeScanner** - Allows for scanning barcodes of various types.  Inner class ABBarCode allows for creating a barcode image
+
 **ABCheckBox** - A simple checkbox control
+
 **ABDropDown** - A dropdown control.  
+
 **ABImageViewer** - Allows for specifying an array of UIImage objects, displays them in a scrollable image list and allows for selecting on to Be diaplayed/selected
+
 **ABListBox** - exactly what you expect it to be
+
 **ABSignatureCapture** - Allows for capture a touch drawn signature - returns as data, an image or a bezierpath
+
 **ABTouchDraw** - Similar to ABSignatureCapture -- allows for simple drawing with return data as an image.  Very nasic, plenty of room for enhancement
+
+
 Additionally, I have created some placeholder classes for controls I plan to implement in the near future.
 ## Installation
 ABControls are compatible with [Carthage](https://github.com/Carthage/Carthage)
@@ -36,6 +44,7 @@ Please note when using the static framework that you do not need to copy
 the static framework into the application bundle like you do with dynamic
 frameworks.
 Thank you!  All feedback welcome.
+
 ## Usage
 ### ABBarcodeScanner
 You must be sure to add a camera usage description to your project's plist, otherwise you will not

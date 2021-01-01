@@ -12,11 +12,13 @@ public class ABImageViewer: ABControl {
 	private var _imageScrollview: UIScrollView = UIScrollView()
 	private var _preview: UIImageView = UIImageView()
 	private var _selected: UIImage?
+    
 	public enum LightMode: Int {
 		case clear = 0
 		case light = 1
 		case dark = 2
 	}
+    
 	public var lightMode = LightMode.clear {
 		didSet {
 			_preview.backgroundColor = background()
@@ -68,7 +70,8 @@ public class ABImageViewer: ABControl {
 	private func setupImageScrollview() {
 		_imageScrollview.removeFromSuperview()
 		_imageScrollview.subviews.forEach({ $0.removeFromSuperview() })
-		_imageScrollview.frame = CGRect(x: 0, y: bounds.height - thumbnailSize, width: bounds.width, height: thumbnailSize)
+		_imageScrollview.frame = CGRect(x: 0, y: bounds.height - thumbnailSize,
+                                        width: bounds.width, height: thumbnailSize)
 		_imageScrollview.contentSize = contentSize()
 
 		for case let image in images {
@@ -83,7 +86,6 @@ public class ABImageViewer: ABControl {
 			_imageScrollview.addSubview(imageButton)
 		}
 		addSubview(_imageScrollview)
-
 	}
 
 	@objc

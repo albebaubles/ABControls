@@ -50,7 +50,8 @@ public class ABGradientLinear: ABControl {
 		let colorSpace = CGColorSpaceCreateDeviceRGB()
 		// Create gradient object from our color space, color components and locations
 		let gradient = CGGradient(colorsSpace: colorSpace, colors: colors, locations: locations)
-		context!.drawLinearGradient(gradient!, start: startPoint, end: endPoint, options: .drawsBeforeStartLocation)
+		context!.drawLinearGradient(gradient!, start: startPoint,
+                                    end: endPoint, options: .drawsBeforeStartLocation)
 		context?.restoreGState()
 	}
 }

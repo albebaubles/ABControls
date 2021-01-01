@@ -21,8 +21,8 @@ public protocol ABDropdownDelegate: class {
 
 /// Provides a dropdown list as a replacement for a UIPickerView.  If the dropdown cannot display without falling off the window, it will popUP
 /// - Attention: fires notification 'ABDropdownDidChangeIndex' which returns the selected index
-@IBDesignable
-public class ABDropdown: ABTextualControl {
+@IBDesignable public class ABDropdown: ABTextualControl {
+    
     public weak var delegate: ABDropdownDelegate?
     private var frameRect = CGRect()
     private var listItems: [String]?

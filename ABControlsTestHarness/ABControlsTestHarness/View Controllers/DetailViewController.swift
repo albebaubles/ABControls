@@ -21,6 +21,7 @@ class DetailViewController: UIViewController {
 		// Do any additional setup after loading the view, typically from a nib.
 		configureView()
 	}
+    
 	var detailItem: NSDate? {
 		didSet {
 			// Update the view.
