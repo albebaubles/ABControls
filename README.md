@@ -1,6 +1,7 @@
 # ABControls
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-The ABControls project's purpose is to provide various iOS controls within
+
+The ABControls project purpose is to provide various iOS controls within
  a reusable framework.
 In the decade I've been writing iOS apps for clients I've written dozens of
  custom UI elements - from special labels to barcode readers, to signature 
@@ -26,7 +27,7 @@ All of the controls support **@IBDesignable** and **@IBInspectable** - so they w
 **ABTouchDraw** - Similar to ABSignatureCapture -- allows for simple drawing with return data as an image.  Very nasic, plenty of room for enhancement
 
 
-Additionally, I have created some placeholder classes for controls I plan to implement in the near future.
+Additionally, I have created some placeholder classes for controls I plan to implement in the future.
 ## Installation
 ABControls are compatible with [Carthage](https://github.com/Carthage/Carthage)
 and can be easily added to your application. ABControls supports generation
