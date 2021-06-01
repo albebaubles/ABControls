@@ -239,10 +239,10 @@ public class ABControlsStyleKit : NSObject {
 
 
         //// Rectangle 2 Drawing
-        let rectangle2Path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 100, height: 15))
+//        let rectangle2Path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 100, height: 15))
         knobColor.setStroke()
-        rectangle2Path.lineWidth = 1
-        rectangle2Path.stroke()
+//        rectangle2Path.lineWidth = 1
+//        rectangle2Path.stroke()
         
         context.restoreGState()
 

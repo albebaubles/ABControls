@@ -7,7 +7,7 @@
 //
 import UIKit
 
-public protocol ABDropdownDelegate: class {
+public protocol ABDropdownDelegate: AnyObject {
 
     /// Fires when the selected has changed
     ///

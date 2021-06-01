@@ -7,7 +7,7 @@
 //
 import UIKit
 
-public protocol ABCheckboxDelegate: class {
+public protocol ABCheckboxDelegate: AnyObject {
 
     /// Fires anytime the checkbox is checked or unchecked
     ///

@@ -9,7 +9,7 @@ import UIKit
 import QuartzCore
 
 
-protocol ABSignatureCaptureDelegate: class {
+protocol ABSignatureCaptureDelegate: AnyObject {
 	func didAcceptSignature()
 }
 

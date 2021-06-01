@@ -11,7 +11,11 @@ import UIKit
 @IBDesignable
 public class ABPotentiometerLinear: ABControl {
     
-    @IBInspectable var value: Float = 100
+	@IBInspectable var value: Float = 100  {
+		didSet {
+			setNeedsLayout()
+		}
+	}
     /// required for dev time
     required public init(frame: CGRect) {
         super.init(frame: frame)
@@ -42,6 +46,6 @@ public class ABPotentiometerLinear: ABControl {
     
     public override func draw(_ rect: CGRect) {
         super.draw(rect)
-        ABControlsStyleKit.drawPotentiometerLinear(frame: bounds, resizing: .aspectFit, knobColor: UIColor.cyan, percentComplete: 30)
+        ABControlsStyleKit.drawPotentiometerLinear(frame: bounds, resizing: .aspectFit, knobColor: UIColor.cyan, percentComplete: CGFloat(value))
     }
 }

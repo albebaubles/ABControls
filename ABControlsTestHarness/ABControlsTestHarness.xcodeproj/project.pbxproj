@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,9 +12,9 @@
 		B46620472593F8130038739C /* PotentiometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46620452593F8130038739C /* PotentiometerViewController.swift */; };
 		B46620482593F8130038739C /* PotentiometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46620452593F8130038739C /* PotentiometerViewController.swift */; };
 		B487264722E3D4480006BB08 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B487264622E3D4480006BB08 /* CoreGraphics.framework */; };
+		B495FA4E26659EB800BF3DFF /* ABControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B49C1708259BBF0800517712 /* ABControls.framework */; };
+		B495FA4F26659EB800BF3DFF /* ABControls.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B49C1708259BBF0800517712 /* ABControls.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B4970CC22595193D00317DF4 /* SignatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4970CC12595193D00317DF4 /* SignatureViewController.swift */; };
-		B49C1709259BBF0800517712 /* ABControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B49C1708259BBF0800517712 /* ABControls.framework */; };
-		B49C170A259BBF0800517712 /* ABControls.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B49C1708259BBF0800517712 /* ABControls.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B49C1715259BC17E00517712 /* ABControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B49C1708259BBF0800517712 /* ABControls.framework */; };
 		B49C1716259BC17F00517712 /* ABControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B49C1708259BBF0800517712 /* ABControls.framework */; };
 		B4FA156C2127409B000A9C53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA156B2127409B000A9C53 /* AppDelegate.swift */; };
@@ -49,13 +49,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B49C16FC259BBDA100517712 /* Embed Frameworks */ = {
+		B495FA5026659EB800BF3DFF /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B49C170A259BBF0800517712 /* ABControls.framework in Embed Frameworks */,
+				B495FA4F26659EB800BF3DFF /* ABControls.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,7 +95,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B487264722E3D4480006BB08 /* CoreGraphics.framework in Frameworks */,
-				B49C1709259BBF0800517712 /* ABControls.framework in Frameworks */,
+				B495FA4E26659EB800BF3DFF /* ABControls.framework in Frameworks */,
 				B44311C922E67126008BEA0C /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,7 +207,7 @@
 				B4FA15642127409B000A9C53 /* Sources */,
 				B4FA15652127409B000A9C53 /* Frameworks */,
 				B4FA15662127409B000A9C53 /* Resources */,
-				B49C16FC259BBDA100517712 /* Embed Frameworks */,
+				B495FA5026659EB800BF3DFF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -281,7 +281,7 @@
 				};
 			};
 			buildConfigurationList = B4FA15632127409B000A9C53 /* Build configuration list for PBXProject "ABControlsTestHarness" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -520,24 +520,22 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ABControlsTestHarness/ABControlsTestHarness.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 4NN457KWJ4;
 				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				INFOPLIST_FILE = ABControlsTestHarness/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.albebaubles.ABControlsTestHarness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macOS";
-				SUPPORTS_MACCATALYST = YES;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,6";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -546,23 +544,22 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ABControlsTestHarness/ABControlsTestHarness.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 4NN457KWJ4;
 				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				INFOPLIST_FILE = ABControlsTestHarness/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.albebaubles.ABControlsTestHarness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macOS";
-				SUPPORTS_MACCATALYST = YES;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,6";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

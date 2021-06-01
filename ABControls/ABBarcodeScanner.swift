@@ -9,7 +9,7 @@ import UIKit
 import AVFoundation
 
 /// In this iteration the scanner object is always on and active
-public protocol ABBarcodeScannerDelegate: class {
+public protocol ABBarcodeScannerDelegate: AnyObject {
 
     /// Fires when the control has found and proceessed a barcode
     ///

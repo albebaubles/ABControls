@@ -6,7 +6,7 @@
 //  Copyright © 2018 AlbeBaubles LLC. All rights reserved.
 //
 import UIKit
-public protocol ABListboxDelegate: class {
+public protocol ABListboxDelegate: AnyObject {
 	/// Fires when the listbox selection has changed
 	///
 	/// - Parameter index: index of the selected item
