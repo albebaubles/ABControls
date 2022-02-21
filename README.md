@@ -51,7 +51,7 @@ Thank you!  All feedback welcome.
 You must be sure to add a camera usage description to your project's plist, otherwise you will not
 be able to scan a barcode. 
 ![camera access setting](docs/img/cameraAccess.png "plist camera usage statement")
-Next step is to drop a UIView object onto your view, and change the class type to ABBarcodeScanner
+<br />Next step is to drop a UIView object onto your view, and change the class type to ABBarcodeScanner
 ![set class](docs/img/abbarcodeSetClass.png )
 Now your view should indicate it's a barcode scanner<br />
 ![set class](docs/img/ABBarcodeScanner.png )
